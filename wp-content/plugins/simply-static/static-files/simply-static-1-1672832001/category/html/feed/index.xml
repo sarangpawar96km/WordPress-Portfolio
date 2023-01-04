@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>HTML &#8211; sarangpawar</title>
+	<atom:link href="https://sarangpawar96km.github.io/sarangpawar/category/html/feed/" rel="self" type="application/rss+xml" />
+	<link>https://sarangpawar96km.github.io/sarangpawar</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Tue, 03 Jan 2023 15:47:15 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0</generator>
+	<item>
+		<title>HTML</title>
+		<link>https://sarangpawar96km.github.io/sarangpawar/2023/01/03/html/</link>
+					<comments>https://sarangpawar96km.github.io/sarangpawar/2023/01/03/html/#respond</comments>
+		
+		<dc:creator><![CDATA[sarang@sp]]></dc:creator>
+		<pubDate>Tue, 03 Jan 2023 15:47:15 +0000</pubDate>
+				<category><![CDATA[HTML]]></category>
+		<category><![CDATA[website]]></category>
+		<guid isPermaLink="false">https://sarangpawar96km.github.io/sarangpawar/?p=1417</guid>
+
+					<description><![CDATA[HTML stands for HyperText Markup Language. It is used to design web pages using the markup language. HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages and markup language defines the text document within the tag that define the structure of web pages.]]></description>
+										<content:encoded><![CDATA[
+<p><strong>HTML</strong> stands for<strong> HyperText Markup Language</strong>. It is used to design web pages using the <strong>markup language</strong>. HTML is the combination of <strong>Hypertext</strong> and <strong>Markup language</strong>. Hypertext defines the link between the web pages and markup language defines the text document within the tag that define the structure of web pages.</p>
+
+
+
+<figure class="wp-block-image aligncenter"><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220401124017/HTML-Tutorial.png" alt="HTML Tutorial" class="wp-image-787261" title="Click to enlarge"/></figure>
+
+
+
+<h2>What is HTML used for ?</h2>
+
+
+
+<p>HTML is used to create the structure of web pages that are displayed on the World Wide Web (www). It contains Tags and Attributes that are used to design the web pages. Also, we can link multiple pages using Hyperlinks.</p>
+
+
+
+<h2>HTML Basic Format Page Structure</h2>
+
+
+
+<p>The basic structure of an HTML page is laid out below. It contains the essential building-block elements (i.e. doctype declaration, HTML, head, title, and body elements) upon which all web pages are created.</p>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="1000" height="695" src="https://sarangpawar96km.github.io/sarangpawar/wp-content/uploads/2023/01/image.png" alt="" class="wp-image-1418" srcset="https://sarangpawar96km.github.io/sarangpawar/wp-content/uploads/2023/01/image.png 1000w, https://sarangpawar96km.github.io/sarangpawar/wp-content/uploads/2023/01/image-300x209.png 300w, https://sarangpawar96km.github.io/sarangpawar/wp-content/uploads/2023/01/image-768x534.png 768w" sizes="(max-width: 1000px) 100vw, 1000px" /></figure>
+
+
+
+<ul><li><strong><a href="https://www.geeksforgeeks.org/html-doctypes/" rel="noreferrer noopener" target="_blank">&lt;DOCTYPE! html&gt;</a>&nbsp;–</strong>&nbsp;A doctype or document type declaration is an instruction that tells the web browser about the markup language in which the current page is written. It is not an element or tag. The doctype declaration is not case-sensitive.</li><li><a href="https://www.geeksforgeeks.org/html-html-tag/" rel="noreferrer noopener" target="_blank"><strong>&lt;html&gt;</strong></a><strong>&nbsp;–</strong>&nbsp;This tag is used to define the root element of HTML document. This tag tells the browser that it is an HTML document. It is the second outer container element that contains all other elements within it.</li><li><strong><a href="https://www.geeksforgeeks.org/html-head-tag/" rel="noreferrer noopener" target="_blank">&lt;head&gt;</a>&nbsp;–</strong>&nbsp;This tag is used to define the head portion of the HTML document that contains information related to the document. Elements within the head tag are not visible on the front-end of a webpage.</li><li><strong><a href="https://www.geeksforgeeks.org/html-body-tag/" rel="noreferrer noopener" target="_blank">&lt;body&gt;</a>&nbsp;–</strong>&nbsp;The body tag is used to enclose all the visible content of a webpage. In other words, the body content is what the browser will show on the front end.</li></ul>
+
+
+
+<p><strong>Example 1:&nbsp;</strong>This is the basic example of HTML that display the heading and paragraph content.</p>
+
+
+
+<ul><li>HTML</li></ul>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><code>&lt;!</code><code>DOCTYPE</code><code>html&gt;</code><code>&lt;</code><code>html</code><code>&gt;</code><code>&lt;!-- Head Section content --&gt;</code><code>&lt;</code><code>head</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;!-- Page title --&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>title</code><code>&gt;Basic Web Page&lt;/</code><code>title</code><code>&gt;</code><code>&lt;/</code><code>head</code><code>&gt;</code><code>&lt;!-- Body Section content --&gt;</code><code>&lt;</code><code>body</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;!-- Used to display heading content --&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>h1</code><code>&gt;Welcome to GeeksforGeeks&lt;/</code><code>h1</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;!-- Used to display paragrapg content --&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>p</code><code>&gt;A computer science portal for geeks&lt;/</code><code>p</code><code>&gt;</code><code>&lt;/</code><code>body</code><code>&gt;</code><code>&lt;/</code><code>html</code><code>&gt;</code></td></tr></tbody></table></figure>
+
+
+
+<p>Run on IDE</p>
+
+
+
+<p><strong>Output:</strong></p>
+
+
+
+<figure class="wp-block-image aligncenter"><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220401150933/basic-web-page.png" alt="HTML Basic Web Page Output" class="wp-image-787377" title="Click to enlarge"/></figure>
+
+
+
+<p><strong>Example 2:</strong>&nbsp;This example describes how to create a simple form using HTML. To create a form, we will use &lt;form&gt; tag and inside form tag, we will use some input fields and label elements to display the form.</p>
+
+
+
+<ul><li>HTML</li></ul>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><code>&lt;!</code><code>DOCTYPE</code><code>html&gt;</code><code>&lt;</code><code>html</code><code>lang</code><code>=</code><code>"en"</code><code>&gt;</code><code>&lt;!-- Head Section Content --&gt;</code><code>&lt;</code><code>head</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;!-- Page title --&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>title</code><code>&gt;Basic form design using HTML&lt;/</code><code>title</code><code>&gt;</code><code>&lt;/</code><code>head</code><code>&gt;</code><code>&lt;!-- Body Section Content --&gt;</code><code>&lt;</code><code>body</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;!-- Heading Content --&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>h1</code><code>&gt;GeeksforGeeks&lt;/</code><code>h1</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>h3</code><code>&gt;Basic form design using HTML&lt;/</code><code>h3</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;!-- Creating a from --&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>form</code><code>action</code><code>=</code><code>"#"</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>fieldset</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>legend</code><code>&gt;Personal Details&lt;/</code><code>legend</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;!-- Label and input field --&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>label</code><code>&gt;First name : &lt;</code><code>input</code><code>name</code><code>=</code><code>"firstName"</code><code>/&gt;&lt;/</code><code>label</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;/</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>label</code><code>&gt;Last name : &lt;</code><code>input</code><code>name</code><code>=</code><code>"lastName"</code><code>/&gt;&lt;/</code><code>label</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;/</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;!-- Label and radio button field --&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>Gender :</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>label</code><code>&gt;&lt;</code><code>input</code><code>type</code><code>=</code><code>"radio"</code><code>name</code><code>=</code><code>"gender"</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>value</code><code>=</code><code>"male"</code><code>/&gt; Male&lt;/</code><code>label</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>label</code><code>&gt;&lt;</code><code>input</code><code>type</code><code>=</code><code>"radio"</code><code>name</code><code>=</code><code>"gender"</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>value</code><code>=</code><code>"female"</code><code>/&gt; Female&lt;/</code><code>label</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;/</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>label</code><code>&gt;Email : &lt;</code><code>input</code><code>type</code><code>=</code><code>"email"</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>name</code><code>=</code><code>"email"</code><code>/&gt;&lt;/</code><code>label</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;/</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>label</code><code>&gt;Date of Birth : &lt;</code><code>input</code><code>type</code><code>=</code><code>"date"</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>name</code><code>=</code><code>"birthDate"</code><code>&gt;&lt;/</code><code>label</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;/</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;!-- Label and textarea field --&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>label</code><code>&gt;Address :</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>br</code><code>/&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>textarea</code><code>name</code><code>=</code><code>"address"</code><code>cols</code><code>=</code><code>"30"</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>rows</code><code>=</code><code>"3"</code><code>&gt;&lt;/</code><code>textarea</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;/</code><code>label</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;/</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;!-- Creating a button --&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>button</code><code>type</code><code>=</code><code>"submit"</code><code>&gt;Submit&lt;/</code><code>button</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;/</code><code>p</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;/</code><code>fieldset</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;/</code><code>form</code><code>&gt;</code><code>&lt;/</code><code>body</code><code>&gt;</code><code>&lt;/</code><code>html</code><code>&gt;</code></td></tr></tbody></table></figure>
+
+
+
+<p>Run on IDE</p>
+
+
+
+<p><strong>Output:</strong></p>
+
+
+
+<figure class="wp-block-image aligncenter"><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20220401152958/Basic-form.png" alt="Basic form design" class="wp-image-787402" title="Click to enlarge"/></figure>
+
+
+
+<p><a href="https://practice.geeksforgeeks.org/courses/web-design-html" rel="noreferrer noopener" target="_blank"><strong>Online Course | Web Design for Beginners:</strong></a>&nbsp;A beginner-level course for the curious Geek inside you! Here you will be learning all that there is to know about Web designing from scratch!</p>
+
+
+
+<p><a href="https://www.geeksforgeeks.org/html-examples/" rel="noreferrer noopener" target="_blank"><strong>HTML Questions:</strong></a>&nbsp;Please go through this link to see the wide collection of question based examples. These examples are categorized based on the topics including hyperlinks, forms, tables, frames, and many more.</p>
+
+
+
+<h2>Learn more about HTML:</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/html-introduction/">Introduction</a></li><li><a href="https://www.geeksforgeeks.org/html-full-form/" rel="noreferrer noopener" target="_blank">HTML full form</a></li><li><a href="https://www.geeksforgeeks.org/html5-introduction/">HTML5 Introduction</a></li><li><a href="https://www.geeksforgeeks.org/html-hex-color-codes/" rel="noreferrer noopener" target="_blank">HTML Hex Color Codes</a></li><li><a href="https://www.geeksforgeeks.org/html-charsets/">HTML Charsets</a></li><li><a href="https://www.geeksforgeeks.org/html-url-encoding/">HTML URL Encoding</a></li><li><a href="https://www.geeksforgeeks.org/most-commonly-used-tags-in-html/" rel="noreferrer noopener" target="_blank">Most commonly used HTML tags</a></li><li><a href="https://www.geeksforgeeks.org/html-course-structure-of-an-html-document/" rel="noreferrer noopener" target="_blank">Structure of HTML Document</a></li><li><a href="https://www.geeksforgeeks.org/html-design-form/" rel="noreferrer noopener" target="_blank">HTML Form Design</a></li><li><a href="https://www.geeksforgeeks.org/introduction-to-html-css-learn-to-design-your-first-website-in-just-1-week/" rel="noreferrer noopener" target="_blank">Design your First Website in Just 1 Week</a></li><li><a href="https://www.geeksforgeeks.org/simple-portfolio-website-design-using-html/" rel="noreferrer noopener" target="_blank">Simple Portfolio Website Design</a></li><li><a href="https://www.geeksforgeeks.org/how-to-create-a-portfolio-gallery-using-html-and-css/" rel="noreferrer noopener" target="_blank">Design a Portfolio Gallery</a></li><li><a href="https://www.geeksforgeeks.org/design-a-web-page-using-html-and-css/" rel="noreferrer noopener" target="_blank">Design a web page</a></li><li><a href="https://www.geeksforgeeks.org/top-10-projects-for-beginners-to-practice-html-and-css-skills/" rel="noreferrer noopener" target="_blank">Top 10 Projects For Beginners</a></li><li><a href="https://www.geeksforgeeks.org/programming-for-beginners-10-best-html-coding-practices-you-must-know/" rel="noreferrer noopener" target="_blank">10 Best HTML Coding Practices You Must Know</a></li><li><a href="https://www.geeksforgeeks.org/how-to-add-a-login-form-to-an-image-using-html-and-css/">Design a Login Form to an Image using HTML and CSS</a></li></ul>
+
+
+
+<h2>Complete References:</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/html-tags-complete-reference/">HTML Tags Complete Reference</a></li><li><a href="https://www.geeksforgeeks.org/html-attributes-complete-reference/">HTML Attributes Complete Reference</a></li><li><a href="https://www.geeksforgeeks.org/html-global-attributes/">HTML Global Attributes</a></li><li><a href="https://www.geeksforgeeks.org/html-event-attributes-complete-reference/">HTML Event Attributes Complete Reference</a></li><li><a href="https://www.geeksforgeeks.org/html-canvas-complete-reference/">HTML Canvas Complete Reference</a></li><li><a href="https://www.geeksforgeeks.org/html-dom-complete-reference/">DOM Complete Reference</a></li><li><a href="https://www.geeksforgeeks.org/html-dom-audio-video-complete-reference/">DOM Audio/Video Complete Reference</a></li><li><a href="https://www.geeksforgeeks.org/html5-complete-reference/">HTML5 Complete Reference</a></li><li><a href="https://www.geeksforgeeks.org/html5-mathml-complete-reference/" rel="noreferrer noopener" target="_blank">HTML5 MathML Complete Reference</a></li><li><a href="https://www.geeksforgeeks.org/tag/html-questions/">Questions Complete Reference</a></li></ul>
+
+
+
+<h2>Quiz Set:</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/html-course-practice-quiz-1/" rel="noreferrer noopener" target="_blank">Practice Quiz 1</a></li><li><a href="https://www.geeksforgeeks.org/html-course-practice-quiz-2/" rel="noreferrer noopener" target="_blank">Practice Quiz 2</a></li></ul>
+
+
+
+<h3><a href="https://www.geeksforgeeks.org/html-interview-questions-set-1/">HTML Interview Questions</a></h3>
+
+
+
+<h3><a href="https://www.geeksforgeeks.org/category/web-technologies/html/">Recent Articles</a></h3>
+
+
+
+<p>If you like GeeksforGeeks and would like to contribute, you can also write an article and mail your article to review-team@geeksforgeeks.org. See your article appearing on the GeeksforGeeks main page and help other Geeks.</p>
+
+
+
+<p>Please write comments if you find anything incorrect, or you want to share more information about the topic discussed above.</p>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://sarangpawar96km.github.io/sarangpawar/2023/01/03/html/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

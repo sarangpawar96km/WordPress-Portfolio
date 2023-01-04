@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Python &#8211; sarangpawar</title>
+	<atom:link href="https://sarangpawar96km.github.io/sarangpawar/category/python/feed/" rel="self" type="application/rss+xml" />
+	<link>https://sarangpawar96km.github.io/sarangpawar</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Tue, 03 Jan 2023 16:10:31 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0</generator>
+	<item>
+		<title>Python Programming Language</title>
+		<link>https://sarangpawar96km.github.io/sarangpawar/2023/01/03/python-programming-language/</link>
+					<comments>https://sarangpawar96km.github.io/sarangpawar/2023/01/03/python-programming-language/#respond</comments>
+		
+		<dc:creator><![CDATA[sarang@sp]]></dc:creator>
+		<pubDate>Tue, 03 Jan 2023 16:10:31 +0000</pubDate>
+				<category><![CDATA[Python]]></category>
+		<category><![CDATA[python]]></category>
+		<category><![CDATA[python programming]]></category>
+		<guid isPermaLink="false">https://sarangpawar96km.github.io/sarangpawar/?p=1438</guid>
+
+					<description><![CDATA[Python is a high-level, general-purpose and a very popular programming language. Python programming language (latest Python 3) is being used in web development, Machine Learning applications, along with all cutting edge technology in Software Industry. Python Programming Language is very well suited for Beginners, also for experienced programmers with other programming languages like C++ and Java.]]></description>
+										<content:encoded><![CDATA[
+<figure class="wp-block-image aligncenter"><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20200711122552/Python-Programming-Language.png" alt="python-programming-language Python-Tutorial" class="wp-image-430076" title="Click to enlarge"/></figure>
+
+
+
+<p>Python is a high-level, general-purpose and a very popular programming language. Python programming language (latest Python 3) is being used in web development, Machine Learning applications, along with all cutting edge technology in Software Industry. Python Programming Language is very well suited for Beginners, also for experienced programmers with other programming languages like C++ and Java.</p>
+
+
+
+<p>This specially designed Python tutorial will help you learn Python Programming Language in most efficient way, with the topics from basics to advanced (like Web-scraping, Django, Deep-Learning, etc.) with examples.</p>
+
+
+
+<p>Below are some facts about Python Programming Language:</p>
+
+
+
+<ol><li>Python is currently the most widely used multi-purpose, high-level programming language.</li><li>Python allows programming in Object-Oriented and Procedural paradigms.</li><li>Python programs generally are smaller than other programming languages like Java. Programmers have to type relatively less and indentation requirement of the language, makes them readable all the time.</li><li>Python language is being used by almost all tech-giant companies like – Google, Amazon, Facebook, Instagram, Dropbox, Uber… etc.</li><li>The biggest strength of Python is huge collection of standard library which can be used for the following:<ul><li><a rel="noreferrer noopener" href="https://www.geeksforgeeks.org/machine-learning/" target="_blank">Machine Learning</a></li><li>GUI Applications (like <a rel="noreferrer noopener" href="https://www.geeksforgeeks.org/kivy-tutorial/" target="_blank">Kivy</a>, Tkinter, PyQt etc. )</li><li>Web frameworks like <a rel="noreferrer noopener" href="https://www.geeksforgeeks.org/django-tutorial/" target="_blank">Django</a> (used by YouTube, Instagram, Dropbox)</li><li>Image processing (like <a rel="noreferrer noopener" href="https://www.geeksforgeeks.org/opencv-python-tutorial/" target="_blank">OpenCV</a>, Pillow)</li><li>Web scraping (like Scrapy, BeautifulSoup, Selenium)</li><li>Test frameworks</li><li>Multimedia</li><li>Scientific computing</li><li>Text processing and many more..</li></ul></li></ol>
+
+
+
+<p><strong><a href="https://www.geeksforgeeks.org/category/python/">Recent Articles on Python !</a></strong><br><a href="https://www.geeksforgeeks.org/python-programming-examples/" rel="noreferrer noopener" target="_blank"><strong>Python Programming Examples</strong></a><br><strong><a href="https://www.geeksforgeeks.org/python-multiple-choice-questions/">Python Output &amp; Multiple Choice Questions</a></strong><br>&nbsp;</p>
+
+
+
+<p><a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Basics">Basics</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#io">Input/Output</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Data%20Types">Data Types</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Variables">Variables</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Operators">Operators</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Control%20Flow">Control Flow</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Functions">Functions</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Object%20Oriented%20Concepts">Object Oriented Concepts</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Exception%20Handling">Exception Handling</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Python%20Collections">Python Collections</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Django%20tutorial">Django Framework</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Data%20Analysis">Data Analysis</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Numpy">Numpy</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Pandas">Pandas</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Machine%20Learning%20with%20Python">Machine Learning with Python</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#PythonGUI">Python GUI</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Modules%20in%20Python">Modules in Python</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#WorkingWithDatabase">Working with Database</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Misc">Misc</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-programming-language/?ref=shm#Applications%20and%20Projects">Applications and Projects</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-multiple-choice-questions/">Multiple Choice Questions</a></p>
+
+
+
+<h1>Python Tutorial –</h1>
+
+
+
+<h2><a></a>Python Basics</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/python-language-introduction/" rel="noreferrer noopener" target="_blank">Python language introduction</a></li><li><a href="https://www.geeksforgeeks.org/python-3-basics/" rel="noreferrer noopener" target="_blank">Python 3 basics</a></li><li><a href="https://www.geeksforgeeks.org/python-the-new-generation-language/" rel="noreferrer noopener" target="_blank">Python The new generation language</a></li><li><a href="https://www.geeksforgeeks.org/important-differences-between-python-2-x-and-python-3-x-with-examples/" rel="noreferrer noopener" target="_blank">Important difference between python 2.x and python 3.x with example</a></li><li><a href="https://www.geeksforgeeks.org/keywords-python-set-1/" rel="noreferrer noopener" target="_blank">Keywords in Python | Set 1</a>,&nbsp;<a href="https://www.geeksforgeeks.org/keywords-python-set-2/" rel="noreferrer noopener" target="_blank">Set 2</a></li><li><a href="https://www.geeksforgeeks.org/namespaces-and-scope-in-python/" rel="noreferrer noopener" target="_blank">Namespaces and Scope in Python</a></li><li><a href="https://www.geeksforgeeks.org/statement-indentation-and-comment-in-python/" rel="noreferrer noopener" target="_blank">Statement, Indentation and Comment in Python</a></li><li><a href="https://www.geeksforgeeks.org/structuring-python-programs/" rel="noreferrer noopener" target="_blank">Structuring Python Programs</a></li><li><a href="https://www.geeksforgeeks.org/check-string-valid-keyword-python/" rel="noreferrer noopener" target="_blank">How to check if a string is a valid keyword in Python?</a></li><li><a href="https://www.geeksforgeeks.org/how-to-assign-values-to-variables-in-python-and-other-languages/" rel="noreferrer noopener" target="_blank">How to assign values to variables in Python and other languages</a></li><li><a href="https://www.geeksforgeeks.org/print-without-newline-python/" rel="noreferrer noopener" target="_blank">How to print without newline in Python?</a></li><li><a href="https://www.geeksforgeeks.org/decision-making-python-else-nested-elif/" rel="noreferrer noopener" target="_blank">Decision making</a></li><li><a href="https://www.geeksforgeeks.org/make-simple-calculator-using-python/" rel="noreferrer noopener" target="_blank">Basic calculator program using Python</a></li><li><a href="https://www.geeksforgeeks.org/python-language-advantages-applications/" rel="noreferrer noopener" target="_blank">Python Language advantages and applications</a></li></ul>
+
+
+
+<h2>Input/Output</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/taking-input-in-python/" rel="noreferrer noopener" target="_blank">Taking input in Python</a></li><li><a href="https://www.geeksforgeeks.org/taking-input-from-console-in-python/" rel="noreferrer noopener" target="_blank">Taking input from console in Python</a></li><li><a href="https://www.geeksforgeeks.org/taking-multiple-inputs-from-user-in-python/" rel="noreferrer noopener" target="_blank">Taking multiple inputs from user in Python</a></li><li><a href="https://www.geeksforgeeks.org/python-input-methods-competitive-programming/" rel="noreferrer noopener" target="_blank">Python Input Methods for Competitive Programming</a></li><li><a href="https://www.geeksforgeeks.org/vulnerability-input-function-python-2-x/" rel="noreferrer noopener" target="_blank">Vulnerability in input() function – Python 2.x</a></li><li><a href="https://www.geeksforgeeks.org/python-output-using-print-function/" rel="noreferrer noopener" target="_blank">Python | Output using print() function</a></li><li><a href="https://www.geeksforgeeks.org/print-without-newline-python/" rel="noreferrer noopener" target="_blank">How to print without newline in Python?</a></li><li><a href="https://www.geeksforgeeks.org/gfact-50-python-end-parameter-in-print/" rel="noreferrer noopener" target="_blank">Python | end parameter in print()</a></li><li><a href="https://www.geeksforgeeks.org/python-sep-parameter-print/" rel="noreferrer noopener" target="_blank">Python | sep parameter in print()</a></li><li><a href="https://www.geeksforgeeks.org/python-output-formatting/" rel="noreferrer noopener" target="_blank">Python | Output Formatting</a></li></ul>
+
+
+
+<h2>Data Types</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/python-set-3-strings-lists-tuples-iterations/" rel="noreferrer noopener" target="_blank">Introduction to DataTypes</a></li><li><a href="https://www.geeksforgeeks.org/python-strings/" rel="noreferrer noopener" target="_blank"><strong>Strings</strong></a></li><li><a href="https://www.geeksforgeeks.org/python-list/"><strong>List</strong></a></li><li><a href="https://www.geeksforgeeks.org/python-tuples/" rel="noreferrer noopener" target="_blank"><strong>Tuples</strong></a></li><li><a href="https://www.geeksforgeeks.org/python-sets/"><strong>Sets</strong></a></li><li><strong><a href="https://www.geeksforgeeks.org/python-dictionary/">Dictionary</a></strong></li><li><strong><a href="https://www.geeksforgeeks.org/python-arrays/" rel="noreferrer noopener" target="_blank">Arrays</a></strong></li></ul>
+
+
+
+<h2><a></a>Variables</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/python-set-2-variables-expressions-conditions-and-functions/#:~:text=Play%20Video-,Variables%20in%20Python%C2%A0,-Variables%20need%20not">Variables</a>,<a href="https://www.geeksforgeeks.org/python-set-2-variables-expressions-conditions-and-functions/#:~:text=Expressions%20in%20Python%C2%A0">&nbsp;expression</a>,&nbsp;<a href="https://www.geeksforgeeks.org/python-set-2-variables-expressions-conditions-and-functions/#:~:text=Conditions%20in%20Python%C2%A0">condition&nbsp;</a>and&nbsp;<a href="https://www.geeksforgeeks.org/python-set-2-variables-expressions-conditions-and-functions/#:~:text=Functions%20in%20Python%C2%A0">function</a></li><li><a href="https://www.geeksforgeeks.org/what-is-maximum-possible-value-of-an-integer-in-python/" rel="noreferrer noopener" target="_blank">Maximum possible value of an integer in python?</a></li><li><a href="https://www.geeksforgeeks.org/global-local-variables-python/" rel="noreferrer noopener" target="_blank">Global and local variables in python</a></li><li><a href="https://www.geeksforgeeks.org/packing-and-unpacking-arguments-in-python/" rel="noreferrer noopener" target="_blank">Packing and unpacking arguments in python</a></li><li><a href="https://www.geeksforgeeks.org/type-conversion-python/" rel="noreferrer noopener" target="_blank">Type conversion in python</a></li><li><a href="https://www.geeksforgeeks.org/byte-objects-vs-string-python/" rel="noreferrer noopener" target="_blank">Byte objects vs string in python</a></li><li><a href="https://www.geeksforgeeks.org/g-fact-25-print-single-multiple-variable-python/" rel="noreferrer noopener" target="_blank">Print single and multiple variable</a></li><li><a href="https://www.geeksforgeeks.org/swap-two-variables-in-one-line-in-c-c-python-php-and-java/" rel="noreferrer noopener" target="_blank">Swap variable</a></li><li><a href="https://www.geeksforgeeks.org/private-variables-python/" rel="noreferrer noopener" target="_blank">Private variables</a></li><li><a href="https://www.geeksforgeeks.org/__name__-special-variable-python/" rel="noreferrer noopener" target="_blank">__name__ (A Special variable) in Python</a></li></ul>
+
+
+
+<h2>Operators</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/basic-operators-python/" rel="noreferrer noopener" target="_blank">Basic operator in python</a></li><li><a href="https://www.geeksforgeeks.org/g-fact-29-logical-and-bitwise-not-operators-on-boolean/" rel="noreferrer noopener" target="_blank">Logical and bitwise not operator on boolean</a></li><li><a href="https://www.geeksforgeeks.org/ternary-operator-in-python/" rel="noreferrer noopener" target="_blank">Ternary operator</a></li><li><a href="https://www.geeksforgeeks.org/division-operator-in-python/" rel="noreferrer noopener" target="_blank">Division operator in python</a></li><li><a href="https://www.geeksforgeeks.org/operator-overloading-in-python/" rel="noreferrer noopener" target="_blank">Operator Overloading in Python</a></li><li><a href="https://www.geeksforgeeks.org/any-all-in-python/" rel="noreferrer noopener" target="_blank">Any &amp; all in python</a></li><li><a href="https://www.geeksforgeeks.org/inplace-vs-standard-operators-python/" rel="noreferrer noopener" target="_blank">Inplace and standard operators in python</a></li><li><a href="https://www.geeksforgeeks.org/operator-functions-in-python-set-1/" rel="noreferrer noopener" target="_blank">Operator function in python | Set – 1</a></li><li><a href="https://www.geeksforgeeks.org/inplace-operators-python-set-1iadd-isub-iconcat/" rel="noreferrer noopener" target="_blank">Inplace operator | Set -1</a></li><li><a href="https://www.geeksforgeeks.org/logic-gates-in-python/" rel="noreferrer noopener" target="_blank">Logic Gates in Python</a></li><li><a href="https://www.geeksforgeeks.org/python-a-b-is-not-always-a-a-b/" rel="noreferrer noopener" target="_blank">Python | a += b is not always a = a + b</a></li><li><a href="https://www.geeksforgeeks.org/difference-operator-python/" rel="noreferrer noopener" target="_blank">Difference between == and is operator in Python</a></li><li><a href="https://www.geeksforgeeks.org/python-membership-identity-operators-not-not/" rel="noreferrer noopener" target="_blank">Python Membership and Identity Operators | in, not in, is, is not</a></li></ul>
+
+
+
+<h2>Control Flow</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/loops-in-python/" rel="noreferrer noopener" target="_blank">Loops</a></li><li><a href="https://www.geeksforgeeks.org/loops-and-loop-control-statements-continue-break-and-pass-in-python/" rel="noreferrer noopener" target="_blank">Loops and Control Statements (continue, break and pass) in Python</a></li><li><a href="https://www.geeksforgeeks.org/looping-techniques-python/" rel="noreferrer noopener" target="_blank">Looping technique in python</a></li><li><a href="https://www.geeksforgeeks.org/range-vs-xrange-python/" rel="noreferrer noopener" target="_blank">range vs xrange on python</a></li><li><a href="https://www.geeksforgeeks.org/programs-printing-pyramid-patterns-python/" rel="noreferrer noopener" target="_blank">Programs for printing pyramid technique in python</a></li><li><a href="https://www.geeksforgeeks.org/chaining-comparison-operators-python/" rel="noreferrer noopener" target="_blank">Chaining comparison in python</a></li><li><a href="https://www.geeksforgeeks.org/using-else-conditional-statement-with-for-loop-in-python/" rel="noreferrer noopener" target="_blank">else with for</a></li><li><a href="https://www.geeksforgeeks.org/switch-case-in-python-replacement/" rel="noreferrer noopener" target="_blank">switch function</a></li><li><a href="https://www.geeksforgeeks.org/using-iterations-in-python-effectively/" rel="noreferrer noopener" target="_blank">Using iteration in python effectively</a></li><li><a href="https://www.geeksforgeeks.org/python-itertools/" rel="noreferrer noopener" target="_blank">Python Itertools</a></li><li><a href="https://www.geeksforgeeks.org/python-__iter__-__next__-converting-object-iterator/" rel="noreferrer noopener" target="_blank">Python __iter__() and __next__() | Converting an object into an iterator</a></li><li><a href="https://www.geeksforgeeks.org/python-difference-iterable-iterator/" rel="noreferrer noopener" target="_blank">Python | Difference between iterable and iterator</a></li><li><a href="https://www.geeksforgeeks.org/generators-in-python/" rel="noreferrer noopener" target="_blank">Generators in python</a></li><li><a href="https://www.geeksforgeeks.org/generator-expressions/" rel="noreferrer noopener" target="_blank">Generators expression in python</a></li></ul>
+
+
+
+<h2>Functions</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/functions-in-python/" rel="noreferrer noopener" target="_blank">Functions in Python</a></li><li><a href="https://www.geeksforgeeks.org/class-method-vs-static-method-python/" rel="noreferrer noopener" target="_blank">class method vs static method in Python</a></li><li><a href="https://www.geeksforgeeks.org/how-to-write-an-empty-function-in-python-pass-statement/">Write an empty function in Python – pass statement</a></li><li><a href="https://www.geeksforgeeks.org/use-yield-keyword-instead-return-keyword-python/">Yield instead of Return</a></li><li><a href="https://www.geeksforgeeks.org/g-fact-41-multiple-return-values-in-python/">Return Multiple Values</a></li><li><a href="https://www.geeksforgeeks.org/partial-functions-python/" rel="noreferrer noopener" target="_blank">Partial Functions in Python</a></li><li><a href="https://www.geeksforgeeks.org/first-class-functions-python/" rel="noreferrer noopener" target="_blank">First Class functions in Python</a></li><li><a href="https://www.geeksforgeeks.org/precision-handling-python/">Precision Handling</a></li><li><a href="https://www.geeksforgeeks.org/args-kwargs-python/">*args and **kwargs</a></li><li><a href="https://www.geeksforgeeks.org/python-closures/">Python closures</a></li><li><a href="https://www.geeksforgeeks.org/function-decorators-in-python-set-1-introduction/">Function Decorators</a></li><li><a href="https://www.geeksforgeeks.org/decorators-in-python/" rel="noreferrer noopener" target="_blank">Decorators in Python</a></li><li><a href="https://www.geeksforgeeks.org/decorators-with-parameters-in-python/" rel="noreferrer noopener" target="_blank">Decorators with parameters in Python</a></li><li><a href="https://www.geeksforgeeks.org/memoization-using-decorators-in-python/" rel="noreferrer noopener" target="_blank">Memoization using decorators in Python</a></li><li><a href="https://www.geeksforgeeks.org/help-function-in-python/" rel="noreferrer noopener" target="_blank">Help function in Python</a></li><li><a href="https://www.geeksforgeeks.org/python-__import__-function/" rel="noreferrer noopener" target="_blank">Python | __import__() function</a></li><li><a href="https://www.geeksforgeeks.org/python-range-does-not-return-an-iterator/" rel="noreferrer noopener" target="_blank">Python | range() does not return an iterator</a></li><li><a href="https://www.geeksforgeeks.org/coroutine-in-python/" rel="noreferrer noopener" target="_blank">Coroutine in Python</a></li><li><a href="https://www.geeksforgeeks.org/python-bit-functions-on-int-bit_length-to_bytes-and-from_bytes/" rel="noreferrer noopener" target="_blank">Python bit functions on int (bit_length, to_bytes and from_bytes)</a></li></ul>
+
+
+
+<h2>Object Oriented Concepts</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/python3-intermediate-level-topics/" rel="noreferrer noopener" target="_blank">Python3 Intermediate Level Topics</a></li><li><a href="https://www.geeksforgeeks.org/object-oriented-programming-in-python-set-1-class-and-its-members/" rel="noreferrer noopener" target="_blank">Class, Object and Members</a></li><li><a href="https://www.geeksforgeeks.org/object-oriented-programming-in-python-set-2-data-hiding-and-object-printing/" rel="noreferrer noopener" target="_blank">Data Hiding and Object Printing</a></li><li><a href="https://www.geeksforgeeks.org/oop-in-python-set-3-inheritance-examples-of-object-issubclass-and-super/" rel="noreferrer noopener" target="_blank">Inheritance, examples of object, issubclass and super</a></li><li><a href="https://www.geeksforgeeks.org/polymorphism-in-python/" rel="noreferrer noopener" target="_blank">Polymorphism in Python</a></li><li><a href="https://www.geeksforgeeks.org/g-fact-34-class-or-static-variables-in-python/" rel="noreferrer noopener" target="_blank">Class and static variable in python</a></li><li><a href="https://www.geeksforgeeks.org/class-method-vs-static-method-python/" rel="noreferrer noopener" target="_blank">Class method and static method in python</a></li><li><a href="https://www.geeksforgeeks.org/g-fact-42-changing-class-members-python/" rel="noreferrer noopener" target="_blank">Changing class members</a></li><li><a href="https://www.geeksforgeeks.org/constructors-in-python/" rel="noreferrer noopener" target="_blank">Constructors in Python</a></li><li><a href="https://www.geeksforgeeks.org/destructors-in-python/" rel="noreferrer noopener" target="_blank">Destructors in Python</a></li><li><a href="https://www.geeksforgeeks.org/first-class-functions-python/" rel="noreferrer noopener" target="_blank">First class function</a></li><li><a href="https://www.geeksforgeeks.org/metaprogramming-metaclasses-python/" rel="noreferrer noopener" target="_blank">Metaprogramming with metaclasses</a></li><li><a href="https://www.geeksforgeeks.org/class-instance-attributes-python/" rel="noreferrer noopener" target="_blank">Class and instance attribute</a></li><li><a href="https://www.geeksforgeeks.org/reflection-in-python/" rel="noreferrer noopener" target="_blank">Reflection</a></li><li><a href="https://www.geeksforgeeks.org/garbage-collection-python/" rel="noreferrer noopener" target="_blank">Garbage collection</a></li></ul>
+
+
+
+<h2>Exception Handling</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/python-set-5-exception-handling/" rel="noreferrer noopener" target="_blank">Exception handling</a></li><li><a href="https://www.geeksforgeeks.org/user-defined-exceptions-python-examples/" rel="noreferrer noopener" target="_blank">User defined Exception</a></li><li><a href="https://www.geeksforgeeks.org/built-exceptions-python/" rel="noreferrer noopener" target="_blank">Built-in Exception</a></li><li><a href="https://www.geeksforgeeks.org/defining-clean-actions-python/" rel="noreferrer noopener" target="_blank">clean up action</a></li><li><a href="https://www.geeksforgeeks.org/nzec-error-python/" rel="noreferrer noopener" target="_blank">Nzec error</a></li><li><a href="https://www.geeksforgeeks.org/try-except-python/" rel="noreferrer noopener" target="_blank">try and except in Python</a></li></ul>
+
+
+
+<h2>Python Collections</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/counters-in-python-set-1/" rel="noreferrer noopener" target="_blank">Counters</a></li><li><a href="https://www.geeksforgeeks.org/ordereddict-in-python/" rel="noreferrer noopener" target="_blank">OrderedDict</a></li><li><a href="https://www.geeksforgeeks.org/defaultdict-in-python/" rel="noreferrer noopener" target="_blank">Defaultdict</a></li><li><a href="https://www.geeksforgeeks.org/chainmap-in-python/" rel="noreferrer noopener" target="_blank">ChainMap</a></li><li><a href="https://www.geeksforgeeks.org/namedtuple-in-python/">NamedTuple</a></li><li><a href="https://www.geeksforgeeks.org/deque-in-python/">DeQue</a></li><li><a href="https://www.geeksforgeeks.org/heap-queue-or-heapq-in-python/">Heap</a></li><li><a href="https://www.geeksforgeeks.org/collections-userdict-in-python/" rel="noreferrer noopener" target="_blank">Collections.UserDict</a></li><li><a href="https://www.geeksforgeeks.org/collections-userlist-in-python/" rel="noreferrer noopener" target="_blank">Collections.UserList</a></li><li><a href="https://www.geeksforgeeks.org/collections-userstring-in-python/" rel="noreferrer noopener" target="_blank">Collections.UserString</a></li></ul>
+
+
+
+<h2>Django Framework</h2>
+
+
+
+<ul><li><strong><a href="https://www.geeksforgeeks.org/django-tutorial/" rel="noreferrer noopener" target="_blank">Django Tutorial</a></strong></li><li><a href="https://www.geeksforgeeks.org/django-basics/" rel="noreferrer noopener" target="_blank">Django Basics</a></li><li><a href="https://www.geeksforgeeks.org/django-introduction-and-installation/" rel="noreferrer noopener" target="_blank">Django Introduction and Installation</a></li><li><a href="https://www.geeksforgeeks.org/django-forms/" rel="noreferrer noopener" target="_blank">Django Forms</a></li><li><a href="https://www.geeksforgeeks.org/views-in-django-python/" rel="noreferrer noopener" target="_blank">Views In Django</a></li><li><a href="https://www.geeksforgeeks.org/django-models/" rel="noreferrer noopener" target="_blank">Django Models</a></li><li><a href="https://www.geeksforgeeks.org/django-templates/" rel="noreferrer noopener" target="_blank">Django Templates</a></li><li><a href="https://www.geeksforgeeks.org/python-todo-webapp-using-django/" rel="noreferrer noopener" target="_blank">ToDo webapp using Django</a></li><li><a href="https://www.geeksforgeeks.org/python-django-news-app/" rel="noreferrer noopener" target="_blank">Django News App</a></li><li><a href="https://www.geeksforgeeks.org/weather-app-using-django-python/" rel="noreferrer noopener" target="_blank">Weather app using Django</a></li></ul>
+
+
+
+<h2>Data Analysis</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/python-data-visualization-using-bokeh/" rel="noreferrer noopener" target="_blank">Data visualization using Bokeh</a></li><li><a href="https://www.geeksforgeeks.org/exploratory-data-analysis-in-python/" rel="noreferrer noopener" target="_blank">Exploratory Data Analysis in Python</a></li><li><a href="https://www.geeksforgeeks.org/data-visualization-different-charts-python/" rel="noreferrer noopener" target="_blank">Data visualization with different Charts in Python</a></li><li><a href="https://www.geeksforgeeks.org/data-analysis-visualization-python/" rel="noreferrer noopener" target="_blank">Data analysis and Visualization with Python</a></li><li><a href="https://www.geeksforgeeks.org/data-analysis-visualization-python-set-2/" rel="noreferrer noopener" target="_blank">Data Analysis &amp; Visualization with Python | Set 2</a></li><li><a href="https://www.geeksforgeeks.org/python-math-operations-for-data-analysis/" rel="noreferrer noopener" target="_blank">Math operations for Data analysis</a></li><li><a href="https://www.geeksforgeeks.org/getting-started-with-jupyter-notebook-python/" rel="noreferrer noopener" target="_blank">Getting started with Jupyter Notebook | Python</a></li></ul>
+
+
+
+<h2>Numpy</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/python-numpy/" target="_blank" rel="noreferrer noopener"><strong>Python Numpy</strong></a></li><li><a href="https://www.geeksforgeeks.org/numpy-ndarray/" rel="noreferrer noopener" target="_blank">Numpy | ndarray</a></li><li><a href="https://www.geeksforgeeks.org/numpy-array-creation/" rel="noreferrer noopener" target="_blank">Numpy | Array Creation</a></li><li><a href="https://www.geeksforgeeks.org/numpy-data-type-objects/" rel="noreferrer noopener" target="_blank">Numpy | Data Type Objects</a></li><li><a href="https://www.geeksforgeeks.org/data-type-object-dtype-numpy-python/" target="_blank" rel="noreferrer noopener">Data type Object (dtype) in NumPy</a></li><li><a href="https://www.geeksforgeeks.org/numpy-indexing/" rel="noreferrer noopener" target="_blank">Numpy | Indexing</a></li><li><a href="https://www.geeksforgeeks.org/indexing-in-numpy/" target="_blank" rel="noreferrer noopener">Numpy | Basic Slicing and Advanced Indexing</a></li><li><a href="https://www.geeksforgeeks.org/numpy-iterating-over-array/" rel="noreferrer noopener" target="_blank">Numpy | Iterating Over Array</a></li><li><a href="https://www.geeksforgeeks.org/numpy-binary-operations/" rel="noreferrer noopener" target="_blank">Numpy | Binary Operations</a></li><li><a href="https://www.geeksforgeeks.org/numpy-linear-algebra/" rel="noreferrer noopener" target="_blank">Numpy | Linear Algebra</a></li><li><a href="https://www.geeksforgeeks.org/numpy-sorting-searching-and-counting/" rel="noreferrer noopener" target="_blank">Numpy | Sorting, Searching and Counting</a></li></ul>
+
+
+
+<h2>Pandas</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/pandas-tutorial/" rel="noreferrer noopener" target="_blank">Pandas Tutorial</a></li><li><a href="https://www.geeksforgeeks.org/python-pandas-dataframe/" rel="noreferrer noopener" target="_blank">Python | Pandas DataFrame</a></li><li><a href="https://www.geeksforgeeks.org/creating-a-pandas-dataframe/" rel="noreferrer noopener" target="_blank">Creating a Pandas DataFrame</a></li><li><a href="https://www.geeksforgeeks.org/dealing-with-rows-and-columns-in-pandas-dataframe/" rel="noreferrer noopener" target="_blank">Dealing with Rows and Columns in Pandas DataFrame</a></li><li><a href="https://www.geeksforgeeks.org/indexing-and-selecting-data-with-pandas/" rel="noreferrer noopener" target="_blank">Indexing and Selecting Data with Pandas</a></li><li><a href="https://www.geeksforgeeks.org/boolean-indexing-in-pandas/" rel="noreferrer noopener" target="_blank">Boolean Indexing in Pandas</a></li><li><a href="https://www.geeksforgeeks.org/conversion-functions-in-pandas-dataframe/" rel="noreferrer noopener" target="_blank">Conversion Functions in Pandas DataFrame</a></li><li><a href="https://www.geeksforgeeks.org/iterating-over-rows-and-columns-in-pandas-dataframe/" rel="noreferrer noopener" target="_blank">Iterating over rows and columns in Pandas DataFrame</a></li><li><a href="https://www.geeksforgeeks.org/working-with-missing-data-in-pandas/" rel="noreferrer noopener" target="_blank">Working with Missing Data in Pandas</a></li><li><a href="https://www.geeksforgeeks.org/python-pandas-series/" rel="noreferrer noopener" target="_blank">Python | Pandas Series</a></li><li><a href="https://www.geeksforgeeks.org/python-data-analysis-using-pandas/" rel="noreferrer noopener" target="_blank">Data analysis using Pandas</a></li><li><a href="https://www.geeksforgeeks.org/python-read-csv-using-pandas-read_csv/" rel="noreferrer noopener" target="_blank">Read csv using pandas.read_csv()</a></li></ul>
+
+
+
+<h2>Machine Learning with Python</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/machine-learning/" rel="noreferrer noopener" target="_blank"><strong>Machine Learning Tutorial</strong></a></li><li><a href="https://www.geeksforgeeks.org/linear-regression-python-implementation/">Linear Regression</a></li><li><a href="https://www.geeksforgeeks.org/understanding-logistic-regression/">Understanding Logistic Regression</a></li><li><a href="https://www.geeksforgeeks.org/k-means-clustering-introduction/">K means Clustering</a></li><li><a href="https://www.geeksforgeeks.org/python-image-classification-using-keras/" rel="noreferrer noopener" target="_blank">Python | Image Classification using keras</a></li><li><a href="https://www.geeksforgeeks.org/creating-a-simple-machine-learning-model/" rel="noreferrer noopener" target="_blank">creating a simple machine learning model</a></li><li><a href="https://www.geeksforgeeks.org/python-implementation-of-movie-recommender-system/" rel="noreferrer noopener" target="_blank">Python | Implementation of Movie Recommender System</a></li><li><a href="https://www.geeksforgeeks.org/ml-boston-housing-kaggle-challenge-with-linear-regression/" rel="noreferrer noopener" target="_blank">ML | Boston Housing Kaggle Challenge with Linear Regression</a></li><li><a href="https://www.geeksforgeeks.org/ml-cancer-cell-classification-using-scikit-learn/" rel="noreferrer noopener" target="_blank">Cancer cell classification using Scikit-learn</a></li><li><a href="https://www.geeksforgeeks.org/saving-a-machine-learning-model/" rel="noreferrer noopener" target="_blank">Saving a machine learning Model</a></li><li><a href="https://www.geeksforgeeks.org/applying-convolutional-neural-network-on-mnist-dataset/" rel="noreferrer noopener" target="_blank">Applying Convolutional Neural Network on mnist dataset</a></li><li><a href="https://www.geeksforgeeks.org/python-nlp-analysis-of-restaurant-reviews/" rel="noreferrer noopener" target="_blank">Python | NLP analysis of Restaurant reviews</a></li><li><a href="https://www.geeksforgeeks.org/learning-model-building-scikit-learn-python-machine-learning-library/">Learning Model Building in Scikit-learn</a></li><li><a href="https://www.geeksforgeeks.org/implementing-ann-training-process-in-python/">Implementing Artificial Neural Network training process</a></li><li><a href="https://www.geeksforgeeks.org/single-neuron-neural-network-python/" rel="noreferrer noopener" target="_blank">A single neuron neural network in Python</a></li><li><a href="https://www.geeksforgeeks.org/python-how-and-where-to-apply-feature-scaling/" rel="noreferrer noopener" target="_blank">Python | How and where to apply Feature Scaling?</a></li><li><a href="https://www.geeksforgeeks.org/identifying-handwritten-digits-using-logistic-regression-pytorch/" rel="noreferrer noopener" target="_blank">Identifying handwritten digits using Logistic Regression in PyTorch</a></li></ul>
+
+
+
+<h2>Python GUI</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/python-tkinter-tutorial/" rel="noreferrer noopener" target="_blank">Tkinter Tutorial</a></li><li><a href="https://www.geeksforgeeks.org/kivy-tutorial/" rel="noreferrer noopener" target="_blank">Kivy Tutorial</a></li><li><a href="https://www.geeksforgeeks.org/python-gui-tkinter/" rel="noreferrer noopener" target="_blank">Python GUI – tkinter</a></li><li><a href="https://www.geeksforgeeks.org/python-simple-gui-calculator-using-tkinter/" rel="noreferrer noopener" target="_blank">Simple GUI calculator using Tkinter</a></li><li><a href="https://www.geeksforgeeks.org/python-simple-registration-form-using-tkinter/" rel="noreferrer noopener" target="_blank">Simple registration form using Tkinter</a></li><li><a href="https://www.geeksforgeeks.org/create-stopwatch-using-python/" rel="noreferrer noopener" target="_blank">Create a stopwatch using python</a></li><li><a href="https://www.geeksforgeeks.org/python-designing-gui-applications-using-pyqt/" rel="noreferrer noopener" target="_blank">Designing GUI applications Using PyQt</a></li><li><a href="https://www.geeksforgeeks.org/color-game-python/" rel="noreferrer noopener" target="_blank">Color game using Tkinter in Python</a></li><li><a href="https://www.geeksforgeeks.org/make-notepad-using-tkinter/" rel="noreferrer noopener" target="_blank">Make Notepad using Tkinter</a></li><li><a href="https://www.geeksforgeeks.org/python-message-encode-decode-using-tkinter/" rel="noreferrer noopener" target="_blank">Message Encode-Decode using Tkinter</a></li><li><a href="https://www.geeksforgeeks.org/python-real-time-currency-convertor-using-tkinter/" rel="noreferrer noopener" target="_blank">Real time currency convertor using Tkinter</a></li></ul>
+
+
+
+<h2>Modules in Python</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/python-modules/">Introduction of Modules</a></li><li><a href="https://www.geeksforgeeks.org/os-module-python-examples/">OS module</a></li><li><a href="https://www.geeksforgeeks.org/python-calendar-module/" rel="noreferrer noopener" target="_blank">Calendar Module</a></li><li><a href="https://www.geeksforgeeks.org/python-urllib-module/" rel="noreferrer noopener" target="_blank">Python Urllib Module</a></li><li><a href="https://www.geeksforgeeks.org/pprint-data-pretty-printer-python/">pprint</a></li><li><a href="https://www.geeksforgeeks.org/timeit-python-examples/">Timit function</a></li><li><a href="https://www.geeksforgeeks.org/import-module-python/">Import module</a></li></ul>
+
+
+
+<h2>Working With Database</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/mongodb-and-python/" rel="noreferrer noopener" target="_blank">MongoDB and Python</a></li><li><a href="https://www.geeksforgeeks.org/sql-using-python/" rel="noreferrer noopener" target="_blank">SQL using Python | Set 1</a></li><li><a href="https://www.geeksforgeeks.org/sql-using-python-sqlite-set-2/" rel="noreferrer noopener" target="_blank">SQL using Python and SQLite | Set 2</a></li><li><a href="https://www.geeksforgeeks.org/sql-using-python-set-3-handling-large-data/" rel="noreferrer noopener" target="_blank">SQL using Python | Set 3 (Handling large data)</a></li><li><a href="https://www.geeksforgeeks.org/inserting-variables-to-database-table-using-python/" rel="noreferrer noopener" target="_blank">Inserting variables to database table using Python</a></li><li><a href="https://www.geeksforgeeks.org/mysqldb-connection-python/" rel="noreferrer noopener" target="_blank">MYSQLdb Connection in Python</a></li><li><a href="https://www.geeksforgeeks.org/python-database-management-in-postgresql/" rel="noreferrer noopener" target="_blank">Database management in PostgreSQL</a></li><li><a href="https://www.geeksforgeeks.org/oracle-database-connection-in-python/" rel="noreferrer noopener" target="_blank">Oracle Database Connection in Python</a></li></ul>
+
+
+
+<h2>Misc</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/10-essential-python-tips-tricks-programmers/">10 Essential Python Tips And Tricks For Programmers</a></li><li><a href="https://www.geeksforgeeks.org/amazing-hacks-python/">Amazing hacks of Python</a></li><li><a href="https://www.geeksforgeeks.org/python-input-methods-competitive-programming" rel="noreferrer noopener" target="_blank">Input method for comptetive programming</a></li><li><a href="https://www.geeksforgeeks.org/optimization-tips-python-code/">Optimization Tips for Python Code</a></li><li><a href="https://www.geeksforgeeks.org/why-import-star-in-python-is-a-bad-idea/" rel="noreferrer noopener" target="_blank">Why import star in Python is a bad idea</a></li><li><a href="https://www.geeksforgeeks.org/python-best-suited-competitive-coding/" rel="noreferrer noopener" target="_blank">Why is python best suited for Competitive Coding?</a></li><li><a href="https://www.geeksforgeeks.org/python-tricks-competitive-coding/" rel="noreferrer noopener" target="_blank">Python trics for Competitive Coding</a></li></ul>
+
+
+
+<h2>Applications and Projects</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/python-program-crawl-web-page-get-frequent-words/" rel="noreferrer noopener" target="_blank">Python | Program to crawl a web page and get most frequent words</a></li><li><a href="https://www.geeksforgeeks.org/facebook-login-using-python/" rel="noreferrer noopener" target="_blank">Facebook login using python</a></li><li><a href="https://www.geeksforgeeks.org/send-message-to-fb-friend-using-python/" rel="noreferrer noopener" target="_blank">FB Chatting through python</a></li><li><a href="https://www.geeksforgeeks.org/creating-a-cc-code-formatting-tool-with-help-of-clang-tools/" rel="noreferrer noopener" target="_blank">C/C++ code formating tool</a></li><li><a href="https://www.geeksforgeeks.org/python-find-live-running-status-pnr-of-any-train-using-railway-api/" rel="noreferrer noopener" target="_blank">Find Live running status and PNR of any train using Railway API</a></li><li><a href="https://www.geeksforgeeks.org/fetching-top-news-using-news-api/" rel="noreferrer noopener" target="_blank">Fetching top news using News API</a></li><li><a href="https://www.geeksforgeeks.org/fetching-text-wikipedias-infobox-python/" rel="noreferrer noopener" target="_blank">Fetching text from Wikipedia’s Infobox in Python</a></li><li><a href="https://www.geeksforgeeks.org/get-emotions-of-images-using-microsoft-emotion-api-in-python/" rel="noreferrer noopener" target="_blank">Get emotions of images using Microsoft emotion API in Python</a></li><li><a href="https://www.geeksforgeeks.org/website-blocker-using-python/" rel="noreferrer noopener" target="_blank">Website blocker</a></li><li><a href="https://www.geeksforgeeks.org/send-sms-updates-mobile-phone-using-python/" rel="noreferrer noopener" target="_blank">Send SMS updates to mobile phone using python</a></li><li><a href="https://www.geeksforgeeks.org/python-desktop-news-notifier-in-20-lines/" rel="noreferrer noopener" target="_blank">Python Desktop News Notifier in 20 lines</a></li><li><a href="https://www.geeksforgeeks.org/morse-code-translator-python/" rel="noreferrer noopener" target="_blank">Morse Code Translator In Python</a></li><li><a href="https://www.geeksforgeeks.org/performing-google-search-using-python-code/" rel="noreferrer noopener" target="_blank">Performing Google Search using Python code</a></li><li><a href="https://www.geeksforgeeks.org/reading-generating-qr-codes-python-using-qrtools/" rel="noreferrer noopener" target="_blank">Reading and generating qr code</a></li><li><a href="https://www.geeksforgeeks.org/birthday-reminder-application-python/" rel="noreferrer noopener" target="_blank">Birthday reminder application in python</a></li><li><a href="https://www.geeksforgeeks.org/program-display-astrological-sign-zodiac-sign-given-date-birth/" rel="noreferrer noopener" target="_blank">Program to display Astrological sign or Zodiac sign for given date of birth</a></li><li><a href="https://www.geeksforgeeks.org/tracking-bird-migration-using-python-3/" rel="noreferrer noopener" target="_blank">Track bird migration</a></li><li><a href="https://www.geeksforgeeks.org/python-desktop-news-notifier-in-20-lines/" rel="noreferrer noopener" target="_blank">News notifier</a></li><li><a href="https://www.geeksforgeeks.org/whatsapp-using-python/" rel="noreferrer noopener" target="_blank">whatsapp using python</a></li><li><a href="https://www.geeksforgeeks.org/python-automating-happy-birthday-post-on-facebook-using-selenium/" rel="noreferrer noopener" target="_blank">Python | Automating Happy Birthday post on Facebook using Selenium</a></li><li><a href="https://www.geeksforgeeks.org/design-a-keylogger-in-python/" rel="noreferrer noopener" target="_blank">Design a Keylogger in Python</a></li><li><a href="https://www.geeksforgeeks.org/python-implementation-of-movie-recommender-system/" rel="noreferrer noopener" target="_blank">Python | Implementation of Movie Recommender System</a></li></ul>
+
+
+
+<h2>Recommended Python Tutorials</h2>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/python-programming-language/learn-python-tutorial/">Python Tutorial</a></li><li><a href="https://www.geeksforgeeks.org/machine-learning/">Machine Learning Tutorial</a></li><li><a href="https://www.geeksforgeeks.org/django-tutorial/" rel="noreferrer noopener" target="_blank">Django Tutorial</a></li><li><a href="https://www.geeksforgeeks.org/pandas-tutorial/" rel="noreferrer noopener" target="_blank">Pandas Tutorial</a></li><li><a href="https://www.geeksforgeeks.org/opencv-python-tutorial/" rel="noreferrer noopener" target="_blank">OpenCV Python Tutorial</a></li><li><a href="https://www.geeksforgeeks.org/selenium-python-tutorial/" rel="noreferrer noopener" target="_blank">Selenium Python Tutorial</a></li><li><a href="https://www.geeksforgeeks.org/python-tkinter-tutorial/" rel="noreferrer noopener" target="_blank">Python Tkinter Tutorial</a></li></ul>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://sarangpawar96km.github.io/sarangpawar/2023/01/03/python-programming-language/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

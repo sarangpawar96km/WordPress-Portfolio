@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>wordpress &#8211; sarangpawar</title>
+	<atom:link href="https://sarangpawar96km.github.io/sarangpawar/category/wordpress/feed/" rel="self" type="application/rss+xml" />
+	<link>https://sarangpawar96km.github.io/sarangpawar</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Wed, 04 Jan 2023 10:26:16 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0</generator>
+	<item>
+		<title>WordPress</title>
+		<link>https://sarangpawar96km.github.io/sarangpawar/2023/01/04/wordpress/</link>
+					<comments>https://sarangpawar96km.github.io/sarangpawar/2023/01/04/wordpress/#respond</comments>
+		
+		<dc:creator><![CDATA[sarang@sp]]></dc:creator>
+		<pubDate>Wed, 04 Jan 2023 10:26:16 +0000</pubDate>
+				<category><![CDATA[wordpress]]></category>
+		<category><![CDATA[learn wordpresss]]></category>
+		<category><![CDATA[static wordpress]]></category>
+		<category><![CDATA[Wordpress]]></category>
+		<guid isPermaLink="false">https://sarangpawar96km.github.io/sarangpawar/?p=1448</guid>
+
+					<description><![CDATA[WordPress is an open-source Content Management System that is totally based on PHP and MySql and used to create a dynamic website. It was developed by Matt Mullenweg and Written in PHP. WordPress is one of the most popular that allows customizing and managing the website from its back-end content management system.]]></description>
+										<content:encoded><![CDATA[
+<p><strong>WordPress</strong>&nbsp;is an open-source Content Management System that is totally based on PHP and MySql and used to create a dynamic website. It was developed by Matt Mullenweg and Written in PHP. WordPress is one of the most popular that allows customizing and managing the website from its back-end content management system.</p>
+
+
+
+<figure class="wp-block-image aligncenter"><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20211110050908/WordPress-Tutorial.png" alt="WordPress Tutorial" class="wp-image-712085" title="Click to enlarge"/></figure>
+
+
+
+<p><strong><a href="https://www.geeksforgeeks.org/content-management-systems-introduction/">Content Management System</a>:</strong>&nbsp;It is a software platform that stores all data such as text, photos, music. It will help you in editing the existing data of the website. It allows users to manage content from an internal UI.</p>
+
+
+
+<p><strong>Why WordPress ?</strong></p>
+
+
+
+<p>Basically, WordPress is an easy platform to use if you are new to web development. Without lots of coding, you will be able to create a blog or website and host it. You can easily customize, choose a theme and build a website of your choice. WordPress installation is better than other CMS and it is easy to use.</p>
+
+
+
+<p><strong>Installing WordPress:</strong>&nbsp;Before installing WordPress, you need to FTP client and the latest version of WordPress. After WordPress is downloaded you can upload your file to your hosting account using FTP Client. Once installation is done, you can log into WordPress DashBoard by using the link&nbsp;<em>http://www.yourdomain.com/wp-admin</em></p>
+
+
+
+<p><strong>Advantages:</strong></p>
+
+
+
+<ul><li>You can choose any design because WordPress has available thousands of free themes.</li><li>There are thousands of Plugins available.</li><li>It is responsive for all-screens.</li><li>It has a huge community that helps you to get answers to your questions.</li><li>It is completely free to install on your server so you have low-cost pay.</li></ul>
+
+
+
+<p><strong>Disadvantages:</strong></p>
+
+
+
+<ul><li>It has no built-in SEO functionality.</li><li>It is Open Source that’s why it has open room for possible hackers.</li><li>It does not have drag and drop web building tools if you do not have coding skills ,it will be difficult to make a lot of changes.</li><li>PHP Knowledge is required to make modifications or changes to the WordPress website.</li></ul>
+
+
+
+<p><strong>Learn more about WordPress:</strong></p>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/introduction-wordpress/">Introduction to WordPress</a></li><li><a href="https://www.geeksforgeeks.org/installation-of-wordpress-on-windows/">WordPress Installation Process</a></li><li><a href="https://www.geeksforgeeks.org/how-to-install-wordpress-on-your-website/">How to Install WordPress on Your Website ?</a></li><li><a href="https://www.geeksforgeeks.org/how-to-create-a-landing-page-in-wordpress/">How to create a Landing Page in WordPress ?</a></li><li><a href="https://www.geeksforgeeks.org/how-to-login-into-your-wordpress-admin-dashboard/">How to login into your WordPress Admin Dashboard ?</a></li><li><a href="https://www.geeksforgeeks.org/how-to-reset-password-in-wordpress/">How to Reset Password in WordPress ?</a></li><li><a href="https://www.geeksforgeeks.org/wordpress-permalink-setting/">WordPress Permalink Setting</a></li><li><a href="https://www.geeksforgeeks.org/how-to-put-your-wordpress-site-in-maintenance-mode/">How to Put Your WordPress Site in Maintenance Mode ?</a></li><li><a href="https://www.geeksforgeeks.org/how-to-clear-the-cache-in-wordpress/">How to clear the Cache in WordPress ?</a></li><li><a href="https://www.geeksforgeeks.org/wordpress-themes-and-plugins/">WordPress Themes &amp; Plugins</a></li><li><a href="https://www.geeksforgeeks.org/making-wordpress-website-secure/">WordPress Security</a></li><li><a href="https://www.geeksforgeeks.org/how-to-backup-wordpress-database/">How to backup WordPress database ?</a></li><li><a href="https://www.geeksforgeeks.org/step-by-step-guide-to-make-your-first-wordpress-plugin/">Step by step guide to make your first WordPress Plugin</a></li><li><a href="https://www.geeksforgeeks.org/step-by-step-guide-to-write-your-own-wordpress-template/">Step by Step guide to Write your own WordPress Template</a></li><li><a href="https://www.geeksforgeeks.org/tag/wordpress/">Complete articles on WordPress</a></li></ul>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://sarangpawar96km.github.io/sarangpawar/2023/01/04/wordpress/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Javascript &#8211; sarangpawar</title>
+	<atom:link href="https://sarangpawar96km.github.io/sarangpawar/category/javascript/feed/" rel="self" type="application/rss+xml" />
+	<link>https://sarangpawar96km.github.io/sarangpawar</link>
+	<description>Just another WordPress site</description>
+	<lastBuildDate>Wed, 04 Jan 2023 10:31:15 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=6.0</generator>
+	<item>
+		<title>JavaScript</title>
+		<link>https://sarangpawar96km.github.io/sarangpawar/2023/01/04/javascript/</link>
+					<comments>https://sarangpawar96km.github.io/sarangpawar/2023/01/04/javascript/#respond</comments>
+		
+		<dc:creator><![CDATA[sarang@sp]]></dc:creator>
+		<pubDate>Wed, 04 Jan 2023 10:31:15 +0000</pubDate>
+				<category><![CDATA[Javascript]]></category>
+		<category><![CDATA[Script]]></category>
+		<guid isPermaLink="false">https://sarangpawar96km.github.io/sarangpawar/?p=1453</guid>
+
+					<description><![CDATA[JavaScript (JS) is the world’s most popular lightweight, interpreted compiled programming language. It is also known as a scripting language for web pages. It can be used for Client-side as well as Server-side developments.]]></description>
+										<content:encoded><![CDATA[
+<p><strong>JavaScript (JS)</strong> is the world’s most popular lightweight, interpreted compiled programming language. It is also known as a scripting language for web pages. It can be used for <strong><a rel="noreferrer noopener" href="https://www.geeksforgeeks.org/server-side-client-side-programming/" target="_blank">Client-side</a></strong> as well as <strong><a rel="noreferrer noopener" href="https://www.geeksforgeeks.org/server-side-client-side-programming/" target="_blank">Server-side</a></strong> developments.</p>
+
+
+
+<figure class="wp-block-image aligncenter"><img src="https://media.geeksforgeeks.org/wp-content/cdn-uploads/20210210175213/JavaScriptTutorial.png" alt="JavaScript Tutorial" class="wp-image-556248" title="Click to enlarge"/></figure>
+
+
+
+<p>JavaScript can be added to your HTML file in two ways:</p>
+
+
+
+<ul><li><strong>Internal JavaScript:</strong>&nbsp;We can add JS code directly to our HTML file by writing the code inside the &lt;script&gt; tag. The &lt;script&gt; tag can either be placed inside the &lt;head&gt; or the &lt;body&gt; tag according to the requirement.</li><li><strong>External JavaScript File:</strong>&nbsp;We can create a file with .js extension and paste the JS code inside it. After creating the file, add this file in &lt;script src=”file_name.js”&gt; tag inside &lt;head&gt; tag of the HTML file.</li></ul>
+
+
+
+<p><strong>Syntax:</strong>&nbsp;It is the basic syntax to write code.</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><code>&lt;script&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>// JS Code</code><code>&lt;/script&gt;</code></td></tr></tbody></table></figure>
+
+
+
+<p><strong>Example 1:</strong>&nbsp;It is the basic example to embed JS code in an HTML file.</p>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><code>&lt;!</code><code>DOCTYPE</code><code>html&gt;</code><code>&lt;</code><code>html</code><code>lang</code><code>=</code><code>"en"</code><code>&gt;</code><code>&lt;</code><code>head</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>title</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>Basic Example to Describe JavaScript</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;/</code><code>title</code><code>&gt;</code><code>&lt;/</code><code>head</code><code>&gt;</code><code>&lt;</code><code>body</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;!-- JavaScript code can be embedded inside</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>head section or body section --&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;</code><code>script</code><code>&gt;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>console.log("Welcome to GeeksforGeeks");</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&lt;/</code><code>script</code><code>&gt;</code><code>&lt;/</code><code>body</code><code>&gt;</code><code>&lt;/</code><code>html</code><code>&gt;</code></td></tr></tbody></table></figure>
+
+
+
+<p><strong>Output:</strong>&nbsp;The output will display on console.</p>
+
+
+
+<pre class="wp-block-preformatted">Welcome to GeeksforGeeks</pre>
+
+
+
+<p><strong>Example 2:&nbsp;</strong>This example describes a simple function and prints the values.</p>
+
+
+
+<ul><li>JavaScript</li></ul>
+
+
+
+<figure class="wp-block-table"><table><tbody><tr><td><code>&lt;script&gt;</code><code>&nbsp;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>// Declare a variable and initialize it</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>// Global variable declaration</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>var</code><code>Name = </code><code>"Apple"</code><code>;</code><code>&nbsp;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>// Function definition</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>function</code><code>MyFunction() {</code><code>&nbsp;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>// Local variable declaration</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>var</code><code>num = 45;</code><code>&nbsp;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>// Console value of Global variable</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>console.log(Name);</code><code>&nbsp;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>// Console value of local variable</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>console.log(</code><code>"\n"</code><code>+ num);</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>}</code><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>// Function call</code><code>&nbsp;&nbsp;&nbsp;&nbsp;</code><code>MyFunction();</code><code>&lt;/script&gt;</code></td></tr></tbody></table></figure>
+
+
+
+<p>Run on IDE</p>
+
+
+
+<p><strong>Output:</strong>&nbsp;Console output</p>
+
+
+
+<pre class="wp-block-preformatted">Apple
+45</pre>
+
+
+
+<h3>Why JavaScript is used?</h3>
+
+
+
+<p>JavaScript is the most popular programming language for both client-side and server-side to make interactive web pages. It is mainly used to develop websites and web-based applications.</p>
+
+
+
+<ul><li><strong>Creating Interactive Websites:</strong>&nbsp;JavaScript is used to make the web pages dynamic and interactive. It means using JavaScript, we can change the web page content and styles dynamically.</li><li><strong>Building Applications:</strong>&nbsp;JavaScript is used to make web and mobile applications. To build the web and mobile apps, we can use most popular JavaScript frameworks like – ReactJS, React Native, Node.js etc.</li><li><strong>Web Servers:</strong>&nbsp;We can make robust server applications using JavaScript. To be precise we use JavaScript frameworks like Node.js and Express.js to build these servers.</li><li><strong>Game Development:</strong>&nbsp;JavaSCript can be used to design Browser games. In JavaScript, lots of game engines available that provide frameworks for building games.</li></ul>
+
+
+
+<h3>How JavaScript is different from HTML?</h3>
+
+
+
+<ul><li>JavaScript is an advanced programming language that makes web pages more interactive and dynamic whereas HTML is a standard markup language that provides the primary structure of a website.</li><li>JavaScript simply adds dynamic content to websites to make them look good and HTML work on the look of the website without the interactive effects and all.</li><li>JavaScript manipulates the content to create dynamic web pages whereas HTML pages are static which means the content cannot be changed.</li><li>JavaScript is not cross-browser compatible whereas HTML is cross-browser compatible.</li><li>JavaScript can be embedded inside HTML but HTML can not be embedded inside JavaScript.</li></ul>
+
+
+
+<h3>Why to learn JavaScript ?</h3>
+
+
+
+<p>JavaScript is the most popular and hence the most loved language around the globe. Apart from this, there are abundant reasons to learn it. Below are a listing of few important points:</p>
+
+
+
+<ul><li><strong>No need of compilers:</strong>&nbsp;Since JavaScript is an interpreted language, therefore it does not need any compiler for compilations.</li><li><strong>Used both Client and Server-side:</strong>&nbsp;Earlier JavaScript was used to build client-side applications only, but with the evolution of its frameworks namely Node.js and Express.js, it is now widely used for building server-side applications too.</li><li><strong>Helps to build a complete solution:</strong>&nbsp;As we saw, JavaScript is widely used in both client and server-side applications, therefore it helps us to build an end-to-end solution to a given problem.</li><li><strong>Used everywhere:</strong>&nbsp;JavaScript is so loved because it can be used anywhere. It can be used to develop websites, games or mobile apps, etc.</li><li><strong>Huge community support:</strong>&nbsp;JavaScript has a huge community of users and mentors who love this language and take it’s legacy forward.</li></ul>
+
+
+
+<h3>Learn more about JavaScript</h3>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/introduction-to-javascript/" rel="noreferrer noopener" target="_blank">Introduction to JavaScript</a></li><li><a href="https://www.geeksforgeeks.org/where-to-put-javascript-in-an-html-document/?ref=lbp" rel="noreferrer noopener" target="_blank">Where to put JavaScript code in an HTML Document ?</a></li><li><a href="https://www.geeksforgeeks.org/introduction-to-javascript-course-learn-how-to-build-a-task-tracker-using-javascript/" rel="noreferrer noopener" target="_blank">Introduction to JavaScript Course</a></li><li><a href="https://www.geeksforgeeks.org/introduction-object-oriented-programming-javascript/" rel="noreferrer noopener" target="_blank">Introduction to Object Oriented Programming in JavaScript</a></li><li><a href="https://www.geeksforgeeks.org/top-5-javascript-projects-for-beginners/" rel="noreferrer noopener" target="_blank">Top 5 JavaScript Projects For Beginners</a></li><li><a href="https://www.geeksforgeeks.org/how-to-become-a-javascript-developer/" rel="noreferrer noopener" target="_blank">How to Become a JavaScript Developer?</a></li><li><a href="https://www.geeksforgeeks.org/7-javascript-concepts-that-every-developer-must-know/" rel="noreferrer noopener" target="_blank">7 JavaScript Concepts That Every Web Developer Should Know</a></li><li><a href="https://www.geeksforgeeks.org/javascript-backend-basics/" rel="noreferrer noopener" target="_blank">JavaScript Backend basics</a></li><li><a href="https://www.geeksforgeeks.org/advanced-javascript-backend-basics/" rel="noreferrer noopener" target="_blank">Advanced JavaScript Backend Basics</a></li><li><a href="https://www.geeksforgeeks.org/functional-programming-in-javascript/" rel="noreferrer noopener" target="_blank">Functional Programming in JavaScript</a></li><li><a href="https://www.geeksforgeeks.org/top-5-reasons-to-learn-javascript/" rel="noreferrer noopener" target="_blank">Top 5 Reasons to Learn JavaScript</a></li></ul>
+
+
+
+<h3>JavaScript Objects Complete Reference</h3>
+
+
+
+<p>This section contains the list of all properties and methods of all JavaScript objects.</p>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/javascript-array-complete-reference/" rel="noreferrer noopener" target="_blank">Array</a></li><li><a href="https://www.geeksforgeeks.org/javascript-arraybuffer-complete-reference/" rel="noreferrer noopener" target="_blank">ArrayBuffer</a></li><li><a href="https://www.geeksforgeeks.org/javascript-atomics-complete-reference/" rel="noreferrer noopener" target="_blank">Atomics</a></li><li><a href="https://www.geeksforgeeks.org/javascript-bigint-complete-reference/" rel="noreferrer noopener" target="_blank">BigInt</a></li><li><a href="https://www.geeksforgeeks.org/javascript-boolean-and-dataview-complete-reference/" rel="noreferrer noopener" target="_blank">Boolean and dataView</a></li><li><a href="https://www.geeksforgeeks.org/javascript-date-object-complete-reference/" rel="noreferrer noopener" target="_blank">Date</a></li><li><a href="https://www.geeksforgeeks.org/javascript-error-object-complete-reference/" rel="noreferrer noopener" target="_blank">Error</a></li><li><a href="https://www.geeksforgeeks.org/javascript-function-complete-reference/" rel="noreferrer noopener" target="_blank">Function</a></li><li><a href="https://www.geeksforgeeks.org/javascript-generator-complete-reference/" rel="noreferrer noopener" target="_blank">Generator</a></li><li><a href="https://www.geeksforgeeks.org/javascript-intl-complete-reference/" rel="noreferrer noopener" target="_blank">Intl</a></li><li><a href="https://www.geeksforgeeks.org/javascript-json-complete-reference/" rel="noreferrer noopener" target="_blank">JSON</a></li><li><a href="https://www.geeksforgeeks.org/javascript-map-complete-reference/" rel="noreferrer noopener" target="_blank">Map</a></li></ul>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/javascript-math-object-complete-reference/" rel="noreferrer noopener" target="_blank">Math</a></li><li><a href="https://www.geeksforgeeks.org/javascript-number-complete-reference/" rel="noreferrer noopener" target="_blank">Number</a></li><li><a href="https://www.geeksforgeeks.org/javascript-object-complete-reference/" rel="noreferrer noopener" target="_blank">Object</a></li><li><a href="https://www.geeksforgeeks.org/javascript-promise-complete-reference/" rel="noreferrer noopener" target="_blank">JavaScript</a></li><li><a href="https://www.geeksforgeeks.org/javascript-proxy-complete-reference/" rel="noreferrer noopener" target="_blank">Proxy</a></li><li><a href="https://www.geeksforgeeks.org/javascript-reflect-complete-reference/" rel="noreferrer noopener" target="_blank">Reflect</a></li><li><a href="https://www.geeksforgeeks.org/javascript-regexp-complete-reference/" rel="noreferrer noopener" target="_blank">RegExp</a></li><li><a href="https://www.geeksforgeeks.org/javascript-string-complete-reference/" rel="noreferrer noopener" target="_blank">String</a></li><li><a href="https://www.geeksforgeeks.org/javascript-symbol-complete-reference/" rel="noreferrer noopener" target="_blank">Symbol</a></li><li><a href="https://www.geeksforgeeks.org/javascript-weakmap-complete-reference/" rel="noreferrer noopener" target="_blank">WeakMap</a></li><li><a href="https://www.geeksforgeeks.org/javascript-weakset-complete-reference/" rel="noreferrer noopener" target="_blank">WeakSet</a></li><li><a href="https://www.geeksforgeeks.org/javascript-expressions-complete-reference/" rel="noreferrer noopener" target="_blank">Expressions</a></li></ul>
+
+
+
+<h3>JavaScript Interview Questions</h3>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/javascript-interview-questions-and-answers/" rel="noreferrer noopener" target="_blank">JavaScript Interview Questions and Answers</a></li><li><a href="https://www.geeksforgeeks.org/commonly-asked-javascript-interview-questions-set-1/" rel="noreferrer noopener" target="_blank">JavaScript Interview Questions and Answers | Set 1</a></li><li><a href="https://www.geeksforgeeks.org/javascript-interview-questions-and-answers-set-2/" rel="noreferrer noopener" target="_blank">JavaScript Interview Questions and Answers | Set-2</a></li><li><a href="https://www.geeksforgeeks.org/javascript-interview-questions-and-answers-set-3/" rel="noreferrer noopener" target="_blank">JavaScript Interview Questions and Answers | Set 3</a></li></ul>
+
+
+
+<h3>JavaScript Practice Quiz</h3>
+
+
+
+<ul><li><a href="https://www.geeksforgeeks.org/javascript-course-quiz-1/" rel="noreferrer noopener" target="_blank">JavaScript Course | Practice Quiz-1</a></li><li><a href="https://www.geeksforgeeks.org/javascript-course-quiz-2/" rel="noreferrer noopener" target="_blank">JavaScript Course | Practice Quiz-2</a></li><li><a href="https://www.geeksforgeeks.org/javascript-course-quiz-3/" rel="noreferrer noopener" target="_blank">JavaScript Course | Practice Quiz-3</a></li></ul>
+
+
+
+<h3>JavaScript Questions</h3>
+
+
+
+<p>Please go through the&nbsp;<a href="https://www.geeksforgeeks.org/javascript-examples/" rel="noreferrer noopener" target="_blank">JavaScript Examples</a>&nbsp;link to see the wide collection of JavaScript programming examples. The examples are categorized based on the topics, including objects, functions, arrays, DOM, and many more.</p>
+
+
+
+<h3><a href="https://www.geeksforgeeks.org/tag/javascript/">Recent Articles on JavaScript</a></h3>
+]]></content:encoded>
+					
+					<wfw:commentRss>https://sarangpawar96km.github.io/sarangpawar/2023/01/04/javascript/feed/</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
