@@ -14,7 +14,7 @@ $dir = is_rtl() ? ' dir="rtl"' : '';
 
 ?>
 
-<div <?php echo $dir; ?> class="lae-marquee-text-container <?php echo $settings['marquee_text_class']; ?>">
+<div <?php echo esc_attr($dir); ?> class="lae-marquee-text-container <?php echo esc_attr($settings['marquee_text_class']); ?>">
 
     <div class="lae-marquee-text-content">
 

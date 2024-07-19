@@ -1,4 +1,3 @@
-
 @import "../lae-lib";
 
 /*--------------------------------- Pie Charts -------------------------------------- */
@@ -21,13 +20,6 @@
 
   .lae-label {
     text-align: center;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    top: 55%;
-    max-width: 65%;
     color: #888;
 
     .lae-dark-bg & {
@@ -58,6 +50,33 @@
     sup {
       font-size: 18px;
       vertical-align: middle;
+    }
+  }
+
+  .lae-piecharts-style1 & {
+    .lae-label {
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      top: 55%;
+      max-width: 65%;
+    }
+  }
+
+  .lae-piecharts-style2 & {
+    .lae-label {
+      margin-top: 20px;
+      font-size: large;
+    }
+    .lae-percentage {
+      position: relative;
+      line-height: 1;
+      span {
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
 

@@ -8,12 +8,12 @@ Author URI: https://www.livemeshthemes.com
 */
 namespace LivemeshAddons\Widgets;
 
-use  Elementor\Widget_Base ;
-use  Elementor\Controls_Manager ;
-use  Elementor\Scheme_Color ;
-use  Elementor\Group_Control_Typography ;
-use  Elementor\Group_Control_Image_Size ;
-use  Elementor\Scheme_Typography ;
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+use Elementor\Scheme_Color;
+use Elementor\Group_Control_Typography;
+use Elementor\Group_Control_Image_Size;
+use Elementor\Scheme_Typography;
 if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
@@ -21,35 +21,31 @@ if ( !defined( 'ABSPATH' ) ) {
 /**
  * Class for Posts Gridbox Slider widget that displays blog posts or custom post types as a pre-styled grid based slider
  */
-class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
-{
+class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base {
     /**
      * Get the name for the widget
      * @return string
      */
-    public function get_name()
-    {
+    public function get_name() {
         return 'lae-posts-gridbox-slider';
     }
-    
+
     /**
      * Get the widget title
      * @return string|void
      */
-    public function get_title()
-    {
+    public function get_title() {
         return __( 'Posts Grid Box Slider', 'livemesh-el-addons' );
     }
-    
+
     /**
      * Get the widget icon
      * @return string
      */
-    public function get_icon()
-    {
+    public function get_icon() {
         return 'lae-icon-slider3';
     }
-    
+
     /**
      * Retrieve the list of categories the widget belongs to.
      *
@@ -57,36 +53,32 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
      *
      * @return string[]
      */
-    public function get_categories()
-    {
-        return array( 'livemesh-addons' );
+    public function get_categories() {
+        return array('livemesh-addons');
     }
-    
+
     /**
      * Get the widget documentation URL
      * @return string
      */
-    public function get_custom_help_url()
-    {
+    public function get_custom_help_url() {
         return 'https://livemeshelementor.com/docs/livemesh-addons/core-addons/posts-gridbox-slider/';
     }
-    
+
     /**
      * Obtain the scripts required for the widget to function
      * @return string[]
      */
-    public function get_script_depends()
-    {
-        return [ 'lae-jquery-slick', 'lae-frontend-scripts', 'lae-posts-gridbox-slider-scripts' ];
+    public function get_script_depends() {
+        return ['lae-jquery-slick', 'lae-frontend-scripts', 'lae-posts-gridbox-slider-scripts'];
     }
-    
+
     /**
      * Register the controls for the widget
      * Adds fields that help configure and customize the widget
      * @return void
      */
-    protected function register_controls()
-    {
+    protected function register_controls() {
         $this->start_controls_section( 'section_query', [
             'label' => __( 'Posts Query', 'livemesh-el-addons' ),
         ] );
@@ -94,10 +86,10 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'label'   => __( 'Source', 'livemesh-el-addons' ),
             'type'    => Controls_Manager::SELECT,
             'options' => array(
-            'custom_query'  => __( 'Custom Query', 'livemesh-el-addons' ),
-            'current_query' => __( 'Current Query', 'livemesh-el-addons' ),
-            'related'       => __( 'Related', 'livemesh-el-addons' ),
-        ),
+                'custom_query'  => __( 'Custom Query', 'livemesh-el-addons' ),
+                'current_query' => __( 'Current Query', 'livemesh-el-addons' ),
+                'related'       => __( 'Related', 'livemesh-el-addons' ),
+            ),
             'default' => 'custom_query',
         ] );
         $this->add_control( 'post_types', [
@@ -107,8 +99,8 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'options'   => lae_get_all_post_type_options(),
             'multiple'  => true,
             'condition' => [
-            'query_type' => 'custom_query',
-        ],
+                'query_type' => 'custom_query',
+            ],
         ] );
         $this->add_control( 'taxonomies', [
             'type'        => Controls_Manager::SELECT2,
@@ -119,8 +111,8 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'default'     => 'category',
             'multiple'    => true,
             'condition'   => [
-            'query_type' => 'related',
-        ],
+                'query_type' => 'related',
+            ],
         ] );
         $this->add_control( 'tax_query', [
             'label'       => __( 'Taxonomies', 'livemesh-el-addons' ),
@@ -129,8 +121,8 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'multiple'    => true,
             'label_block' => true,
             'condition'   => [
-            'query_type' => 'custom_query',
-        ],
+                'query_type' => 'custom_query',
+            ],
         ] );
         $this->add_control( 'post_in', [
             'label'       => __( 'Post In', 'livemesh-el-addons' ),
@@ -138,8 +130,11 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'type'        => Controls_Manager::TEXT,
             'label_block' => true,
             'condition'   => [
-            'query_type' => 'custom_query',
-        ],
+                'query_type' => 'custom_query',
+            ],
+            'ai'          => [
+                'active' => false,
+            ],
         ] );
         $this->add_control( 'posts_per_page', [
             'label'     => __( 'Posts Per Page', 'livemesh-el-addons' ),
@@ -149,56 +144,59 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'step'      => 1,
             'default'   => 6,
             'condition' => [
-            'query_type' => [ 'custom_query', 'related' ],
-        ],
+                'query_type' => ['custom_query', 'related'],
+            ],
         ] );
         $this->add_control( 'advanced', [
             'label'     => __( 'Advanced', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::HEADING,
             'condition' => [
-            'query_type' => [ 'custom_query', 'related' ],
-        ],
+                'query_type' => ['custom_query', 'related'],
+            ],
         ] );
         $this->add_control( 'orderby', [
             'label'     => __( 'Order By', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::SELECT,
             'options'   => array(
-            'none'          => __( 'No order', 'livemesh-el-addons' ),
-            'ID'            => __( 'Post ID', 'livemesh-el-addons' ),
-            'author'        => __( 'Author', 'livemesh-el-addons' ),
-            'title'         => __( 'Title', 'livemesh-el-addons' ),
-            'date'          => __( 'Published date', 'livemesh-el-addons' ),
-            'modified'      => __( 'Modified date', 'livemesh-el-addons' ),
-            'parent'        => __( 'By parent', 'livemesh-el-addons' ),
-            'rand'          => __( 'Random order', 'livemesh-el-addons' ),
-            'comment_count' => __( 'Comment count', 'livemesh-el-addons' ),
-            'menu_order'    => __( 'Menu order', 'livemesh-el-addons' ),
-            'post__in'      => __( 'By include order', 'livemesh-el-addons' ),
-        ),
+                'none'          => __( 'No order', 'livemesh-el-addons' ),
+                'ID'            => __( 'Post ID', 'livemesh-el-addons' ),
+                'author'        => __( 'Author', 'livemesh-el-addons' ),
+                'title'         => __( 'Title', 'livemesh-el-addons' ),
+                'date'          => __( 'Published date', 'livemesh-el-addons' ),
+                'modified'      => __( 'Modified date', 'livemesh-el-addons' ),
+                'parent'        => __( 'By parent', 'livemesh-el-addons' ),
+                'rand'          => __( 'Random order', 'livemesh-el-addons' ),
+                'comment_count' => __( 'Comment count', 'livemesh-el-addons' ),
+                'menu_order'    => __( 'Menu order', 'livemesh-el-addons' ),
+                'post__in'      => __( 'By include order', 'livemesh-el-addons' ),
+            ),
             'default'   => 'date',
             'condition' => [
-            'query_type' => [ 'custom_query', 'related' ],
-        ],
+                'query_type' => ['custom_query', 'related'],
+            ],
         ] );
         $this->add_control( 'order', [
             'label'     => __( 'Order', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::SELECT,
             'options'   => array(
-            'ASC'  => __( 'Ascending', 'livemesh-el-addons' ),
-            'DESC' => __( 'Descending', 'livemesh-el-addons' ),
-        ),
+                'ASC'  => __( 'Ascending', 'livemesh-el-addons' ),
+                'DESC' => __( 'Descending', 'livemesh-el-addons' ),
+            ),
             'default'   => 'DESC',
             'condition' => [
-            'query_type' => [ 'custom_query', 'related' ],
-        ],
+                'query_type' => ['custom_query', 'related'],
+            ],
         ] );
         $this->add_control( 'exclude_posts', [
             'label'       => __( 'Exclude Posts', 'livemesh-el-addons' ),
             'description' => __( 'Provide a comma separated list of Post IDs to exclude in the slider.', 'livemesh-el-addons' ),
             'type'        => Controls_Manager::TEXT,
             'condition'   => [
-            'query_type' => [ 'custom_query', 'related' ],
-        ],
+                'query_type' => ['custom_query', 'related'],
+            ],
+            'ai'          => [
+                'active' => false,
+            ],
         ] );
         $this->add_control( 'offset', [
             'label'       => __( 'Offset', 'livemesh-el-addons' ),
@@ -206,8 +204,8 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'type'        => Controls_Manager::NUMBER,
             'default'     => 0,
             'condition'   => [
-            'query_type' => 'custom_query',
-        ],
+                'query_type' => 'custom_query',
+            ],
         ] );
         $this->add_control( 'upgrade_notice', [
             'type'      => Controls_Manager::RAW_HTML,
@@ -239,8 +237,8 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'label'     => __( 'Image Size', 'livemesh-el-addons' ),
             'default'   => 'large',
             'condition' => [
-            'display_thumbnail' => 'yes',
-        ],
+                'display_thumbnail' => 'yes',
+            ],
         ] );
         $this->add_control( 'image_linkable', [
             'label'        => __( 'Link Images to Posts?', 'livemesh-el-addons' ),
@@ -250,8 +248,8 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'return_value' => 'yes',
             'default'      => 'yes',
             'condition'    => [
-            'display_thumbnail' => 'yes',
-        ],
+                'display_thumbnail' => 'yes',
+            ],
         ] );
         $this->add_control( 'post_link_new_window', [
             'label'        => __( 'Open post links in new window?', 'livemesh-el-addons' ),
@@ -323,39 +321,59 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             "description" => __( 'Specify the text for the read more link/button', 'livemesh-el-addons' ),
             'default'     => __( 'Read More', 'livemesh-el-addons' ),
             'condition'   => [
-            'display_read_more' => [ 'yes' ],
-        ],
+                'display_read_more' => ['yes'],
+            ],
+        ] );
+        $this->end_controls_section();
+        $this->start_controls_section( 'section_templates', [
+            'label' => __( 'Templates', 'livemesh-el-addons' ),
+            'tab'   => Controls_Manager::TAB_LAYOUT,
+        ] );
+        $style_options = [
+            'style-1' => [
+                'title'      => __( 'Style 1', 'livemesh-el-addons' ),
+                'imagelarge' => LAE_STYLES_PREVIEW_URL . 'posts-gridbox-slider/style1.jpg',
+                'imagesmall' => LAE_STYLES_PREVIEW_URL . 'posts-gridbox-slider/style1.jpg',
+                'width'      => '100%',
+            ],
+            'style-2' => [
+                'title'      => __( 'Style 2', 'livemesh-el-addons' ),
+                'imagelarge' => LAE_STYLES_PREVIEW_URL . 'posts-gridbox-slider/style2.jpg',
+                'imagesmall' => LAE_STYLES_PREVIEW_URL . 'posts-gridbox-slider/style2.jpg',
+                'width'      => '100%',
+            ],
+            'style-3' => [
+                'title'      => __( 'Style 3', 'livemesh-el-addons' ),
+                'imagelarge' => LAE_STYLES_PREVIEW_URL . 'posts-gridbox-slider/style3.jpg',
+                'imagesmall' => LAE_STYLES_PREVIEW_URL . 'posts-gridbox-slider/style3.jpg',
+                'width'      => '100%',
+            ],
+        ];
+        $this->add_control( 'slider_style', [
+            'type'    => 'lae-style-select',
+            'label'   => __( 'Choose Slider Style', 'livemesh-el-addons' ),
+            'default' => 'style-1',
+            'options' => $style_options,
         ] );
         $this->end_controls_section();
         $this->start_controls_section( 'section_slider_settings', [
             'label' => __( 'Slider Settings', 'livemesh-el-addons' ),
             'tab'   => Controls_Manager::TAB_SETTINGS,
         ] );
-        $slider_styles = array(
-            'style-1' => __( 'Slider Style 1', 'livemesh-el-addons' ),
-            'style-2' => __( 'Slider Style 2', 'livemesh-el-addons' ),
-            'style-3' => __( 'Slider Style 3', 'livemesh-el-addons' ),
-        );
-        $this->add_control( 'slider_style', [
-            'type'    => Controls_Manager::SELECT,
-            'label'   => __( 'Choose Slider Style', 'livemesh-el-addons' ),
-            'options' => $slider_styles,
-            'default' => 'style-1',
-        ] );
         $this->add_control( 'text_alignment', [
             'type'    => Controls_Manager::SELECT,
             'label'   => __( 'Choose Text Alignment', 'livemesh-el-addons' ),
             'options' => array(
-            'align-top-left'      => __( 'Top Left', 'livemesh-el-addons' ),
-            'align-middle-left'   => __( 'Middle Left', 'livemesh-el-addons' ),
-            'align-bottom-left'   => __( 'Bottom Left', 'livemesh-el-addons' ),
-            'align-top-center'    => __( 'Top Center', 'livemesh-el-addons' ),
-            'align-middle-center' => __( 'Middle Center', 'livemesh-el-addons' ),
-            'align-bottom-center' => __( 'Bottom Center', 'livemesh-el-addons' ),
-            'align-top-right'     => __( 'Top Right', 'livemesh-el-addons' ),
-            'align-middle-right'  => __( 'Middle Right', 'livemesh-el-addons' ),
-            'align-bottom-right'  => __( 'Bottom Right', 'livemesh-el-addons' ),
-        ),
+                'align-top-left'      => __( 'Top Left', 'livemesh-el-addons' ),
+                'align-middle-left'   => __( 'Middle Left', 'livemesh-el-addons' ),
+                'align-bottom-left'   => __( 'Bottom Left', 'livemesh-el-addons' ),
+                'align-top-center'    => __( 'Top Center', 'livemesh-el-addons' ),
+                'align-middle-center' => __( 'Middle Center', 'livemesh-el-addons' ),
+                'align-bottom-center' => __( 'Bottom Center', 'livemesh-el-addons' ),
+                'align-top-right'     => __( 'Top Right', 'livemesh-el-addons' ),
+                'align-middle-right'  => __( 'Middle Right', 'livemesh-el-addons' ),
+                'align-bottom-right'  => __( 'Bottom Right', 'livemesh-el-addons' ),
+            ),
             'default' => 'align-bottom-left',
         ] );
         $this->add_control( 'slider_height', [
@@ -363,23 +381,23 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'type'      => Controls_Manager::NUMBER,
             'default'   => 500,
             'condition' => [
-            'slider_style' => [
-            'style-1',
-            'style-2',
-            'style-3',
-            'style-4',
-            'style-5',
-            'style-6'
-        ],
-        ],
+                'slider_style' => [
+                    'style-1',
+                    'style-2',
+                    'style-3',
+                    'style-4',
+                    'style-5',
+                    'style-6'
+                ],
+            ],
         ] );
         $this->add_control( 'image_height', [
             'label'     => __( 'Image height', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::NUMBER,
             'default'   => 250,
             'condition' => [
-            'slider_style' => [ 'style-7', 'style-8' ],
-        ],
+                'slider_style' => ['style-7', 'style-8'],
+            ],
         ] );
         $this->add_control( 'arrows', [
             'type'         => Controls_Manager::SWITCHER,
@@ -447,20 +465,20 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'label'     => __( 'Slider Arrow Settings', 'livemesh-el-addons' ),
             'tab'       => Controls_Manager::TAB_SETTINGS,
             'condition' => [
-            'arrows' => [ 'yes' ],
-        ],
+                'arrows' => ['yes'],
+            ],
         ] );
         $this->add_control( 'arrows_placement', [
             'type'         => Controls_Manager::SELECT,
             'label'        => __( 'Placement', 'livemesh-el-addons' ),
             'options'      => array(
-            'middle-center' => __( 'Middle Center', 'livemesh-el-addons' ),
-            'bottom-center' => __( 'Bottom Center', 'livemesh-el-addons' ),
-            'top-left'      => __( 'Top Left', 'livemesh-el-addons' ),
-            'top-right'     => __( 'Top Right', 'livemesh-el-addons' ),
-            'bottom-left'   => __( 'Bottom Left', 'livemesh-el-addons' ),
-            'bottom-right'  => __( 'Bottom Right', 'livemesh-el-addons' ),
-        ),
+                'middle-center' => __( 'Middle Center', 'livemesh-el-addons' ),
+                'bottom-center' => __( 'Bottom Center', 'livemesh-el-addons' ),
+                'top-left'      => __( 'Top Left', 'livemesh-el-addons' ),
+                'top-right'     => __( 'Top Right', 'livemesh-el-addons' ),
+                'bottom-left'   => __( 'Bottom Left', 'livemesh-el-addons' ),
+                'bottom-right'  => __( 'Bottom Right', 'livemesh-el-addons' ),
+            ),
             'default'      => 'middle-center',
             'prefix_class' => 'lae-slider-arrow-placement-',
         ] );
@@ -468,10 +486,10 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'type'         => Controls_Manager::SELECT,
             'label'        => __( 'Shape', 'livemesh-el-addons' ),
             'options'      => array(
-            'square'          => __( 'Square', 'livemesh-el-addons' ),
-            'rounded-corners' => __( 'Square with Rounded Corners', 'livemesh-el-addons' ),
-            'circle'          => __( 'Circle', 'livemesh-el-addons' ),
-        ),
+                'square'          => __( 'Square', 'livemesh-el-addons' ),
+                'rounded-corners' => __( 'Square with Rounded Corners', 'livemesh-el-addons' ),
+                'circle'          => __( 'Circle', 'livemesh-el-addons' ),
+            ),
             'default'      => 'circle',
             'prefix_class' => 'lae-slider-arrow-shape-',
         ] );
@@ -479,9 +497,9 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'type'         => Controls_Manager::SELECT,
             'label'        => __( 'Color', 'livemesh-el-addons' ),
             'options'      => array(
-            'dark'  => __( 'Dark', 'livemesh-el-addons' ),
-            'light' => __( 'Light', 'livemesh-el-addons' ),
-        ),
+                'dark'  => __( 'Dark', 'livemesh-el-addons' ),
+                'light' => __( 'Light', 'livemesh-el-addons' ),
+            ),
             'default'      => 'dark',
             'prefix_class' => 'lae-slider-arrow-color-',
         ] );
@@ -489,9 +507,9 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'type'         => Controls_Manager::SELECT,
             'label'        => __( 'Visibility', 'livemesh-el-addons' ),
             'options'      => array(
-            'always'   => __( 'Show Always', 'livemesh-el-addons' ),
-            'on-hover' => __( 'Show on Hover', 'livemesh-el-addons' ),
-        ),
+                'always'   => __( 'Show Always', 'livemesh-el-addons' ),
+                'on-hover' => __( 'Show on Hover', 'livemesh-el-addons' ),
+            ),
             'default'      => 'always',
             'prefix_class' => 'lae-slider-arrow-visibility-',
         ] );
@@ -504,15 +522,15 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'label'     => __( 'Taxonomy Terms Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-terms, {{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-terms a' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-terms, {{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-terms a' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'taxonomy_terms_hover_color', [
             'label'     => __( 'Taxonomy Terms Hover Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-terms a:hover' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-terms a:hover' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'taxonomy_terms_typography',
@@ -527,29 +545,29 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'label'   => __( 'Entry Title HTML Tag', 'livemesh-el-addons' ),
             'type'    => Controls_Manager::SELECT,
             'options' => [
-            'h1'  => __( 'H1', 'livemesh-el-addons' ),
-            'h2'  => __( 'H2', 'livemesh-el-addons' ),
-            'h3'  => __( 'H3', 'livemesh-el-addons' ),
-            'h4'  => __( 'H4', 'livemesh-el-addons' ),
-            'h5'  => __( 'H5', 'livemesh-el-addons' ),
-            'h6'  => __( 'H6', 'livemesh-el-addons' ),
-            'div' => __( 'div', 'livemesh-el-addons' ),
-        ],
+                'h1'  => __( 'H1', 'livemesh-el-addons' ),
+                'h2'  => __( 'H2', 'livemesh-el-addons' ),
+                'h3'  => __( 'H3', 'livemesh-el-addons' ),
+                'h4'  => __( 'H4', 'livemesh-el-addons' ),
+                'h5'  => __( 'H5', 'livemesh-el-addons' ),
+                'h6'  => __( 'H6', 'livemesh-el-addons' ),
+                'div' => __( 'div', 'livemesh-el-addons' ),
+            ],
             'default' => 'h3',
         ] );
         $this->add_control( 'entry_title_color', [
             'label'     => __( 'Entry Title Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-post-title a' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-post-title a' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'entry_title_hover_color', [
             'label'     => __( 'Entry Title Hover Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-post-title a:hover' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-post-title a:hover' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'entry_title_typography',
@@ -564,22 +582,22 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'label'     => __( 'Entry Meta Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-post-meta span' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-post-meta span' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'entry_meta_link_color', [
             'label'     => __( 'Entry Meta Link Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-post-meta span a' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-post-meta span a' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'entry_meta_link_hover_color', [
             'label'     => __( 'Entry Meta Link Hover Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-post-meta span a:hover' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-post-meta span a:hover' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'entry_meta_typography',
@@ -594,8 +612,8 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'label'     => __( 'Entry Summary Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-post-summary' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-post-summary' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'entry_summary_typography',
@@ -610,29 +628,29 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'label'     => __( 'Read More Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-read-more' => 'background-color: {{VALUE}}; border-color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-read-more' => 'background-color: {{VALUE}}; border-color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'read_more_hover_color', [
             'label'     => __( 'Read More Hover Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-read-more:hover' => 'background-color: {{VALUE}}; border-color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-read-more:hover' => 'background-color: {{VALUE}}; border-color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'read_more_text_color', [
             'label'     => __( 'Read More Text Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-read-more' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-read-more' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'read_more_hover_text_color', [
             'label'     => __( 'Read More Hover Text Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-read-more:hover' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-post-overlay .lae-post-text .lae-read-more:hover' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'read_more_typography',
@@ -643,8 +661,8 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'label'     => __( 'Bottom Entry Text', 'livemesh-el-addons' ),
             'tab'       => Controls_Manager::TAB_STYLE,
             'condition' => [
-            'slider_style' => [ 'style-7', 'style-8' ],
-        ],
+                'slider_style' => ['style-7', 'style-8'],
+            ],
         ] );
         $this->add_control( 'heading_bottom_entry_taxonomy', [
             'label'     => __( 'Entry Terms', 'livemesh-el-addons' ),
@@ -655,15 +673,15 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'label'     => __( 'Entry Terms Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-terms, {{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-terms a' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-terms, {{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-terms a' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'bottom_entry_terms_hover_color', [
             'label'     => __( 'Entry Terms Hover Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-terms a:hover' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-terms a:hover' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'bottom_entry_terms_typography',
@@ -678,15 +696,15 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'label'     => __( 'Entry Title Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-post-title a' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-post-title a' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'bottom_entry_title_hover_color', [
             'label'     => __( 'Entry Title Hover Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-post-title a:hover' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-post-title a:hover' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'bottom_entry_title_typography',
@@ -701,22 +719,22 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
             'label'     => __( 'Entry Meta Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-post-meta span' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-post-meta span' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'bottom_entry_meta_link_color', [
             'label'     => __( 'Entry Meta Link Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-post-meta span a' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-post-meta span a' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'bottom_entry_meta_link_hover_color', [
             'label'     => __( 'Entry Meta Link Hover Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-post-meta span a:hover' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-posts-gridbox-slider .lae-posts-gridbox-item .lae-bottom-entry-text .lae-post-text .lae-post-meta span a:hover' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'bottom_entry_meta_typography',
@@ -724,7 +742,7 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
         ] );
         $this->end_controls_section();
     }
-    
+
     /**
      * Render HTML widget output on the frontend.
      *
@@ -732,21 +750,19 @@ class LAE_Posts_GridBox_Slider_Widget extends LAE_Widget_Base
      *
      * @return void
      */
-    protected function render()
-    {
+    protected function render() {
         $settings = $this->get_settings_for_display();
         $settings['slider_id'] = $this->get_id();
         $settings = apply_filters( 'lae_posts_gridbox_slider_' . $this->get_id() . '_settings', $settings );
         $args['settings'] = $settings;
         lae_get_template_part( 'addons/posts-gridbox-slider/loop', $args );
     }
-    
+
     /**
      * Render the widget output in the editor.
      * @return void
      */
-    protected function content_template()
-    {
+    protected function content_template() {
     }
 
 }

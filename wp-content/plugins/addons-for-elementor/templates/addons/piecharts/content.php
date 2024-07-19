@@ -10,15 +10,11 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-$bar_color = ' data-bar-color="' . esc_attr($settings['bar_color']) . '"';
-$track_color = ' data-track-color="' . esc_attr($settings['track_color']) . '"';
-
 ?>
 
 <div class="lae-grid-item lae-piechart">
 
-    <div class="lae-percentage" <?php echo $bar_color; ?> <?php echo $track_color; ?>
-         data-percent="<?php echo round($piechart['percentage_value']); ?>">
+    <div class="lae-percentage" data-percent="<?php echo round($piechart['percentage_value']); ?>">
 
         <span><?php echo round($piechart['percentage_value']); ?><sup>%</sup></span>
 

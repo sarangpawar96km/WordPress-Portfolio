@@ -1,38 +1,44 @@
 ( function ( $ ) {
 
-    var WidgetLAEPiechartsHandler = function ($scope, $) {
+    var WidgetLAEPiechartsHandler = function ( $scope, $ ) {
 
-        $scope.find('.lae-piechart .lae-percentage').each(function () {
+        let elem = $scope.find( '.lae-piecharts' ).eq( 0 );
 
-            var track_color = $(this).data('track-color');
-            var bar_color = $(this).data('bar-color');
+        var settings = elem.data( 'settings' );
 
-            $(this).easyPieChart({
+        var trackColor = settings['track_color'];
+        var barColor = settings['bar_color'];
+        var chartSize = parseInt( settings['chart_size'] ) || 220;
+        var lineWidth = parseInt( settings['line_width'] ) || 10;
+
+        elem.find( '.lae-piechart .lae-percentage' ).each( function () {
+
+            $( this ).easyPieChart( {
                 animate: 2000,
-                lineWidth: 10,
-                barColor: bar_color,
-                trackColor: track_color,
+                lineWidth: lineWidth,
+                barColor: barColor,
+                trackColor: trackColor,
                 scaleColor: false,
                 lineCap: 'square',
-                size: 220
+                size: chartSize
 
-            });
+            } );
 
-        });
+        } );
 
     };
 
-    var WidgetLAEPiechartsHandlerOnScroll = function ($scope, $) {
+    var WidgetLAEPiechartsHandlerOnScroll = function ( $scope, $ ) {
 
-        $scope.livemeshWaypoint(function (direction) {
+        $scope.livemeshWaypoint( function ( direction ) {
 
-            WidgetLAEPiechartsHandler($(this.element), $);
+            WidgetLAEPiechartsHandler( $( this.element ), $ );
 
             this.destroy(); // Done with handle on scroll
 
         }, {
-            offset: (window.innerHeight || document.documentElement.clientHeight) - 100
-        });
+            offset: ( window.innerHeight || document.documentElement.clientHeight ) - 100
+        } );
 
     };
 

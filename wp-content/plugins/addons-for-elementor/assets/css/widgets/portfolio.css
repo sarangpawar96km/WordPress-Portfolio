@@ -9,29 +9,15 @@
     margin: 0 auto 30px;
     overflow: hidden;
     clear: both;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row nowrap;
-            flex-flow: row nowrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
+    flex-flow: row nowrap;
+    justify-content: space-between; }
     .lae-portfolio-wrap .lae-portfolio-header.lae-no-heading {
-      -webkit-box-pack: center;
-          -ms-flex-pack: center;
-              justify-content: center; }
+      justify-content: center; }
     @media only screen and (max-width: 800px) {
       .lae-portfolio-wrap .lae-portfolio-header {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-            -ms-flex-flow: column wrap;
-                flex-flow: column wrap;
-        -webkit-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: flex-start; } }
+        flex-flow: column wrap;
+        justify-content: flex-start; } }
   .lae-portfolio-wrap .lae-heading {
     display: inline-block;
     text-align: left;
@@ -53,12 +39,10 @@
     display: block;
     margin: 0;
     padding: 0;
-    -webkit-align-self: center;
     align-self: center;
     -ms-flex-item-align: center; }
     @media only screen and (max-width: 800px) {
       .lae-portfolio-wrap .lae-taxonomy-filter {
-        -webkit-align-self: flex-start;
         align-self: flex-start;
         -ms-flex-item-align: start; } }
     .lae-portfolio-wrap .lae-taxonomy-filter .lae-filter-item {
@@ -73,7 +57,6 @@
       .lae-portfolio-wrap .lae-taxonomy-filter .lae-filter-item a {
         font-size: 15px;
         line-height: 24px;
-        -webkit-transition: all .4s ease-in-out 0s;
         transition: all .4s ease-in-out 0s;
         display: block;
         color: #777;
@@ -105,15 +88,13 @@
     padding: 0;
     border: none;
     background: none;
-    -webkit-box-shadow: none;
-            box-shadow: none; }
+    box-shadow: none; }
   .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .lae-project-image {
     position: relative;
     overflow: hidden; }
     .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .lae-project-image img {
       display: block;
       width: 100%;
-      -webkit-transition: all .4s ease-in-out 0s;
       transition: all .4s ease-in-out 0s; }
     .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .lae-project-image:hover img {
       -webkit-filter: brightness(50%);
@@ -140,7 +121,6 @@
         font-weight: 400;
         color: #fff;
         opacity: 0;
-        -webkit-transition: opacity .4s ease-in-out 0s;
         transition: opacity .4s ease-in-out 0s; }
         @media only screen and (max-width: 1024px) {
           .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .lae-project-image .lae-image-info .lae-post-title {
@@ -149,7 +129,6 @@
         .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .lae-project-image .lae-image-info .lae-post-title a {
           display: inline;
           color: #fff;
-          -webkit-transition: all .3s ease-in-out 0s;
           transition: all .3s ease-in-out 0s;
           border-bottom: 1px solid transparent; }
           .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .lae-project-image .lae-image-info .lae-post-title a:hover {
@@ -160,7 +139,6 @@
         font-size: 14px;
         line-height: 22px;
         opacity: 0;
-        -webkit-transition: opacity .4s ease-in-out 0s;
         transition: opacity .4s ease-in-out 0s; }
         .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .lae-project-image .lae-image-info .lae-terms a {
           color: #ddd;
@@ -170,7 +148,6 @@
           font-size: 14px;
           line-height: 22px;
           font-style: italic;
-          -webkit-transition: all .4s ease-in-out 0s;
           transition: all .4s ease-in-out 0s; }
           .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .lae-project-image .lae-image-info .lae-terms a:hover {
             color: #fff; }
@@ -188,7 +165,6 @@
     .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .entry-title:after, .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .entry-title:before {
       display: none; }
     .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .entry-title a {
-      -webkit-transition: all .4s ease-in-out 0s;
       transition: all .4s ease-in-out 0s;
       color: #333; }
       .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .entry-title a:hover {
@@ -213,7 +189,6 @@
     .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .lae-entry-meta span:last-child:after {
       display: none; }
     .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .lae-entry-meta span a {
-      -webkit-transition: all 0.3s ease-in-out 0s;
       transition: all 0.3s ease-in-out 0s;
       font-style: normal; }
     .lae-dark-bg .lae-portfolio-wrap .lae-portfolio .lae-portfolio-item .lae-entry-meta span {
@@ -244,7 +219,6 @@
   text-transform: uppercase;
   display: block;
   padding: 0;
-  -webkit-transition: color 0.3s ease-in-out 0s;
   transition: color 0.3s ease-in-out 0s; }
   .lae-portfolio-wrap .lae-portfolio-item .lae-read-more a:not(.lae-button):hover {
     color: #666; }

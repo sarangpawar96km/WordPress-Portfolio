@@ -23,11 +23,11 @@ if (!empty($service['service_link']['url'])) {
 
     $link_key = 'link_' . $index;
 
-    $url = $service['service_link'];
+    $url = esc_url($service['service_link']['url']);
 
     $widget_instance->add_render_attribute($link_key, 'title', $service['service_title']);
 
-    $widget_instance->add_render_attribute($link_key, 'href', $url['url']);
+    $widget_instance->add_render_attribute($link_key, 'href', $url);
 
     if (!empty($url['is_external'])) {
         $widget_instance->add_render_attribute($link_key, 'target', '_blank');
@@ -45,7 +45,7 @@ if ($settings['layout'] == 'grid')
 
 ?>
 
-<div class="lae-service <?php echo $class_attr; ?>" <?php echo $data_attr; ?>>
+<div class="lae-service <?php echo esc_attr($class_attr); ?>" <?php echo esc_attr($data_attr); ?>>
 
     <?php if ($service['icon_type'] == 'icon_image') : ?>
 

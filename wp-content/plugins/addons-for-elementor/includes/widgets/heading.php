@@ -8,11 +8,11 @@ Author URI: https://www.livemeshthemes.com
 */
 namespace LivemeshAddons\Widgets;
 
-use  Elementor\Widget_Base ;
-use  Elementor\Controls_Manager ;
-use  Elementor\Scheme_Color ;
-use  Elementor\Group_Control_Typography ;
-use  Elementor\Scheme_Typography ;
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+use Elementor\Scheme_Color;
+use Elementor\Group_Control_Typography;
+use Elementor\Scheme_Typography;
 if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
@@ -20,35 +20,31 @@ if ( !defined( 'ABSPATH' ) ) {
 /**
  * Class for Heading widget that displays headings in multiple styles.
  */
-class LAE_Heading_Widget extends LAE_Widget_Base
-{
+class LAE_Heading_Widget extends LAE_Widget_Base {
     /**
      * Get the name for the widget
      * @return string
      */
-    public function get_name()
-    {
+    public function get_name() {
         return 'lae-heading';
     }
-    
+
     /**
      * Get the widget title
      * @return string|void
      */
-    public function get_title()
-    {
+    public function get_title() {
         return __( 'Heading', 'livemesh-el-addons' );
     }
-    
+
     /**
      * Get the widget icon
      * @return string
      */
-    public function get_icon()
-    {
+    public function get_icon() {
         return 'lae-icon-heading';
     }
-    
+
     /**
      * Retrieve the list of categories the widget belongs to.
      *
@@ -56,36 +52,32 @@ class LAE_Heading_Widget extends LAE_Widget_Base
      *
      * @return string[]
      */
-    public function get_categories()
-    {
-        return array( 'livemesh-addons' );
+    public function get_categories() {
+        return array('livemesh-addons');
     }
-    
+
     /**
      * Get the widget documentation URL
      * @return string
      */
-    public function get_custom_help_url()
-    {
+    public function get_custom_help_url() {
         return 'https://livemeshelementor.com/docs/livemesh-addons/core-addons/heading-addon/';
     }
-    
+
     /**
      * Obtain the scripts required for the widget to function
      * @return string[]
      */
-    public function get_script_depends()
-    {
-        return [ 'lae-waypoints', 'lae-frontend-scripts' ];
+    public function get_script_depends() {
+        return ['lae-waypoints', 'lae-frontend-scripts'];
     }
-    
+
     /**
      * Register the controls for the widget
      * Adds fields that help configure and customize the widget
      * @return void
      */
-    protected function register_controls()
-    {
+    protected function register_controls() {
         $this->start_controls_section( 'section_heading', [
             'label' => __( 'Heading', 'livemesh-el-addons' ),
         ] );
@@ -94,10 +86,10 @@ class LAE_Heading_Widget extends LAE_Widget_Base
             'label'   => __( 'Choose Style', 'livemesh-el-addons' ),
             'default' => 'style1',
             'options' => [
-            'style1' => __( 'Style 1', 'livemesh-el-addons' ),
-            'style2' => __( 'Style 2', 'livemesh-el-addons' ),
-            'style3' => __( 'Style 3', 'livemesh-el-addons' ),
-        ],
+                'style1' => __( 'Style 1', 'livemesh-el-addons' ),
+                'style2' => __( 'Style 2', 'livemesh-el-addons' ),
+                'style3' => __( 'Style 3', 'livemesh-el-addons' ),
+            ],
         ] );
         $this->add_control( 'heading', [
             'type'        => Controls_Manager::TEXT,
@@ -106,8 +98,8 @@ class LAE_Heading_Widget extends LAE_Widget_Base
             'separator'   => 'before',
             'default'     => __( 'Heading Title', 'livemesh-el-addons' ),
             'dynamic'     => [
-            'active' => true,
-        ],
+                'active' => true,
+            ],
         ] );
         $this->add_control( 'subtitle', [
             'type'        => Controls_Manager::TEXT,
@@ -115,22 +107,22 @@ class LAE_Heading_Widget extends LAE_Widget_Base
             'label_block' => true,
             'description' => __( 'A subtitle displayed above the title heading.', 'livemesh-el-addons' ),
             'condition'   => [
-            'style' => 'style2',
-        ],
+                'style' => 'style2',
+            ],
             'dynamic'     => [
-            'active' => true,
-        ],
+                'active' => true,
+            ],
         ] );
         $this->add_control( 'short_text', [
             'type'        => 'textarea',
             'label'       => __( 'Short Text', 'livemesh-el-addons' ),
             'description' => __( 'Short text generally displayed below the heading title.', 'livemesh-el-addons' ),
             'condition'   => [
-            'style' => [ 'style1', 'style2' ],
-        ],
+                'style' => ['style1', 'style2'],
+            ],
             'dynamic'     => [
-            'active' => true,
-        ],
+                'active' => true,
+            ],
         ] );
         $this->add_control( 'heading_settings', [
             'label'     => __( 'Settings', 'livemesh-el-addons' ),
@@ -141,23 +133,23 @@ class LAE_Heading_Widget extends LAE_Widget_Base
             'label'   => __( 'Alignment', 'livemesh-el-addons' ),
             'type'    => Controls_Manager::CHOOSE,
             'options' => [
-            'left'    => [
-            'title' => __( 'Left', 'livemesh-el-addons' ),
-            'icon'  => 'fa fa-align-left',
-        ],
-            'center'  => [
-            'title' => __( 'Center', 'livemesh-el-addons' ),
-            'icon'  => 'fa fa-align-center',
-        ],
-            'right'   => [
-            'title' => __( 'Right', 'livemesh-el-addons' ),
-            'icon'  => 'fa fa-align-right',
-        ],
-            'justify' => [
-            'title' => __( 'Justified', 'livemesh-el-addons' ),
-            'icon'  => 'fa fa-align-justify',
-        ],
-        ],
+                'left'    => [
+                    'title' => __( 'Left', 'livemesh-el-addons' ),
+                    'icon'  => 'fa fa-align-left',
+                ],
+                'center'  => [
+                    'title' => __( 'Center', 'livemesh-el-addons' ),
+                    'icon'  => 'fa fa-align-center',
+                ],
+                'right'   => [
+                    'title' => __( 'Right', 'livemesh-el-addons' ),
+                    'icon'  => 'fa fa-align-right',
+                ],
+                'justify' => [
+                    'title' => __( 'Justified', 'livemesh-el-addons' ),
+                    'icon'  => 'fa fa-align-justify',
+                ],
+            ],
             'default' => 'center',
         ] );
         $this->add_control( 'widget_animation', [
@@ -193,14 +185,14 @@ class LAE_Heading_Widget extends LAE_Widget_Base
             'label'   => __( 'Title HTML Tag', 'livemesh-el-addons' ),
             'type'    => Controls_Manager::SELECT,
             'options' => [
-            'h1'  => __( 'H1', 'livemesh-el-addons' ),
-            'h2'  => __( 'H2', 'livemesh-el-addons' ),
-            'h3'  => __( 'H3', 'livemesh-el-addons' ),
-            'h4'  => __( 'H4', 'livemesh-el-addons' ),
-            'h5'  => __( 'H5', 'livemesh-el-addons' ),
-            'h6'  => __( 'H6', 'livemesh-el-addons' ),
-            'div' => __( 'div', 'livemesh-el-addons' ),
-        ],
+                'h1'  => __( 'H1', 'livemesh-el-addons' ),
+                'h2'  => __( 'H2', 'livemesh-el-addons' ),
+                'h3'  => __( 'H3', 'livemesh-el-addons' ),
+                'h4'  => __( 'H4', 'livemesh-el-addons' ),
+                'h5'  => __( 'H5', 'livemesh-el-addons' ),
+                'h6'  => __( 'H6', 'livemesh-el-addons' ),
+                'div' => __( 'div', 'livemesh-el-addons' ),
+            ],
             'default' => 'h3',
         ] );
         $this->add_control( 'heading_color', [
@@ -208,8 +200,8 @@ class LAE_Heading_Widget extends LAE_Widget_Base
             'type'      => Controls_Manager::COLOR,
             'default'   => '',
             'selectors' => [
-            '{{WRAPPER}} .lae-heading .lae-title' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-heading .lae-title' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'heading_typography',
@@ -225,8 +217,8 @@ class LAE_Heading_Widget extends LAE_Widget_Base
             'label'     => __( 'Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-heading .lae-subtitle' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-heading .lae-subtitle' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'subtitle_typography',
@@ -241,8 +233,8 @@ class LAE_Heading_Widget extends LAE_Widget_Base
             'label'     => __( 'Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-heading .lae-text' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-heading .lae-text' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'text_typography',
@@ -250,7 +242,7 @@ class LAE_Heading_Widget extends LAE_Widget_Base
         ] );
         $this->end_controls_section();
     }
-    
+
     /**
      * Render HTML widget output on the frontend.
      *
@@ -258,21 +250,20 @@ class LAE_Heading_Widget extends LAE_Widget_Base
      *
      * @return void
      */
-    protected function render()
-    {
+    protected function render() {
         $settings = $this->get_settings_for_display();
         $settings = apply_filters( 'lae_heading_' . $this->get_id() . '_settings', $settings );
         $args['settings'] = $settings;
         $args['widget_instance'] = $this;
-        lae_get_template_part( "addons/heading/{$settings['style']}", $args );
+        $widget_template = esc_attr( $settings['style'] );
+        lae_get_template_part( "addons/heading/{$widget_template}", $args );
     }
-    
+
     /**
      * Render the widget output in the editor.
      * @return void
      */
-    protected function content_template()
-    {
+    protected function content_template() {
     }
 
 }

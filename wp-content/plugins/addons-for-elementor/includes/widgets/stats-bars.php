@@ -8,12 +8,12 @@ Author URI: https://www.livemeshthemes.com
 */
 namespace LivemeshAddons\Widgets;
 
-use  Elementor\Repeater ;
-use  Elementor\Widget_Base ;
-use  Elementor\Controls_Manager ;
-use  Elementor\Scheme_Color ;
-use  Elementor\Group_Control_Typography ;
-use  Elementor\Scheme_Typography ;
+use Elementor\Repeater;
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+use Elementor\Scheme_Color;
+use Elementor\Group_Control_Typography;
+use Elementor\Scheme_Typography;
 if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
@@ -21,35 +21,31 @@ if ( !defined( 'ABSPATH' ) ) {
 /**
  * Class for Stats Bars widget that displays multiple stats bars that talk about skills or other percentage stats.
  */
-class LAE_Stats_Bars_Widget extends LAE_Widget_Base
-{
+class LAE_Stats_Bars_Widget extends LAE_Widget_Base {
     /**
      * Get the name for the widget
      * @return string
      */
-    public function get_name()
-    {
+    public function get_name() {
         return 'lae-stats-bars';
     }
-    
+
     /**
      * Get the widget title
      * @return string|void
      */
-    public function get_title()
-    {
+    public function get_title() {
         return __( 'Stats Bars', 'livemesh-el-addons' );
     }
-    
+
     /**
      * Get the widget icon
      * @return string
      */
-    public function get_icon()
-    {
+    public function get_icon() {
         return 'lae-icon-stats-bars';
     }
-    
+
     /**
      * Retrieve the list of categories the widget belongs to.
      *
@@ -57,36 +53,32 @@ class LAE_Stats_Bars_Widget extends LAE_Widget_Base
      *
      * @return string[]
      */
-    public function get_categories()
-    {
-        return array( 'livemesh-addons' );
+    public function get_categories() {
+        return array('livemesh-addons');
     }
-    
+
     /**
      * Get the widget documentation URL
      * @return string
      */
-    public function get_custom_help_url()
-    {
+    public function get_custom_help_url() {
         return 'https://livemeshelementor.com/docs/livemesh-addons/core-addons/statistics-addons/';
     }
-    
+
     /**
      * Obtain the scripts required for the widget to function
      * @return string[]
      */
-    public function get_script_depends()
-    {
-        return [ 'lae-waypoints', 'lae-frontend-scripts', 'lae-stats-bars-scripts' ];
+    public function get_script_depends() {
+        return ['lae-waypoints', 'lae-frontend-scripts', 'lae-stats-bars-scripts'];
     }
-    
+
     /**
      * Register the controls for the widget
      * Adds fields that help configure and customize the widget
      * @return void
      */
-    protected function register_controls()
-    {
+    protected function register_controls() {
         $this->start_controls_section( 'section_stats_bars', [
             'label' => __( 'Stats Bars', 'livemesh-el-addons' ),
         ] );
@@ -97,8 +89,8 @@ class LAE_Stats_Bars_Widget extends LAE_Widget_Base
             'description' => __( 'The title for the stats bar', 'livemesh-el-addons' ),
             'default'     => __( 'My stats title', 'livemesh-el-addons' ),
             'dynamic'     => [
-            'active' => true,
-        ],
+                'active' => true,
+            ],
         ] );
         $repeater->add_control( 'percentage_value', [
             'label'       => __( 'Percentage Value', 'livemesh-el-addons' ),
@@ -116,16 +108,16 @@ class LAE_Stats_Bars_Widget extends LAE_Widget_Base
         ] );
         $this->add_control( 'stats_bars', [
             'type'        => Controls_Manager::REPEATER,
-            'default'     => [ [
-            'stats_title'      => __( 'Web Design', 'livemesh-el-addons' ),
-            'percentage_value' => 87,
-        ], [
-            'stats_title'      => __( 'SEO Services', 'livemesh-el-addons' ),
-            'percentage_value' => 76,
-        ], [
-            'stats_title'      => __( 'Brand Marketing', 'livemesh-el-addons' ),
-            'percentage_value' => 40,
-        ] ],
+            'default'     => [[
+                'stats_title'      => __( 'Web Design', 'livemesh-el-addons' ),
+                'percentage_value' => 87,
+            ], [
+                'stats_title'      => __( 'SEO Services', 'livemesh-el-addons' ),
+                'percentage_value' => 76,
+            ], [
+                'stats_title'      => __( 'Brand Marketing', 'livemesh-el-addons' ),
+                'percentage_value' => 40,
+            ]],
             'fields'      => $repeater->get_controls(),
             'title_field' => '{{{ stats_title }}}',
         ] );
@@ -156,51 +148,51 @@ class LAE_Stats_Bars_Widget extends LAE_Widget_Base
             'label'     => __( 'Stats Bar Background Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-bar-bg' => 'background-color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-bar-bg' => 'background-color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'stats_bar_spacing', [
             'label'      => __( 'Stats Bar Spacing', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px' ],
+            'size_units' => ['px'],
             'default'    => [
-            'size' => 18,
-        ],
+                'size' => 18,
+            ],
             'range'      => [
-            'px' => [
-            'min' => 5,
-            'max' => 128,
-        ],
-        ],
+                'px' => [
+                    'min' => 5,
+                    'max' => 128,
+                ],
+            ],
             'selectors'  => [
-            '{{WRAPPER}} .lae-stats-bars .lae-stats-bar' => 'margin-bottom: {{SIZE}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-stats-bars .lae-stats-bar' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+            ],
         ] );
         $this->add_control( 'stats_bar_height', [
             'label'      => __( 'Stats Bar Height', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px' ],
+            'size_units' => ['px'],
             'default'    => [
-            'size' => 10,
-        ],
+                'size' => 10,
+            ],
             'range'      => [
-            'px' => [
-            'min' => 1,
-            'max' => 96,
-        ],
-        ],
+                'px' => [
+                    'min' => 1,
+                    'max' => 96,
+                ],
+            ],
             'selectors'  => [
-            '{{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-bar-bg, {{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-bar-content' => 'height: {{SIZE}}{{UNIT}};',
-            '{{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-bar-bg'                                                                    => 'margin-top: -{{SIZE}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-bar-bg, {{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-bar-content' => 'height: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-bar-bg'                                                                    => 'margin-top: -{{SIZE}}{{UNIT}};',
+            ],
         ] );
         $this->add_control( 'stats_bar_border_radius', [
             'label'      => __( 'Stats Bar Border Radius', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::DIMENSIONS,
-            'size_units' => [ 'px', '%' ],
+            'size_units' => ['px', '%'],
             'selectors'  => [
-            '{{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-bar-bg, {{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-bar-content' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-bar-bg, {{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-bar-content' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
         ] );
         $this->end_controls_section();
         $this->start_controls_section( 'section_stats_title', [
@@ -211,8 +203,8 @@ class LAE_Stats_Bars_Widget extends LAE_Widget_Base
             'label'     => __( 'Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-title' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-title' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'stats_title_typography',
@@ -227,8 +219,8 @@ class LAE_Stats_Bars_Widget extends LAE_Widget_Base
             'label'     => __( 'Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-title span' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-stats-bars .lae-stats-bar .lae-stats-title span' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'stats_percentage_typography',
@@ -236,7 +228,7 @@ class LAE_Stats_Bars_Widget extends LAE_Widget_Base
         ] );
         $this->end_controls_section();
     }
-    
+
     /**
      * Render HTML widget output on the frontend.
      *
@@ -244,21 +236,19 @@ class LAE_Stats_Bars_Widget extends LAE_Widget_Base
      *
      * @return void
      */
-    protected function render()
-    {
+    protected function render() {
         $settings = $this->get_settings_for_display();
         $settings = apply_filters( 'lae_stats_bars_' . $this->get_id() . '_settings', $settings );
         $args['settings'] = $settings;
         $args['widget_instance'] = $this;
         lae_get_template_part( 'addons/stats-bars/loop', $args );
     }
-    
+
     /**
      * Render the widget output in the editor.
      * @return void
      */
-    protected function content_template()
-    {
+    protected function content_template() {
     }
 
 }

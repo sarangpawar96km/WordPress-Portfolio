@@ -17,7 +17,11 @@ if (!defined('ABSPATH')) {
 $class_attr = $data_attr = '';
 $dir = is_rtl() ? ' dir="rtl"' : '';
 
-if ($settings['style'] == 'style1'):
+$styles = array('style1', 'style6', 'style7', 'style8', 'style9');
+
+$widget_template = esc_attr($settings['style']);
+
+if (in_array($widget_template, $styles)):
 
     if ($settings['layout'] == 'carousel') :
 
@@ -32,20 +36,20 @@ if ($settings['style'] == 'style1'):
         ];
 
         $responsive_settings = [
-            'display_columns' => $settings['display_columns'],
-            'scroll_columns' => $settings['scroll_columns'],
-            'tablet_width' => $settings['tablet_width'],
-            'tablet_display_columns' => $settings['tablet_display_columns'],
-            'tablet_scroll_columns' => $settings['tablet_scroll_columns'],
-            'mobile_width' => $settings['mobile_width'],
-            'mobile_display_columns' => $settings['mobile_display_columns'],
-            'mobile_scroll_columns' => $settings['mobile_scroll_columns'],
+            'display_columns' => absint($settings['display_columns']),
+            'scroll_columns' => absint($settings['scroll_columns']),
+            'tablet_width' => absint($settings['tablet_width']),
+            'tablet_display_columns' => absint($settings['tablet_display_columns']),
+            'tablet_scroll_columns' => absint($settings['tablet_scroll_columns']),
+            'mobile_width' => absint($settings['mobile_width']),
+            'mobile_display_columns' => absint($settings['mobile_display_columns']),
+            'mobile_scroll_columns' => absint($settings['mobile_scroll_columns']),
         ];
 
         $carousel_settings = array_merge($carousel_settings, $responsive_settings);
 
         $class_attr = 'lae-team-members-carousel lae-container';
-        $data_attr = ' data-settings=\'' . wp_json_encode($carousel_settings) . '\'';
+        $data_attr = ' data-settings=\'' . esc_attr(wp_json_encode($carousel_settings)) . '\'';
 
     else:
 
@@ -61,8 +65,8 @@ endif;
 
 ?>
 
-<div<?php echo $dir; ?>
-        class="lae-team-members lae-team-members-<?php echo $settings['style']; ?> <?php echo $class_attr; ?>" <?php echo $data_attr; ?>>
+<div<?php echo esc_attr($dir); ?>
+        class="lae-team-members lae-team-members-<?php echo $widget_template; ?> <?php echo esc_attr($class_attr); ?>" <?php echo esc_attr($data_attr); ?>>
 
     <?php foreach ($settings['team_members'] as $index => $team_member): ?>
 
@@ -70,7 +74,7 @@ endif;
 
         <?php $args['team_member'] = $team_member; ?>
 
-        <?php lae_get_template_part("addons/team-members/{$settings['style']}", $args); ?>
+        <?php lae_get_template_part("addons/team-members/{$widget_template}", $args); ?>
 
     <?php endforeach; ?>
 

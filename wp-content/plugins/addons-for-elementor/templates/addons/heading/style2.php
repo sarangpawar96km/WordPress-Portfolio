@@ -17,7 +17,7 @@ list($animate_class, $animation_attr) = lae_get_animation_atts($settings['widget
 
 ?>
 
-<div class="lae-heading lae-<?php echo $settings['style']; ?> lae-align<?php echo $settings['align']; ?> <?php echo $animate_class; ?>" <?php echo $animation_attr; ?>>
+<div class="lae-heading lae-<?php echo esc_attr($settings['style']); ?> lae-align<?php echo esc_attr($settings['align']); ?> <?php echo esc_attr($animate_class); ?>" <?php echo esc_attr($animation_attr); ?>>
 
     <?php if (!empty($settings['subtitle'])): ?>
 

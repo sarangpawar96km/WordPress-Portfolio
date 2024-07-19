@@ -12,7 +12,7 @@ if (!defined('ABSPATH')) {
 
 ?>
 
-<div class="lae-client <?php echo $animate_class; ?>" <?php echo $animation_attr; ?>>
+<div class="lae-client <?php echo esc_attr($animate_class); ?>" <?php echo esc_attr($animation_attr); ?>>
 
     <?php if (!empty($client['client_image'])): ?>
 

@@ -8,13 +8,13 @@ Author URI: https://www.livemeshthemes.com
 */
 namespace LivemeshAddons\Widgets;
 
-use  Elementor\Repeater ;
-use  Elementor\Widget_Base ;
-use  Elementor\Controls_Manager ;
-use  Elementor\Utils ;
-use  Elementor\Scheme_Color ;
-use  Elementor\Group_Control_Typography ;
-use  Elementor\Scheme_Typography ;
+use Elementor\Repeater;
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+use Elementor\Utils;
+use Elementor\Scheme_Color;
+use Elementor\Group_Control_Typography;
+use Elementor\Scheme_Typography;
 if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
@@ -22,35 +22,31 @@ if ( !defined( 'ABSPATH' ) ) {
 /**
  * Class for Testimonials widget that displays testimonials from your clients/customers in a multi-column grid.
  */
-class LAE_Testimonials_Widget extends LAE_Widget_Base
-{
+class LAE_Testimonials_Widget extends LAE_Widget_Base {
     /**
      * Get the name for the widget
      * @return string
      */
-    public function get_name()
-    {
+    public function get_name() {
         return 'lae-testimonials';
     }
-    
+
     /**
      * Get the widget title
      * @return string|void
      */
-    public function get_title()
-    {
+    public function get_title() {
         return __( 'Testimonials', 'livemesh-el-addons' );
     }
-    
+
     /**
      * Get the widget icon
      * @return string
      */
-    public function get_icon()
-    {
+    public function get_icon() {
         return 'lae-icon-testimonials3';
     }
-    
+
     /**
      * Retrieve the list of categories the widget belongs to.
      *
@@ -58,26 +54,23 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
      *
      * @return string[]
      */
-    public function get_categories()
-    {
-        return array( 'livemesh-addons' );
+    public function get_categories() {
+        return array('livemesh-addons');
     }
-    
+
     /**
      * Get the widget documentation URL
      * @return string
      */
-    public function get_custom_help_url()
-    {
+    public function get_custom_help_url() {
         return 'https://livemeshelementor.com/docs/livemesh-addons/core-addons/testimonials-addons/';
     }
-    
+
     /**
      * Obtain the scripts required for the widget to function
      * @return string[]
      */
-    public function get_script_depends()
-    {
+    public function get_script_depends() {
         return [
             'lae-waypoints',
             'lae-jquery-slick',
@@ -86,14 +79,13 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
             'lae-testimonials-scripts'
         ];
     }
-    
+
     /**
      * Register the controls for the widget
      * Adds fields that help configure and customize the widget
      * @return void
      */
-    protected function register_controls()
-    {
+    protected function register_controls() {
         $this->start_controls_section( 'section_testimonials', [
             'label' => __( 'Testimonials', 'livemesh-el-addons' ),
         ] );
@@ -104,40 +96,43 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
             'default'     => __( 'My client name', 'livemesh-el-addons' ),
             'description' => __( 'The client or customer name for the testimonial', 'livemesh-el-addons' ),
             'dynamic'     => [
-            'active' => true,
-        ],
+                'active' => true,
+            ],
+            'ai'          => [
+                'active' => false,
+            ],
         ] );
         $repeater->add_control( 'credentials', [
             'label'       => __( 'Client Details', 'livemesh-el-addons' ),
             'type'        => Controls_Manager::TEXT,
             'description' => __( 'The details of the client/customer like company name, credential held, company URL etc. HTML accepted.', 'livemesh-el-addons' ),
             'dynamic'     => [
-            'active' => true,
-        ],
+                'active' => true,
+            ],
         ] );
         $repeater->add_control( 'testimonial_rating', [
             'label'   => __( 'Rating', 'livemesh-el-addons' ),
             'type'    => Controls_Manager::SELECT,
             'default' => 'rating-none',
             'options' => [
-            'rating-none'  => __( 'None', 'livemesh-el-addons' ),
-            'rating-one'   => __( '1', 'livemesh-el-addons' ),
-            'rating-two'   => __( '2', 'livemesh-el-addons' ),
-            'rating-three' => __( '3', 'livemesh-el-addons' ),
-            'rating-four'  => __( '4', 'livemesh-el-addons' ),
-            'rating-five'  => __( '5', 'livemesh-el-addons' ),
-        ],
+                'rating-none'  => __( 'None', 'livemesh-el-addons' ),
+                'rating-one'   => __( '1', 'livemesh-el-addons' ),
+                'rating-two'   => __( '2', 'livemesh-el-addons' ),
+                'rating-three' => __( '3', 'livemesh-el-addons' ),
+                'rating-four'  => __( '4', 'livemesh-el-addons' ),
+                'rating-five'  => __( '5', 'livemesh-el-addons' ),
+            ],
         ] );
         $repeater->add_control( 'client_image', [
             'label'       => __( 'Customer/Client Image', 'livemesh-el-addons' ),
             'type'        => Controls_Manager::MEDIA,
             'default'     => [
-            'url' => Utils::get_placeholder_image_src(),
-        ],
+                'url' => Utils::get_placeholder_image_src(),
+            ],
             'label_block' => true,
             'dynamic'     => [
-            'active' => true,
-        ],
+                'active' => true,
+            ],
         ] );
         $repeater->add_control( 'testimonial_text', [
             'label'       => __( 'Testimonials Text', 'livemesh-el-addons' ),
@@ -145,8 +140,8 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
             'description' => __( 'What your customer/client had to say', 'livemesh-el-addons' ),
             'show_label'  => false,
             'dynamic'     => [
-            'active' => true,
-        ],
+                'active' => true,
+            ],
         ] );
         $repeater->add_control( "widget_animation", [
             "type"    => Controls_Manager::SELECT,
@@ -154,29 +149,29 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
             'options' => lae_get_animation_options(),
             'default' => 'none',
             'dynamic' => [
-            'active' => true,
-        ],
+                'active' => true,
+            ],
         ] );
         $this->add_control( 'testimonials', [
             'label'       => __( 'Testimonials', 'livemesh-el-addons' ),
             'type'        => Controls_Manager::REPEATER,
             'separator'   => 'before',
-            'default'     => [ [
-            'client_name'        => __( 'Customer #1', 'livemesh-el-addons' ),
-            'credentials'        => __( 'CEO, Invision Inc.', 'livemesh-el-addons' ),
-            'testimonial_rating' => 'rating-four',
-            'testimonial_text'   => __( 'I am testimonial text. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'livemesh-el-addons' ),
-        ], [
-            'client_name'        => __( 'Customer #2', 'livemesh-el-addons' ),
-            'credentials'        => __( 'Lead Developer, Automattic Inc', 'livemesh-el-addons' ),
-            'testimonial_rating' => 'rating-five',
-            'testimonial_text'   => __( 'I am testimonial text. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'livemesh-el-addons' ),
-        ], [
-            'client_name'        => __( 'Customer #3', 'livemesh-el-addons' ),
-            'credentials'        => __( 'Store Manager, Walmart Inc', 'livemesh-el-addons' ),
-            'testimonial_rating' => 'rating-four',
-            'testimonial_text'   => __( 'I am testimonial text. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'livemesh-el-addons' ),
-        ] ],
+            'default'     => [[
+                'client_name'        => __( 'Customer #1', 'livemesh-el-addons' ),
+                'credentials'        => __( 'CEO, Invision Inc.', 'livemesh-el-addons' ),
+                'testimonial_rating' => 'rating-four',
+                'testimonial_text'   => __( 'I am testimonial text. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'livemesh-el-addons' ),
+            ], [
+                'client_name'        => __( 'Customer #2', 'livemesh-el-addons' ),
+                'credentials'        => __( 'Lead Developer, Automattic Inc', 'livemesh-el-addons' ),
+                'testimonial_rating' => 'rating-five',
+                'testimonial_text'   => __( 'I am testimonial text. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'livemesh-el-addons' ),
+            ], [
+                'client_name'        => __( 'Customer #3', 'livemesh-el-addons' ),
+                'credentials'        => __( 'Store Manager, Walmart Inc', 'livemesh-el-addons' ),
+                'testimonial_rating' => 'rating-four',
+                'testimonial_text'   => __( 'I am testimonial text. Click edit button to change this text. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'livemesh-el-addons' ),
+            ]],
             'fields'      => $repeater->get_controls(),
             'title_field' => '{{{ client_name }}}',
         ] );
@@ -191,54 +186,90 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
             'tab'   => Controls_Manager::TAB_SETTINGS,
         ] );
         $this->add_control( 'style', [
-            'type'    => Controls_Manager::SELECT,
-            'label'   => __( 'Choose Testimonials Style', 'livemesh-el-addons' ),
+            'label'   => __( 'Testimonials Style', 'livemesh-el-addons' ),
+            'type'    => 'lae-style-select',
             'default' => 'style1',
             'options' => [
-            'style1' => __( 'Style 1', 'livemesh-el-addons' ),
-            'style2' => __( 'Style 2', 'livemesh-el-addons' ),
-            'style3' => __( 'Style 3', 'livemesh-el-addons' ),
-            'style4' => __( 'Style 4 (List)', 'livemesh-el-addons' ),
-        ],
+                'style1' => [
+                    'title'      => __( 'Style 1', 'livemesh-el-addons' ),
+                    'imagelarge' => LAE_STYLES_PREVIEW_URL . 'testimonials/style1.jpg',
+                    'imagesmall' => LAE_STYLES_PREVIEW_URL . 'testimonials/style1.jpg',
+                    'width'      => '50%',
+                ],
+                'style2' => [
+                    'title'      => __( 'Style 2', 'livemesh-el-addons' ),
+                    'imagelarge' => LAE_STYLES_PREVIEW_URL . 'testimonials/style2.jpg',
+                    'imagesmall' => LAE_STYLES_PREVIEW_URL . 'testimonials/style2.jpg',
+                    'width'      => '50%',
+                ],
+                'style3' => [
+                    'title'      => __( 'Style 3', 'livemesh-el-addons' ),
+                    'imagelarge' => LAE_STYLES_PREVIEW_URL . 'testimonials/style3.jpg',
+                    'imagesmall' => LAE_STYLES_PREVIEW_URL . 'testimonials/style3.jpg',
+                    'width'      => '50%',
+                ],
+                'style4' => [
+                    'title'      => __( 'Style 4', 'livemesh-el-addons' ),
+                    'imagelarge' => LAE_STYLES_PREVIEW_URL . 'testimonials/style4.jpg',
+                    'imagesmall' => LAE_STYLES_PREVIEW_URL . 'testimonials/style4.jpg',
+                    'width'      => '50%',
+                ],
+                'style5' => [
+                    'title'      => __( 'Style 5', 'livemesh-el-addons' ),
+                    'imagelarge' => LAE_STYLES_PREVIEW_URL . 'testimonials/style5.jpg',
+                    'imagesmall' => LAE_STYLES_PREVIEW_URL . 'testimonials/style5.jpg',
+                    'width'      => '50%',
+                ],
+            ],
         ] );
         $this->add_control( 'layout', [
             'type'      => Controls_Manager::SELECT,
             'label'     => __( 'Choose Layout', 'livemesh-el-addons' ),
             'default'   => 'grid',
             'options'   => [
-            'grid'     => __( 'Grid', 'livemesh-el-addons' ),
-            'carousel' => __( 'Carousel', 'livemesh-el-addons' ),
-        ],
+                'grid'     => __( 'Grid', 'livemesh-el-addons' ),
+                'carousel' => __( 'Carousel', 'livemesh-el-addons' ),
+            ],
             'condition' => [
-            'style' => [ 'style1', 'style2', 'style3' ],
-        ],
+                'style' => [
+                    'style1',
+                    'style2',
+                    'style3',
+                    'style5'
+                ],
+            ],
         ] );
         $this->end_controls_section();
         $this->start_controls_section( 'section_carousel_settings', [
             'label'     => __( 'Carousel Settings', 'livemesh-el-addons' ),
             'tab'       => Controls_Manager::TAB_SETTINGS,
             'condition' => [
-            'style'  => [ 'style1', 'style2', 'style3' ],
-            'layout' => [ 'carousel' ],
-        ],
+                'style'  => [
+                    'style1',
+                    'style2',
+                    'style3',
+                    'style5'
+                ],
+                'layout' => ['carousel'],
+            ],
         ] );
         $this->add_responsive_control( 'gutter', [
             'label'      => __( 'Spacing between items', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px' ],
+            'size_units' => ['px'],
             'default'    => [
-            'size' => 10,
-        ],
+                'size' => 10,
+            ],
             'range'      => [
-            'px' => [
-            'min' => 0,
-            'max' => 50,
-        ],
-        ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 50,
+                ],
+            ],
             'selectors'  => [
-            '{{WRAPPER}} .lae-testimonials-carousel .slick-slide' => 'margin: 0 {{SIZE}}{{UNIT}};',
-            '{{WRAPPER}} .lae-testimonials-carousel .slick-list'  => 'margin: 0 -{{SIZE}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-testimonials-carousel .slick-slide' => 'margin: 0 {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .lae-testimonials-carousel .slick-list'  => 'margin: 0 -{{SIZE}}{{UNIT}};',
+            ],
         ] );
         $this->add_control( 'arrows', [
             'type'         => Controls_Manager::SWITCHER,
@@ -315,9 +346,14 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
             'label'     => __( 'Responsive Options', 'livemesh-el-addons' ),
             'tab'       => Controls_Manager::TAB_SETTINGS,
             'condition' => [
-            'style'  => [ 'style1', 'style2', 'style3' ],
-            'layout' => [ 'carousel' ],
-        ],
+                'style'  => [
+                    'style1',
+                    'style2',
+                    'style3',
+                    'style5'
+                ],
+                'layout' => ['carousel'],
+            ],
         ] );
         $this->add_control( 'heading_desktop', [
             'label'     => __( 'Desktop', 'livemesh-el-addons' ),
@@ -399,39 +435,44 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
             'label'     => __( 'Grid Settings', 'livemesh-el-addons' ),
             'tab'       => Controls_Manager::TAB_SETTINGS,
             'condition' => [
-            'style'  => [ 'style1', 'style2', 'style3' ],
-            'layout' => [ 'grid' ],
-        ],
+                'style'  => [
+                    'style1',
+                    'style2',
+                    'style3',
+                    'style5'
+                ],
+                'layout' => ['grid'],
+            ],
         ] );
         $this->add_control( 'column_layout', [
             'label'       => __( 'Column Layout', 'livemesh-el-addons' ),
             'type'        => Controls_Manager::SELECT,
             'options'     => array(
-            'auto'   => __( 'Auto', 'livemesh-el-addons' ),
-            'custom' => __( 'Custom', 'livemesh-el-addons' ),
-        ),
+                'auto'   => __( 'Auto', 'livemesh-el-addons' ),
+                'custom' => __( 'Custom', 'livemesh-el-addons' ),
+            ),
             'default'     => 'auto',
             'description' => __( 'Set column layout to be <strong>Auto</strong> to let the widget auto calculate number of columns based on minimum column size specified. The option <strong>Custom</strong> lets you explicitly control number of columns based on screen width.', 'livemesh-el-addons' ),
         ] );
         $this->add_control( 'min_column_size', [
             'label'      => __( 'Minimum Column Size', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px' ],
+            'size_units' => ['px'],
             'default'    => [
-            'size' => 300,
-        ],
+                'size' => 300,
+            ],
             'range'      => [
-            'px' => [
-            'min' => 50,
-            'max' => 500,
-        ],
-        ],
+                'px' => [
+                    'min' => 50,
+                    'max' => 500,
+                ],
+            ],
             'selectors'  => [
-            '{{WRAPPER}} .lae-uber-grid-container.lae-grid-auto-column-layout' => 'grid-template-columns: repeat(auto-fit, minmax({{SIZE}}{{UNIT}}, 1fr));',
-        ],
+                '{{WRAPPER}} .lae-uber-grid-container.lae-grid-auto-column-layout' => 'grid-template-columns: repeat(auto-fit, minmax({{SIZE}}{{UNIT}}, 1fr));',
+            ],
             'condition'  => [
-            'column_layout' => 'auto',
-        ],
+                'column_layout' => 'auto',
+            ],
         ] );
         $this->add_responsive_control( 'per_line', [
             'label'              => __( 'Columns per row', 'livemesh-el-addons' ),
@@ -440,51 +481,51 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
             'tablet_default'     => '2',
             'mobile_default'     => '1',
             'options'            => [
-            '1' => '1',
-            '2' => '2',
-            '3' => '3',
-            '4' => '4',
-            '5' => '5',
-            '6' => '6',
-        ],
+                '1' => '1',
+                '2' => '2',
+                '3' => '3',
+                '4' => '4',
+                '5' => '5',
+                '6' => '6',
+            ],
             'frontend_available' => true,
             'condition'          => [
-            'column_layout' => 'custom',
-        ],
+                'column_layout' => 'custom',
+            ],
         ] );
         $this->add_control( 'column_gap', [
             'label'      => __( 'Column Gap', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px' ],
+            'size_units' => ['px'],
             'default'    => [
-            'size' => 30,
-        ],
+                'size' => 30,
+            ],
             'range'      => [
-            'px' => [
-            'min' => 0,
-            'max' => 100,
-        ],
-        ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                ],
+            ],
             'selectors'  => [
-            '{{WRAPPER}} .lae-uber-grid-container' => 'column-gap: {{SIZE}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-uber-grid-container' => 'column-gap: {{SIZE}}{{UNIT}};',
+            ],
         ] );
         $this->add_control( 'row_gap', [
             'label'      => __( 'Row Gap', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px' ],
+            'size_units' => ['px'],
             'default'    => [
-            'size' => 30,
-        ],
+                'size' => 30,
+            ],
             'range'      => [
-            'px' => [
-            'min' => 0,
-            'max' => 100,
-        ],
-        ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                ],
+            ],
             'selectors'  => [
-            '{{WRAPPER}} .lae-uber-grid-container' => 'row-gap: {{SIZE}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-uber-grid-container' => 'row-gap: {{SIZE}}{{UNIT}};',
+            ],
         ] );
         $this->end_controls_section();
         $this->start_controls_section( 'section_widget_theme', [
@@ -508,28 +549,29 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
         $this->add_control( 'thumbnail_border_radius', [
             'label'      => __( 'Thumbnail Border Radius', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::DIMENSIONS,
-            'size_units' => [ 'px', '%' ],
+            'size_units' => ['px', '%'],
             'selectors'  => [
-            '{{WRAPPER}} .lae-testimonials .lae-testimonial-user .lae-image-wrapper img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-testimonials .lae-testimonial-user .lae-image-wrapper img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
         ] );
         $this->add_control( 'thumbnail_size', [
             'label'      => __( 'Thumbnail Size', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ '%', 'px' ],
+            'size_units' => ['%', 'px'],
             'range'      => [
-            '%'  => [
-            'min' => 10,
-            'max' => 100,
-        ],
-            'px' => [
-            'min' => 50,
-            'max' => 156,
-        ],
-        ],
+                '%'  => [
+                    'min' => 10,
+                    'max' => 100,
+                ],
+                'px' => [
+                    'min' => 50,
+                    'max' => 150,
+                ],
+            ],
             'selectors'  => [
-            '{{WRAPPER}} .lae-testimonials .lae-testimonial-user .lae-image-wrapper img' => 'max-width: {{SIZE}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-testimonials .lae-testimonial-user .lae-image-wrapper img' => 'max-width: {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .lae-testimonials .lae-testimonial-user'                        => 'transform: translateY( calc(  -{{SIZE}}{{UNIT}}/2 ))',
+            ],
         ] );
         $this->end_controls_section();
         $this->start_controls_section( 'section_testimonials_text', [
@@ -539,47 +581,67 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
         $this->add_responsive_control( 'text_padding', [
             'label'      => __( 'Text Padding', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::DIMENSIONS,
-            'size_units' => [ 'px', 'em' ],
+            'size_units' => ['px', 'em'],
             'selectors'  => [
-            '{{WRAPPER}} .lae-testimonials .lae-testimonial-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-testimonials .lae-testimonial-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
             'isLinked'   => false,
             'condition'  => [
-            'style' => [ 'style1', 'style3' ],
-        ],
+                'style' => ['style1', 'style3', 'style5'],
+            ],
+        ] );
+        $this->add_control( 'text_background_color', [
+            'label'     => __( 'Text Background Color', 'livemesh-el-addons' ),
+            'type'      => Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .lae-testimonials .lae-testimonial-text' => 'background: {{VALUE}};',
+            ],
+            'condition' => [
+                'style' => ['style5'],
+            ],
+        ] );
+        $this->add_control( 'user_background_color', [
+            'label'     => __( 'User Information Background Color', 'livemesh-el-addons' ),
+            'type'      => Controls_Manager::COLOR,
+            'selectors' => [
+                '{{WRAPPER}} .lae-testimonial .lae-testimonial-user-wrap' => 'background: {{VALUE}};',
+            ],
+            'condition' => [
+                'style' => ['style5'],
+            ],
         ] );
         $this->add_control( 'text_color', [
             'label'     => __( 'Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-testimonials .lae-testimonial-text' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-testimonials .lae-testimonial-text' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'text_border_color', [
             'label'     => __( 'Border Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-testimonials .lae-testimonial-text, {{WRAPPER}} .lae-testimonials .lae-testimonial-text:after' => 'border-color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-testimonials .lae-testimonial-text, {{WRAPPER}} .lae-testimonials .lae-testimonial-text:after' => 'border-color: {{VALUE}};',
+            ],
             'condition' => [
-            'style' => [ 'style1' ],
-        ],
+                'style' => ['style1'],
+            ],
         ] );
         $this->add_control( 'text_border_width', [
             'label'     => __( 'Border Width', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::SLIDER,
             'range'     => [
-            'px' => [
-            'min' => 1,
-            'max' => 5,
-        ],
-        ],
+                'px' => [
+                    'min' => 1,
+                    'max' => 5,
+                ],
+            ],
             'selectors' => [
-            '{{WRAPPER}} .lae-testimonials .lae-testimonial-text, {{WRAPPER}} .lae-testimonials .lae-testimonial-text:after' => 'border-width: {{SIZE}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-testimonials .lae-testimonial-text, {{WRAPPER}} .lae-testimonials .lae-testimonial-text:after' => 'border-width: {{SIZE}}{{UNIT}};',
+            ],
             'condition' => [
-            'style' => [ 'style1' ],
-        ],
+                'style' => ['style1'],
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'text_typography',
@@ -594,22 +656,22 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
             'label'   => __( 'Title HTML Tag', 'livemesh-el-addons' ),
             'type'    => Controls_Manager::SELECT,
             'options' => [
-            'h1'  => __( 'H1', 'livemesh-el-addons' ),
-            'h2'  => __( 'H2', 'livemesh-el-addons' ),
-            'h3'  => __( 'H3', 'livemesh-el-addons' ),
-            'h4'  => __( 'H4', 'livemesh-el-addons' ),
-            'h5'  => __( 'H5', 'livemesh-el-addons' ),
-            'h6'  => __( 'H6', 'livemesh-el-addons' ),
-            'div' => __( 'div', 'livemesh-el-addons' ),
-        ],
+                'h1'  => __( 'H1', 'livemesh-el-addons' ),
+                'h2'  => __( 'H2', 'livemesh-el-addons' ),
+                'h3'  => __( 'H3', 'livemesh-el-addons' ),
+                'h4'  => __( 'H4', 'livemesh-el-addons' ),
+                'h5'  => __( 'H5', 'livemesh-el-addons' ),
+                'h6'  => __( 'H6', 'livemesh-el-addons' ),
+                'div' => __( 'div', 'livemesh-el-addons' ),
+            ],
             'default' => 'h4',
         ] );
         $this->add_control( 'title_color', [
             'label'     => __( 'Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-testimonials .lae-testimonial-user .lae-user-text .lae-author-name' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-testimonials .lae-testimonial-user .lae-user-text .lae-author-name' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'title_typography',
@@ -624,8 +686,8 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
             'label'     => __( 'Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-testimonials .lae-testimonial-user .lae-user-text' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-testimonials .lae-testimonial-user .lae-user-text' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'credential_typography',
@@ -641,19 +703,19 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
             'label'     => __( 'Default Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-testimonials .lae-testimonial .lae-testimonial-star-rating .lae-testimonial-star-rating-item svg' => 'fill: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-testimonials .lae-testimonial .lae-testimonial-star-rating .lae-testimonial-star-rating-item svg' => 'fill: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'rating_highlight_color', [
             'label'     => __( 'Highlight Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-five .lae-testimonial-star-rating .lae-testimonial-star-rating-item svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-one .lae-testimonial-star-rating .lae-testimonial-star-rating-item:first-child svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-two .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(1) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-two .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(2) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-three .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(1) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-three .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(2) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-three .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(3) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-four .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(1) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-four .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(2) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-four .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(3) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-four .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(4) svg' => 'fill: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-five .lae-testimonial-star-rating .lae-testimonial-star-rating-item svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-one .lae-testimonial-star-rating .lae-testimonial-star-rating-item:first-child svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-two .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(1) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-two .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(2) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-three .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(1) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-three .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(2) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-three .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(3) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-four .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(1) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-four .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(2) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-four .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(3) svg,{{WRAPPER}} .lae-testimonials .lae-testimonial.lae-rating-four .lae-testimonial-star-rating .lae-testimonial-star-rating-item:nth-child(4) svg' => 'fill: {{VALUE}};',
+            ],
         ] );
         $this->end_controls_section();
     }
-    
+
     /**
      * Render HTML widget output on the frontend.
      *
@@ -661,21 +723,19 @@ class LAE_Testimonials_Widget extends LAE_Widget_Base
      *
      * @return void
      */
-    protected function render()
-    {
+    protected function render() {
         $settings = $this->get_settings_for_display();
         $settings = apply_filters( 'lae_testimonials_' . $this->get_id() . '_settings', $settings );
         $args['settings'] = $settings;
         $args['widget_instance'] = $this;
         lae_get_template_part( 'addons/testimonials/loop', $args );
     }
-    
+
     /**
      * Render the widget output in the editor.
      * @return void
      */
-    protected function content_template()
-    {
+    protected function content_template() {
     }
 
 }

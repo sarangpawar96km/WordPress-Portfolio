@@ -12,14 +12,14 @@
 
         <?php
 
-        $email = $team_member['member_email'];
-        $facebook_url = $team_member['facebook_url'];
-        $twitter_url = $team_member['twitter_url'];
-        $linkedin_url = $team_member['linkedin_url'];
-        $dribbble_url = $team_member['dribbble_url'];
-        $pinterest_url = $team_member['pinterest_url'];
-        $googleplus_url = $team_member['google_plus_url'];
-        $instagram_url = $team_member['instagram_url'];
+        $email = esc_attr($team_member['member_email']);
+        $facebook_url = esc_url($team_member['facebook_url']);
+        $twitter_url = esc_url($team_member['twitter_url']);
+        $linkedin_url = esc_url($team_member['linkedin_url']);
+        $dribbble_url = esc_url($team_member['dribbble_url']);
+        $pinterest_url = esc_url($team_member['pinterest_url']);
+        $googleplus_url = esc_url($team_member['google_plus_url']);
+        $instagram_url = esc_url($team_member['instagram_url']);
 
         ?>
         <?php if ($email): ?>

@@ -1,14 +1,16 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { __ } from '@wordpress/i18n';
 import { Tooltip } from '@brainstormforce/starter-templates-components';
+import { __ } from '@wordpress/i18n';
 import { useStateValue } from '../store/store';
 import ICONS from '../../icons';
 import Logo from '../components/logo';
-import { storeCurrentState } from '../utils/functions';
+import { getStepIndex, storeCurrentState } from '../utils/functions';
 import { STEPS } from './util';
 const { adminUrl } = starterTemplates;
 const $ = jQuery;
+
+const pageBuilders = [ 'gutenberg', 'elementor', 'beaver-builder' ];
 
 const Steps = () => {
 	const [ stateValue, dispatch ] = useStateValue();
@@ -92,6 +94,9 @@ const Steps = () => {
 					continue;
 				}
 
+				if ( key === 'builder' ) {
+					continue;
+				}
 				stateValueUpdates[ key ] = storedStateValue[ `${ key }` ];
 			}
 
@@ -112,16 +117,27 @@ const Steps = () => {
 	useEffect( () => {
 		const currentUrlParams = new URLSearchParams( window.location.search );
 		const urlIndex = parseInt( currentUrlParams.get( 'ci' ) ) || 0;
+		const builderValue = currentUrlParams.get( 'builder' ) || '';
 
-		if ( currentIndex === 0 ) {
+		if ( currentIndex === getStepIndex( 'page-builder' ) ) {
 			currentUrlParams.delete( 'ci' );
+			currentUrlParams.delete( 'ai' );
+			currentUrlParams.delete( 'builder' );
+			if ( builderValue && pageBuilders.includes( builderValue ) ) {
+				dispatch( {
+					type: 'set',
+					builder: builderValue,
+					currentIndex: 2,
+				} );
+			}
 			history(
 				window.location.pathname + '?' + currentUrlParams.toString()
 			);
 		}
 
 		if (
-			( currentIndex !== 0 && urlIndex !== currentIndex ) ||
+			( currentIndex !== getStepIndex( 'page-builder' ) &&
+				urlIndex !== currentIndex ) ||
 			templateResponse !== null
 		) {
 			storeCurrentState( stateValue );
@@ -144,7 +160,7 @@ const Steps = () => {
 			);
 		}
 
-		if ( currentIndex === 2 ) {
+		if ( currentIndex === getStepIndex( 'site-list' ) ) {
 			dispatch( {
 				type: 'set',
 				activePalette: {},
@@ -157,25 +173,13 @@ const Steps = () => {
 		setSettingIndex( false );
 	}, [ currentIndex, templateResponse, designStep ] );
 
-	const goToShowcase = () => {
-		dispatch( {
-			type: 'set',
-			currentIndex: currentIndex - 2,
-			currentCustomizeIndex: 0,
-		} );
-	};
-
 	window.onpopstate = () => {
-		const gridIndex = STEPS.findIndex(
-			( step ) => step.class === 'step-site-list'
-		);
-
-		if ( !! designStep && designStep !== 1 && currentIndex !== gridIndex ) {
-			const surveyIndex = STEPS.findIndex(
-				( step ) => step.class === 'step-survey'
-			);
-
-			if ( currentIndex >= surveyIndex ) {
+		if (
+			!! designStep &&
+			designStep !== 1 &&
+			currentIndex !== getStepIndex( 'site-list' )
+		) {
+			if ( currentIndex >= getStepIndex( 'survey' ) ) {
 				dispatch( {
 					type: 'set',
 					currentIndex: currentIndex - 1,
@@ -189,7 +193,7 @@ const Steps = () => {
 				} );
 			}
 		}
-		if ( currentIndex > gridIndex && designStep === 1 ) {
+		if ( currentIndex > getStepIndex( 'site-list' ) && designStep === 1 ) {
 			dispatch( {
 				type: 'set',
 				currentIndex: currentIndex - 1,
@@ -199,7 +203,7 @@ const Steps = () => {
 
 	return (
 		<div className={ `st-step ${ current.class }` }>
-			{ currentIndex !== 3 && (
+			{ ! [ getStepIndex( 'customizer' ) ].includes( currentIndex ) && (
 				<div className="step-header">
 					{ current.header ? (
 						current.header
@@ -209,21 +213,6 @@ const Steps = () => {
 								<Logo />
 							</div>
 							<div className="right-col">
-								{ currentIndex === 4 && (
-									<div
-										className="back-to-main"
-										onClick={ goToShowcase }
-									>
-										<Tooltip
-											content={ __(
-												'Back to Templates',
-												'astra-sites'
-											) }
-										>
-											{ ICONS.cross }
-										</Tooltip>
-									</div>
-								) }
 								<div className="col exit-link">
 									<a href={ adminUrl }>
 										<Tooltip
@@ -232,7 +221,7 @@ const Steps = () => {
 												'astra-sites'
 											) }
 										>
-											{ ICONS.dashboard }
+											{ ICONS.remove }
 										</Tooltip>
 									</a>
 								</div>

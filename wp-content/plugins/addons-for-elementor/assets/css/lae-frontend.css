@@ -9,17 +9,14 @@
   text-align: center; }
 
 .lae-container, .lae-uber-grid-container, .lae-grid-container {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
   .lae-container *, .lae-container *::after, .lae-container *::before, .lae-uber-grid-container *, .lae-uber-grid-container *::after, .lae-uber-grid-container *::before, .lae-grid-container *, .lae-grid-container *::after, .lae-grid-container *::before {
-    -webkit-box-sizing: inherit;
-            box-sizing: inherit; }
+    box-sizing: inherit; }
   .lae-container ol, .lae-container ul, .lae-container ol > li, .lae-container ul > li, .lae-container ol:hover, .lae-container ul:hover, .lae-container ul > li:hover, .lae-container ol > li:hover, .lae-container ol > li > a, .lae-container ul > li > a, .lae-container ol > li > a:hover, .lae-container ul > li > a:hover, .lae-container img, .lae-uber-grid-container ol, .lae-uber-grid-container ul, .lae-uber-grid-container ol > li, .lae-uber-grid-container ul > li, .lae-uber-grid-container ol:hover, .lae-uber-grid-container ul:hover, .lae-uber-grid-container ul > li:hover, .lae-uber-grid-container ol > li:hover, .lae-uber-grid-container ol > li > a, .lae-uber-grid-container ul > li > a, .lae-uber-grid-container ol > li > a:hover, .lae-uber-grid-container ul > li > a:hover, .lae-uber-grid-container img, .lae-grid-container ol, .lae-grid-container ul, .lae-grid-container ol > li, .lae-grid-container ul > li, .lae-grid-container ol:hover, .lae-grid-container ul:hover, .lae-grid-container ul > li:hover, .lae-grid-container ol > li:hover, .lae-grid-container ol > li > a, .lae-grid-container ul > li > a, .lae-grid-container ol > li > a:hover, .lae-grid-container ul > li > a:hover, .lae-grid-container img {
     padding: 0;
     margin: 0;
     border: none;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     list-style: none;
     background: none; }
     .lae-container ol:before, .lae-container ol:after, .lae-container ul:before, .lae-container ul:after, .lae-container ol > li:before, .lae-container ol > li:after, .lae-container ul > li:before, .lae-container ul > li:after, .lae-container ol:hover:before, .lae-container ol:hover:after, .lae-container ul:hover:before, .lae-container ul:hover:after, .lae-container ul > li:hover:before, .lae-container ul > li:hover:after, .lae-container ol > li:hover:before, .lae-container ol > li:hover:after, .lae-container ol > li > a:before, .lae-container ol > li > a:after, .lae-container ul > li > a:before, .lae-container ul > li > a:after, .lae-container ol > li > a:hover:before, .lae-container ol > li > a:hover:after, .lae-container ul > li > a:hover:before, .lae-container ul > li > a:hover:after, .lae-container img:before, .lae-container img:after, .lae-uber-grid-container ol:before, .lae-uber-grid-container ol:after, .lae-uber-grid-container ul:before, .lae-uber-grid-container ul:after, .lae-uber-grid-container ol > li:before, .lae-uber-grid-container ol > li:after, .lae-uber-grid-container ul > li:before, .lae-uber-grid-container ul > li:after, .lae-uber-grid-container ol:hover:before, .lae-uber-grid-container ol:hover:after, .lae-uber-grid-container ul:hover:before, .lae-uber-grid-container ul:hover:after, .lae-uber-grid-container ul > li:hover:before, .lae-uber-grid-container ul > li:hover:after, .lae-uber-grid-container ol > li:hover:before, .lae-uber-grid-container ol > li:hover:after, .lae-uber-grid-container ol > li > a:before, .lae-uber-grid-container ol > li > a:after, .lae-uber-grid-container ul > li > a:before, .lae-uber-grid-container ul > li > a:after, .lae-uber-grid-container ol > li > a:hover:before, .lae-uber-grid-container ol > li > a:hover:after, .lae-uber-grid-container ul > li > a:hover:before, .lae-uber-grid-container ul > li > a:hover:after, .lae-uber-grid-container img:before, .lae-uber-grid-container img:after, .lae-grid-container ol:before, .lae-grid-container ol:after, .lae-grid-container ul:before, .lae-grid-container ul:after, .lae-grid-container ol > li:before, .lae-grid-container ol > li:after, .lae-grid-container ul > li:before, .lae-grid-container ul > li:after, .lae-grid-container ol:hover:before, .lae-grid-container ol:hover:after, .lae-grid-container ul:hover:before, .lae-grid-container ul:hover:after, .lae-grid-container ul > li:hover:before, .lae-grid-container ul > li:hover:after, .lae-grid-container ol > li:hover:before, .lae-grid-container ol > li:hover:after, .lae-grid-container ol > li > a:before, .lae-grid-container ol > li > a:after, .lae-grid-container ul > li > a:before, .lae-grid-container ul > li > a:after, .lae-grid-container ol > li > a:hover:before, .lae-grid-container ol > li > a:hover:after, .lae-grid-container ul > li > a:hover:before, .lae-grid-container ul > li > a:hover:after, .lae-grid-container img:before, .lae-grid-container img:after {
@@ -130,7 +127,6 @@ input.lae-button, button.lae-button, a.lae-button, .lae-button:active, .lae-butt
   background-color: #f94213;
   color: #fefefe;
   outline: none;
-  -webkit-transition: all 0.4s ease-in-out 0s;
   transition: all 0.4s ease-in-out 0s; }
   input.lae-button.lae-rounded, button.lae-button.lae-rounded, a.lae-button.lae-rounded, .lae-button:active.lae-rounded, .lae-button:visited.lae-rounded {
     border-radius: 999px; }
@@ -317,7 +313,6 @@ input.lae-button.lae-with-icon img.lae-thumbnail, button.lae-button.lae-with-ico
   z-index: 1; }
 
 .lae-terms a, .lae-post-title a {
-  -webkit-transition: all 0.5s ease-out 0s;
   transition: all 0.5s ease-out 0s; }
 
 .lae-read-more {
@@ -328,7 +323,6 @@ input.lae-button.lae-with-icon img.lae-thumbnail, button.lae-button.lae-with-ico
   text-decoration: none;
   padding: 8px 15px;
   margin-top: 15px;
-  -webkit-transition: all 0.5s ease-out 0s;
   transition: all 0.5s ease-out 0s;
   transition: all 0.5s ease-out 0s; }
 
@@ -338,5 +332,12 @@ input.lae-button.lae-with-icon img.lae-thumbnail, button.lae-button.lae-with-ico
   background-position: center;
   background-size: cover;
   margin-bottom: 15px; }
+
+/* ----------- Templates Library -------------------- */
+.elementor-add-section-area-button.lae-add-template-button {
+  background-color: #fbebd7; }
+
+.elementor-add-section-area-button.lae-add-template-button:hover {
+  background-color: #f8f3ed; }
 
 /*# sourceMappingURL=lae-frontend.css.map */

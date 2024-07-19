@@ -46,7 +46,7 @@ class LAE_Marquee_Text_Widget extends LAE_Widget_Base {
      * @return string
      */
     public function get_icon() {
-        return 'eicon-form-vertical';
+        return 'lae-icon-text_rotation_none';
     }
 
     /**
@@ -97,6 +97,9 @@ class LAE_Marquee_Text_Widget extends LAE_Widget_Base {
                 'type' => Controls_Manager::TEXT,
                 'label' => __('Container Class', 'livemesh-el-addons'),
                 'description' => __('The CSS class for the marquee text container DIV element.', 'livemesh-el-addons'),
+                'ai' => [
+                    'active' => false,
+                ],
             ]
         );
 
@@ -109,6 +112,20 @@ class LAE_Marquee_Text_Widget extends LAE_Widget_Base {
                 'label' => __('Marquee Text', 'livemesh-el-addons'),
                 'default' => __('My Marquee Text', 'livemesh-el-addons'),
                 'type' => Controls_Manager::TEXTAREA,
+                'label_block' => true,
+                'dynamic' => [
+                    'active' => true,
+                ],
+            ]
+        );
+
+        $repeater->add_control(
+            'marquee_subtext',
+            [
+
+                'label' => __('Marquee Subtext', 'livemesh-el-addons'),
+                'default' => __('My Marquee Subtext', 'livemesh-el-addons'),
+                'type' => Controls_Manager::TEXT,
                 'label_block' => true,
                 'dynamic' => [
                     'active' => true,
@@ -296,7 +313,7 @@ class LAE_Marquee_Text_Widget extends LAE_Widget_Base {
                     'px' => [
                         'min' => 0,
                         'step' => 1,
-                        'max' => 100,
+                        'max' => 250,
                     ],
                 ],
                 'selectors' => [
@@ -342,6 +359,58 @@ class LAE_Marquee_Text_Widget extends LAE_Widget_Base {
             [
                 'name' => 'marquee_text_typography',
                 'selector' => '{{WRAPPER}} .lae-marquee-text-content .lae-marquee-text-items .lae-marquee-text-item .lae-marquee-text',
+            ]
+        );
+
+        $this->end_controls_section();
+
+        $this->start_controls_section(
+            'section_marquee_subtext',
+            [
+                'label' => __('Marquee Subtext', 'livemesh-el-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_control(
+            'marquee_subtext_color',
+            [
+                'label' => __('Default Color', 'livemesh-el-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .lae-marquee-text-content .lae-marquee-text-items .lae-marquee-text-item .lae-marquee-subtext' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'subtext_spacing',
+            [
+                'label' => __('Spacing Between Marquee Text and Subtext', 'livemesh-el-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%', 'em'],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 10,
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'step' => 1,
+                        'max' => 64,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .lae-marquee-text-content .lae-marquee-text-items .lae-marquee-text-item .lae-marquee-subtext' => 'margin-top: calc({{SIZE}}{{UNIT}}/2);',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'marquee_subtext_typography',
+                'selector' => '{{WRAPPER}} .lae-marquee-text-content .lae-marquee-text-items .lae-marquee-text-item .lae-marquee-subtext',
             ]
         );
 

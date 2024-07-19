@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
 
 $dir = is_rtl() ? ' dir="rtl"' : '';
 
-$slider_style = $settings['slider_style'];
+$slider_style = esc_attr($settings['slider_style']);
 
 $slider_settings = [
     'slider_id' => $settings['slider_id'],
@@ -27,6 +27,6 @@ $slider_settings = [
 
 <div class="lae-posts-gridbox-slider-wrap">
     <div<?php echo is_rtl() ? ' dir="rtl"' : ''; ?>
-            id="lae-posts-gridbox-slider-<?php echo $settings['slider_id']; ?>"
+            id="lae-posts-gridbox-slider-<?php echo esc_attr($settings['slider_id']) ?>"
             class="lae-posts-gridbox-slider lae-container <?php echo 'lae-posts-gridbox-slider-' . $slider_style; ?>"
-            data-settings='<?php echo wp_json_encode($slider_settings); ?>'>
+            data-settings='<?php echo esc_attr(wp_json_encode($slider_settings)); ?>'>

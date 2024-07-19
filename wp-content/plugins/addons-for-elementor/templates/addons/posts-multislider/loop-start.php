@@ -11,7 +11,7 @@ if (!defined('ABSPATH')) {
 
 $dir = is_rtl() ? ' dir="rtl"' : '';
 
-$slider_style = $settings['slider_style'];
+$slider_style = esc_attr($settings['slider_style']);
 
 $multislider_settings = [
     'arrows' => ('yes' === $settings['arrows']),
@@ -23,15 +23,16 @@ $multislider_settings = [
     'adaptive_height' => ('yes' === $settings['adaptive_height']),
 ];
 
+
 $responsive_settings = [
-    'display_columns' => $settings['display_columns'],
-    'scroll_columns' => $settings['scroll_columns'],
-    'tablet_width' => $settings['tablet_width'],
-    'tablet_display_columns' => $settings['tablet_display_columns'],
-    'tablet_scroll_columns' => $settings['tablet_scroll_columns'],
-    'mobile_width' => $settings['mobile_width'],
-    'mobile_display_columns' => $settings['mobile_display_columns'],
-    'mobile_scroll_columns' => $settings['mobile_scroll_columns'],
+    'display_columns' => absint($settings['display_columns']),
+    'scroll_columns' => absint($settings['scroll_columns']),
+    'tablet_width' => absint($settings['tablet_width']),
+    'tablet_display_columns' => absint($settings['tablet_display_columns']),
+    'tablet_scroll_columns' => absint($settings['tablet_scroll_columns']),
+    'mobile_width' => absint($settings['mobile_width']),
+    'mobile_display_columns' => absint($settings['mobile_display_columns']),
+    'mobile_scroll_columns' => absint($settings['mobile_scroll_columns']),
 ];
 
 $multislider_settings = array_merge($multislider_settings, $responsive_settings);
@@ -40,6 +41,6 @@ $multislider_settings = array_merge($multislider_settings, $responsive_settings)
 
 <div class="lae-posts-multislider-wrap">
     <div<?php echo is_rtl() ? ' dir="rtl"' : ''; ?>
-            id="lae-posts-multislider-<?php echo $settings['slider_id']; ?>"
+            id="lae-posts-multislider-<?php echo esc_attr($settings['slider_id']); ?>"
             class="lae-posts-multislider lae-container <?php echo 'lae-posts-multislider-' . $slider_style; ?>"
-            data-settings='<?php echo wp_json_encode($multislider_settings); ?>'>
+            data-settings='<?php echo esc_attr(wp_json_encode($multislider_settings)); ?>'>

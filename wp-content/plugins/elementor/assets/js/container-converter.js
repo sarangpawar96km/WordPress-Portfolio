@@ -1,4 +1,4 @@
-/*! elementor - v3.9.2 - 21-12-2022 */
+/*! elementor - v3.23.0 - 15-07-2024 */
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
@@ -25,8 +25,8 @@ var _possibleConstructorReturn2 = _interopRequireDefault(__webpack_require__(/*!
 var _getPrototypeOf2 = _interopRequireDefault(__webpack_require__(/*! @babel/runtime/helpers/getPrototypeOf */ "../node_modules/@babel/runtime/helpers/getPrototypeOf.js"));
 function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function () {})); return true; } catch (e) { return false; } }
-var ConvertAll = /*#__PURE__*/function (_$e$modules$document$) {
-  (0, _inherits2.default)(ConvertAll, _$e$modules$document$);
+var ConvertAll = /*#__PURE__*/function (_$e$modules$editor$do) {
+  (0, _inherits2.default)(ConvertAll, _$e$modules$editor$do);
   var _super = _createSuper(ConvertAll);
   function ConvertAll() {
     (0, _classCallCheck2.default)(this, ConvertAll);
@@ -53,7 +53,7 @@ var ConvertAll = /*#__PURE__*/function (_$e$modules$document$) {
     }
   }]);
   return ConvertAll;
-}($e.modules.document.CommandHistory);
+}($e.modules.editor.document.CommandHistoryBase);
 exports.ConvertAll = ConvertAll;
 
 /***/ }),
@@ -84,8 +84,8 @@ function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Re
 /**
  * @typedef {import('../../../../../../assets/dev/js/editor/container/container')} Container
  */
-var Convert = /*#__PURE__*/function (_$e$modules$document$) {
-  (0, _inherits2.default)(Convert, _$e$modules$document$);
+var Convert = /*#__PURE__*/function (_$e$modules$editor$do) {
+  (0, _inherits2.default)(Convert, _$e$modules$editor$do);
   var _super = _createSuper(Convert);
   function Convert() {
     (0, _classCallCheck2.default)(this, Convert);
@@ -184,7 +184,7 @@ var Convert = /*#__PURE__*/function (_$e$modules$document$) {
     }
   }]);
   return Convert;
-}($e.modules.document.CommandHistory);
+}($e.modules.editor.document.CommandHistoryBase);
 exports.Convert = Convert;
 
 /***/ }),
@@ -360,6 +360,8 @@ var map = function map() {
     var deviceKey = (0, _utils.getDeviceKey)('flex_gap', breakpoint);
     var newValue = {
       size: deviceValue,
+      column: '' + deviceValue,
+      row: '' + deviceValue,
       unit: 'px'
     };
     return [deviceKey, newValue];
@@ -389,12 +391,24 @@ var _utils = __webpack_require__(/*! ./utils */ "../modules/container-converter/
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { (0, _defineProperty2.default)(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
 var map = function map(_ref) {
-  var isInner = _ref.isInner;
+  var isInner = _ref.isInner,
+    _ref$settings = _ref.settings,
+    settings = _ref$settings === void 0 ? {} : _ref$settings;
   var widthKey = isInner ? 'width' : 'boxed_width';
-  return _objectSpread(_objectSpread(_objectSpread({}, (0, _utils.responsive)('content_width', widthKey)), (0, _utils.responsive)('custom_height', 'min_height')), {}, {
-    height: function height(_ref2) {
-      var value = _ref2.value,
-        settings = _ref2.settings;
+  return _objectSpread(_objectSpread(_objectSpread({}, 'boxed' === settings.layout ? (0, _utils.responsive)('content_width', widthKey) : {
+    content_width: null
+  }), 'min-height' === settings.height && (0, _utils.responsive)('custom_height', 'min_height')), {}, {
+    layout: function layout(_ref2) {
+      var value = _ref2.value;
+      var optionsMap = {
+        boxed: 'boxed',
+        full_width: 'full'
+      };
+      return ['content_width', optionsMap[value] || value];
+    },
+    height: function height(_ref3) {
+      var value = _ref3.value,
+        sectionSettings = _ref3.settings;
       switch (value) {
         case 'full':
           value = {
@@ -403,17 +417,19 @@ var map = function map(_ref) {
           };
           break;
         case 'min-height':
-          value = settings.custom_height || {
+          value = sectionSettings.custom_height || {
             size: 400,
             unit: 'px'
           }; // Default section's height.
           break;
+        default:
+          return false;
       }
       return ['min_height', value];
     },
-    gap: function gap(_ref3) {
-      var value = _ref3.value,
-        settings = _ref3.settings;
+    gap: function gap(_ref4) {
+      var value = _ref4.value,
+        sectionSettings = _ref4.settings;
       var sizesMap = {
         no: 0,
         narrow: 5,
@@ -421,15 +437,17 @@ var map = function map(_ref) {
         wide: 20,
         wider: 30
       };
-      value = 'custom' === value ? settings.gap_columns_custom : {
+      value = 'custom' === value ? sectionSettings.gap_columns_custom : {
         size: sizesMap[value],
+        column: '' + sizesMap[value],
+        row: '' + sizesMap[value],
         unit: 'px'
       };
       return ['flex_gap', value];
     },
     gap_columns_custom: null,
-    column_position: function column_position(_ref4) {
-      var value = _ref4.value;
+    column_position: function column_position(_ref5) {
+      var value = _ref5.value;
       var optionsMap = {
         top: 'flex-start',
         middle: 'center',
@@ -552,12 +570,6 @@ var Migrator = /*#__PURE__*/function () {
     key: "migrate",
     value:
     /**
-     * Migrations configuration by `elType`.
-     *
-     * @type {Object}
-     */
-
-    /**
      * Migrate element settings into new settings object, using a map object.
      *
      * @param {Object} settings - Settings to migrate.
@@ -648,6 +660,11 @@ var Migrator = /*#__PURE__*/function () {
   return Migrator;
 }();
 exports["default"] = Migrator;
+/**
+ * Migrations configuration by `elType`.
+ *
+ * @type {Object}
+ */
 (0, _defineProperty2.default)(Migrator, "config", {
   section: {
     legacyControlsMapping: _section.default,
@@ -660,6 +677,8 @@ exports["default"] = Migrator;
         flex_align_items: settings.flex_align_items || 'stretch',
         flex_gap: settings.flex_gap || {
           size: 10,
+          column: '10',
+          row: '10',
           unit: 'px'
         }
       }, isInner ? {
@@ -698,9 +717,7 @@ module.exports = wp.i18n;
 
 function _arrayLikeToArray(arr, len) {
   if (len == null || len > arr.length) len = arr.length;
-  for (var i = 0, arr2 = new Array(len); i < len; i++) {
-    arr2[i] = arr[i];
-  }
+  for (var i = 0, arr2 = new Array(len); i < len; i++) arr2[i] = arr[i];
   return arr2;
 }
 module.exports = _arrayLikeToArray, module.exports.__esModule = true, module.exports["default"] = module.exports;
@@ -769,15 +786,16 @@ module.exports = _classCallCheck, module.exports.__esModule = true, module.expor
 /*!*************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/createClass.js ***!
   \*************************************************************/
-/***/ ((module) => {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+var toPropertyKey = __webpack_require__(/*! ./toPropertyKey.js */ "../node_modules/@babel/runtime/helpers/toPropertyKey.js");
 function _defineProperties(target, props) {
   for (var i = 0; i < props.length; i++) {
     var descriptor = props[i];
     descriptor.enumerable = descriptor.enumerable || false;
     descriptor.configurable = true;
     if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
+    Object.defineProperty(target, toPropertyKey(descriptor.key), descriptor);
   }
 }
 function _createClass(Constructor, protoProps, staticProps) {
@@ -796,9 +814,11 @@ module.exports = _createClass, module.exports.__esModule = true, module.exports[
 /*!****************************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/defineProperty.js ***!
   \****************************************************************/
-/***/ ((module) => {
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
+var toPropertyKey = __webpack_require__(/*! ./toPropertyKey.js */ "../node_modules/@babel/runtime/helpers/toPropertyKey.js");
 function _defineProperty(obj, key, value) {
+  key = toPropertyKey(key);
   if (key in obj) {
     Object.defineProperty(obj, key, {
       value: value,
@@ -892,29 +912,32 @@ module.exports = _iterableToArray, module.exports.__esModule = true, module.expo
   \**********************************************************************/
 /***/ ((module) => {
 
-function _iterableToArrayLimit(arr, i) {
-  var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"];
-  if (_i == null) return;
-  var _arr = [];
-  var _n = true;
-  var _d = false;
-  var _s, _e;
-  try {
-    for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) {
-      _arr.push(_s.value);
-      if (i && _arr.length === i) break;
-    }
-  } catch (err) {
-    _d = true;
-    _e = err;
-  } finally {
+function _iterableToArrayLimit(r, l) {
+  var t = null == r ? null : "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"];
+  if (null != t) {
+    var e,
+      n,
+      i,
+      u,
+      a = [],
+      f = !0,
+      o = !1;
     try {
-      if (!_n && _i["return"] != null) _i["return"]();
+      if (i = (t = t.call(r)).next, 0 === l) {
+        if (Object(t) !== t) return;
+        f = !1;
+      } else for (; !(f = (e = i.call(t)).done) && (a.push(e.value), a.length !== l); f = !0);
+    } catch (r) {
+      o = !0, n = r;
     } finally {
-      if (_d) throw _e;
+      try {
+        if (!f && null != t["return"] && (u = t["return"](), Object(u) !== u)) return;
+      } finally {
+        if (o) throw n;
+      }
     }
+    return a;
   }
-  return _arr;
 }
 module.exports = _iterableToArrayLimit, module.exports.__esModule = true, module.exports["default"] = module.exports;
 
@@ -1017,20 +1040,57 @@ module.exports = _toConsumableArray, module.exports.__esModule = true, module.ex
 
 /***/ }),
 
+/***/ "../node_modules/@babel/runtime/helpers/toPrimitive.js":
+/*!*************************************************************!*\
+  !*** ../node_modules/@babel/runtime/helpers/toPrimitive.js ***!
+  \*************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var _typeof = (__webpack_require__(/*! ./typeof.js */ "../node_modules/@babel/runtime/helpers/typeof.js")["default"]);
+function toPrimitive(t, r) {
+  if ("object" != _typeof(t) || !t) return t;
+  var e = t[Symbol.toPrimitive];
+  if (void 0 !== e) {
+    var i = e.call(t, r || "default");
+    if ("object" != _typeof(i)) return i;
+    throw new TypeError("@@toPrimitive must return a primitive value.");
+  }
+  return ("string" === r ? String : Number)(t);
+}
+module.exports = toPrimitive, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
+/***/ "../node_modules/@babel/runtime/helpers/toPropertyKey.js":
+/*!***************************************************************!*\
+  !*** ../node_modules/@babel/runtime/helpers/toPropertyKey.js ***!
+  \***************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+var _typeof = (__webpack_require__(/*! ./typeof.js */ "../node_modules/@babel/runtime/helpers/typeof.js")["default"]);
+var toPrimitive = __webpack_require__(/*! ./toPrimitive.js */ "../node_modules/@babel/runtime/helpers/toPrimitive.js");
+function toPropertyKey(t) {
+  var i = toPrimitive(t, "string");
+  return "symbol" == _typeof(i) ? i : String(i);
+}
+module.exports = toPropertyKey, module.exports.__esModule = true, module.exports["default"] = module.exports;
+
+/***/ }),
+
 /***/ "../node_modules/@babel/runtime/helpers/typeof.js":
 /*!********************************************************!*\
   !*** ../node_modules/@babel/runtime/helpers/typeof.js ***!
   \********************************************************/
 /***/ ((module) => {
 
-function _typeof(obj) {
+function _typeof(o) {
   "@babel/helpers - typeof";
 
-  return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) {
-    return typeof obj;
-  } : function (obj) {
-    return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(obj);
+  return (module.exports = _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (o) {
+    return typeof o;
+  } : function (o) {
+    return o && "function" == typeof Symbol && o.constructor === Symbol && o !== Symbol.prototype ? "symbol" : typeof o;
+  }, module.exports.__esModule = true, module.exports["default"] = module.exports), _typeof(o);
 }
 module.exports = _typeof, module.exports.__esModule = true, module.exports["default"] = module.exports;
 

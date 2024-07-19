@@ -8,12 +8,12 @@ Author URI: https://www.livemeshthemes.com
 */
 namespace LivemeshAddons\Widgets;
 
-use  Elementor\Repeater ;
-use  Elementor\Widget_Base ;
-use  Elementor\Controls_Manager ;
-use  Elementor\Scheme_Color ;
-use  Elementor\Group_Control_Typography ;
-use  Elementor\Scheme_Typography ;
+use Elementor\Repeater;
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+use Elementor\Scheme_Color;
+use Elementor\Group_Control_Typography;
+use Elementor\Scheme_Typography;
 if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
@@ -21,35 +21,31 @@ if ( !defined( 'ABSPATH' ) ) {
 /**
  * Class for Carousel widget that displays a list of custom HTML content as a carousel.
  */
-class LAE_Carousel_Widget extends LAE_Widget_Base
-{
+class LAE_Carousel_Widget extends LAE_Widget_Base {
     /**
      * Get the name for the widget
      * @return string
      */
-    public function get_name()
-    {
+    public function get_name() {
         return 'lae-carousel';
     }
-    
+
     /**
      * Get the widget title
      * @return string|void
      */
-    public function get_title()
-    {
+    public function get_title() {
         return __( 'Carousel', 'livemesh-el-addons' );
     }
-    
+
     /**
      * Get the widget icon
      * @return string
      */
-    public function get_icon()
-    {
+    public function get_icon() {
         return 'lae-icon-carousel';
     }
-    
+
     /**
      * Retrieve the list of categories the widget belongs to.
      *
@@ -57,26 +53,23 @@ class LAE_Carousel_Widget extends LAE_Widget_Base
      *
      * @return string[]
      */
-    public function get_categories()
-    {
-        return array( 'livemesh-addons' );
+    public function get_categories() {
+        return array('livemesh-addons');
     }
-    
+
     /**
      * Get the widget documentation URL
      * @return string
      */
-    public function get_custom_help_url()
-    {
+    public function get_custom_help_url() {
         return 'https://livemeshelementor.com/docs/livemesh-addons/core-addons/carousel-addon/';
     }
-    
+
     /**
      * Obtain the scripts required for the widget to function
      * @return string[]
      */
-    public function get_script_depends()
-    {
+    public function get_script_depends() {
         return [
             'lae-jquery-slick',
             'lae-frontend-scripts',
@@ -84,14 +77,13 @@ class LAE_Carousel_Widget extends LAE_Widget_Base
             'lae-carousel-scripts'
         ];
     }
-    
+
     /**
      * Register the controls for the widget
      * Adds fields that help configure and customize the widget
      * @return void
      */
-    protected function register_controls()
-    {
+    protected function register_controls() {
         $this->start_controls_section( 'section_carousel', [
             'label' => __( 'Carousel', 'livemesh-el-addons' ),
         ] );
@@ -113,53 +105,53 @@ class LAE_Carousel_Widget extends LAE_Widget_Base
             'default'    => __( 'The HTML content for the element', 'livemesh-el-addons' ),
             'show_label' => false,
             'dynamic'    => [
-            'active' => true,
-        ],
+                'active' => true,
+            ],
         ] );
         $this->add_control( 'elements', [
             'type'        => Controls_Manager::REPEATER,
             'default'     => [
-            [
-            'element_title'   => 'Aliquam lorem ante',
-            'element_content' => 'Suspendisse potenti. Praesent ac sem eget est egestas volutpat. Fusce neque. In hac habitasse platea dictumst. Morbi nec metus.
+                [
+                    'element_title'   => 'Aliquam lorem ante',
+                    'element_content' => 'Suspendisse potenti. Praesent ac sem eget est egestas volutpat. Fusce neque. In hac habitasse platea dictumst. Morbi nec metus.
 
 Sed magna purus, fermentum eu, tincidunt eu, varius ut, felis. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Vestibulum volutpat pretium libero. Nullam accumsan lorem in dui. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
 
 In consectetuer turpis ut velit. Phasellus leo dolor, tempus non, auctor et, hendrerit quis, nisi. Vivamus laoreet. Praesent ac massa at ligula laoreet iaculis. Cras non dolor.',
-        ],
-            [
-            'element_title'   => 'Pellentesque commodo eros',
-            'element_content' => 'In hac habitasse platea dictumst. Ut a nisl id ante tempus hendrerit. Morbi mattis ullamcorper velit. Nullam sagittis. Sed a libero.
+                ],
+                [
+                    'element_title'   => 'Pellentesque commodo eros',
+                    'element_content' => 'In hac habitasse platea dictumst. Ut a nisl id ante tempus hendrerit. Morbi mattis ullamcorper velit. Nullam sagittis. Sed a libero.
 
 Donec mollis hendrerit risus. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Praesent egestas neque eu enim. Donec mollis hendrerit risus.
 
 Donec orci lectus, aliquam ut, faucibus non, euismod id, nulla. Aenean imperdiet. Nulla consequat massa quis enim. Aenean imperdiet. Fusce commodo aliquam arcu.',
-        ],
-            [
-            'element_title'   => 'Aenean commodo ligula',
-            'element_content' => 'Fusce convallis metus id felis luctus adipiscing. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Sed lectus. Etiam vitae tortor. Praesent adipiscing.
+                ],
+                [
+                    'element_title'   => 'Aenean commodo ligula',
+                    'element_content' => 'Fusce convallis metus id felis luctus adipiscing. Suspendisse faucibus, nunc et pellentesque egestas, lacus ante convallis tellus, vitae iaculis lacus elit id tortor. Sed lectus. Etiam vitae tortor. Praesent adipiscing.
 
 Sed in libero ut nibh placerat accumsan. Pellentesque ut neque. Donec id justo. Phasellus gravida semper nisi. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
 
 Vestibulum dapibus nunc ac augue. Nam at tortor in tellus interdum sagittis. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Sed lectus. Quisque ut nisi.',
-        ],
-            [
-            'element_title'   => 'Suspendisse pulvinar augue',
-            'element_content' => 'Sed aliquam ultrices mauris. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Etiam feugiat lorem non metus. In turpis. Morbi mattis ullamcorper velit.
+                ],
+                [
+                    'element_title'   => 'Suspendisse pulvinar augue',
+                    'element_content' => 'Sed aliquam ultrices mauris. Sed mollis, eros et ultrices tempus, mauris ipsum aliquam libero, non adipiscing dolor urna a orci. Etiam feugiat lorem non metus. In turpis. Morbi mattis ullamcorper velit.
 
 Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Maecenas nec odio et ante tincidunt tempus. Ut leo. Praesent vestibulum dapibus nibh. Sed aliquam ultrices mauris.
 
 Nunc interdum lacus sit amet orci. Nunc interdum lacus sit amet orci. Vestibulum facilisis, purus nec pulvinar iaculis, ligula mi congue nunc, vitae euismod ligula urna in dolor. Curabitur at lacus ac velit ornare lobortis. Fusce vulputate eleifend sapien.',
-        ],
-            [
-            'element_title'   => 'Aenean tellus metus',
-            'element_content' => 'Vivamus elementum semper nisi. Praesent adipiscing. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Fusce vel dui.
+                ],
+                [
+                    'element_title'   => 'Aenean tellus metus',
+                    'element_content' => 'Vivamus elementum semper nisi. Praesent adipiscing. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Fusce vel dui.
 
 Sed fringilla mauris sit amet nibh. Nunc nonummy metus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus blandit leo ut odio. Praesent egestas neque eu enim.
 
 Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Vestibulum turpis sem, aliquet eget, lobortis pellentesque, rutrum eu, nisl. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Sed fringilla mauris sit amet nibh. Pellentesque ut neque.',
-        ]
-        ],
+                ]
+            ],
             'fields'      => $repeater->get_controls(),
             'title_field' => '{{{ element_title }}}',
         ] );
@@ -176,20 +168,20 @@ Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Vestibulum turpis s
         $this->add_responsive_control( 'gutter', [
             'label'      => __( 'Spacing between items', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px' ],
+            'size_units' => ['px'],
             'default'    => [
-            'size' => 10,
-        ],
+                'size' => 10,
+            ],
             'range'      => [
-            'px' => [
-            'min' => 0,
-            'max' => 50,
-        ],
-        ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 50,
+                ],
+            ],
             'selectors'  => [
-            '{{WRAPPER}} .lae-carousel .slick-slide' => 'margin: 0 {{SIZE}}{{UNIT}};',
-            '{{WRAPPER}} .lae-carousel .slick-list'  => 'margin: 0 -{{SIZE}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-carousel .slick-slide' => 'margin: 0 {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .lae-carousel .slick-list'  => 'margin: 0 -{{SIZE}}{{UNIT}};',
+            ],
         ] );
         $this->add_control( 'arrows', [
             'type'         => Controls_Manager::SWITCHER,
@@ -344,22 +336,22 @@ Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Vestibulum turpis s
             'label'     => __( 'Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-carousel .lae-carousel-item' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-carousel .lae-carousel-item' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'content_bg_color', [
             'label'     => __( 'Background Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-carousel .lae-carousel-item' => 'background-color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-carousel .lae-carousel-item' => 'background-color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'content_typography',
             'selector' => '{{WRAPPER}} .lae-carousel .lae-carousel-item',
         ] );
     }
-    
+
     /**
      * Render HTML widget output on the frontend.
      *
@@ -367,21 +359,19 @@ Fusce risus nisl, viverra et, tempor et, pretium in, sapien. Vestibulum turpis s
      *
      * @return void
      */
-    protected function render()
-    {
+    protected function render() {
         $settings = $this->get_settings_for_display();
         $settings = apply_filters( 'lae_carousel_' . $this->get_id() . '_settings', $settings );
         $args['settings'] = $settings;
         $args['widget_instance'] = $this;
         lae_get_template_part( 'addons/carousel/loop', $args );
     }
-    
+
     /**
      * Render the widget output in the editor.
      * @return void
      */
-    protected function content_template()
-    {
+    protected function content_template() {
     }
 
 }

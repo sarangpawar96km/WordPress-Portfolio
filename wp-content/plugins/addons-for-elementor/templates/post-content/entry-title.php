@@ -1,8 +1,6 @@
 <?php
 
 
-use Elementor\Utils;
-
 $title = the_title('<' . lae_validate_html_tag($title_tag) . ' class="lae-post-title"><a href="' . get_permalink() . '" title="' . get_the_title() . '"
                                                rel="bookmark"' . $target . '>', '</a></' . lae_validate_html_tag($title_tag) . '>', false);
 

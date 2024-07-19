@@ -8,13 +8,13 @@ Author URI: https://www.livemeshthemes.com
 */
 namespace LivemeshAddons\Widgets;
 
-use  Elementor\Repeater ;
-use  Elementor\Widget_Base ;
-use  Elementor\Controls_Manager ;
-use  Elementor\Utils ;
-use  Elementor\Group_Control_Typography ;
-use  Elementor\Scheme_Color ;
-use  Elementor\Scheme_Typography ;
+use Elementor\Repeater;
+use Elementor\Widget_Base;
+use Elementor\Controls_Manager;
+use Elementor\Utils;
+use Elementor\Group_Control_Typography;
+use Elementor\Scheme_Color;
+use Elementor\Scheme_Typography;
 if ( !defined( 'ABSPATH' ) ) {
     exit;
 }
@@ -22,35 +22,31 @@ if ( !defined( 'ABSPATH' ) ) {
 /**
  * Class for Clients widget that displays one or more clients depicting a percentage value in a multi-column grid.
  */
-class LAE_Clients_Widget extends LAE_Widget_Base
-{
+class LAE_Clients_Widget extends LAE_Widget_Base {
     /**
      * Get the name for the widget
      * @return string
      */
-    public function get_name()
-    {
+    public function get_name() {
         return 'lae-clients';
     }
-    
+
     /**
      * Get the widget title
      * @return string|void
      */
-    public function get_title()
-    {
+    public function get_title() {
         return __( 'Clients', 'livemesh-el-addons' );
     }
-    
+
     /**
      * Get the widget icon
      * @return string
      */
-    public function get_icon()
-    {
+    public function get_icon() {
         return 'lae-icon-clients';
     }
-    
+
     /**
      * Retrieve the list of categories the widget belongs to.
      *
@@ -58,26 +54,23 @@ class LAE_Clients_Widget extends LAE_Widget_Base
      *
      * @return string[]
      */
-    public function get_categories()
-    {
-        return array( 'livemesh-addons' );
+    public function get_categories() {
+        return array('livemesh-addons');
     }
-    
+
     /**
      * Get the widget documentation URL
      * @return string
      */
-    public function get_custom_help_url()
-    {
+    public function get_custom_help_url() {
         return 'https://livemeshelementor.com/docs/livemesh-addons/core-addons/clients-addon/';
     }
-    
+
     /**
      * Obtain the scripts required for the widget to function
      * @return string[]
      */
-    public function get_script_depends()
-    {
+    public function get_script_depends() {
         return [
             'lae-waypoints',
             'lae-jquery-slick',
@@ -86,14 +79,13 @@ class LAE_Clients_Widget extends LAE_Widget_Base
             'lae-clients-scripts'
         ];
     }
-    
+
     /**
      * Register the controls for the widget
      * Adds fields that help configure and customize the widget
      * @return void
      */
-    protected function register_controls()
-    {
+    protected function register_controls() {
         $this->start_controls_section( 'section_clients', [
             'label' => __( 'Clients', 'livemesh-el-addons' ),
         ] );
@@ -105,8 +97,11 @@ class LAE_Clients_Widget extends LAE_Widget_Base
             'description' => __( 'The name of the client/customer.', 'livemesh-el-addons' ),
             'default'     => __( 'My client name', 'livemesh-el-addons' ),
             'dynamic'     => [
-            'active' => true,
-        ],
+                'active' => true,
+            ],
+            'ai'          => [
+                'active' => false,
+            ],
         ] );
         $repeater->add_control( 'client_link', [
             'label'       => __( 'Client URL', 'livemesh-el-addons' ),
@@ -114,25 +109,25 @@ class LAE_Clients_Widget extends LAE_Widget_Base
             'type'        => Controls_Manager::URL,
             'label_block' => true,
             'default'     => [
-            'url'         => '',
-            'is_external' => 'true',
-        ],
+                'url'         => '',
+                'is_external' => 'true',
+            ],
             'placeholder' => __( 'http://client-link.com', 'livemesh-el-addons' ),
             'dynamic'     => [
-            'active' => true,
-        ],
+                'active' => true,
+            ],
         ] );
         $repeater->add_control( 'client_image', [
             'label'       => __( 'Client Logo/Image', 'livemesh-el-addons' ),
             'description' => __( 'The logo image for the client/customer.', 'livemesh-el-addons' ),
             'type'        => Controls_Manager::MEDIA,
             'default'     => [
-            'url' => Utils::get_placeholder_image_src(),
-        ],
+                'url' => Utils::get_placeholder_image_src(),
+            ],
             'label_block' => true,
             'dynamic'     => [
-            'active' => true,
-        ],
+                'active' => true,
+            ],
         ] );
         $this->add_control( 'clients', [
             'type'        => Controls_Manager::REPEATER,
@@ -154,9 +149,9 @@ class LAE_Clients_Widget extends LAE_Widget_Base
             'label'   => __( 'Choose Layout', 'livemesh-el-addons' ),
             'default' => 'grid',
             'options' => [
-            'grid'     => __( 'Grid', 'livemesh-el-addons' ),
-            'carousel' => __( 'Carousel', 'livemesh-el-addons' ),
-        ],
+                'grid'     => __( 'Grid', 'livemesh-el-addons' ),
+                'carousel' => __( 'Carousel', 'livemesh-el-addons' ),
+            ],
         ] );
         $this->add_control( 'widget_animation', [
             "type"    => Controls_Manager::SELECT,
@@ -169,26 +164,26 @@ class LAE_Clients_Widget extends LAE_Widget_Base
             'label'     => __( 'Carousel Settings', 'livemesh-el-addons' ),
             'tab'       => Controls_Manager::TAB_SETTINGS,
             'condition' => [
-            'layout' => [ 'carousel' ],
-        ],
+                'layout' => ['carousel'],
+            ],
         ] );
         $this->add_responsive_control( 'gutter', [
             'label'      => __( 'Spacing between items', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px' ],
+            'size_units' => ['px'],
             'default'    => [
-            'size' => 0,
-        ],
+                'size' => 0,
+            ],
             'range'      => [
-            'px' => [
-            'min' => 0,
-            'max' => 50,
-        ],
-        ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 50,
+                ],
+            ],
             'selectors'  => [
-            '{{WRAPPER}} .lae-clients-carousel .slick-slide' => 'margin: 0 {{SIZE}}{{UNIT}};',
-            '{{WRAPPER}} .lae-clients-carousel .slick-list'  => 'margin: 0 -{{SIZE}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-clients-carousel .slick-slide' => 'margin: 0 {{SIZE}}{{UNIT}};',
+                '{{WRAPPER}} .lae-clients-carousel .slick-list'  => 'margin: 0 -{{SIZE}}{{UNIT}};',
+            ],
         ] );
         $this->add_control( 'arrows', [
             'type'         => Controls_Manager::SWITCHER,
@@ -265,8 +260,8 @@ class LAE_Clients_Widget extends LAE_Widget_Base
             'label'     => __( 'Responsive Options', 'livemesh-el-addons' ),
             'tab'       => Controls_Manager::TAB_SETTINGS,
             'condition' => [
-            'layout' => [ 'carousel' ],
-        ],
+                'layout' => ['carousel'],
+            ],
         ] );
         $this->add_control( 'heading_desktop', [
             'label'     => __( 'Desktop', 'livemesh-el-addons' ),
@@ -348,38 +343,38 @@ class LAE_Clients_Widget extends LAE_Widget_Base
             'label'     => __( 'Grid Settings', 'livemesh-el-addons' ),
             'tab'       => Controls_Manager::TAB_SETTINGS,
             'condition' => [
-            'layout' => [ 'grid' ],
-        ],
+                'layout' => ['grid'],
+            ],
         ] );
         $this->add_control( 'column_layout', [
             'label'       => __( 'Column Layout', 'livemesh-el-addons' ),
             'type'        => Controls_Manager::SELECT,
             'options'     => array(
-            'auto'   => __( 'Auto', 'livemesh-el-addons' ),
-            'custom' => __( 'Custom', 'livemesh-el-addons' ),
-        ),
+                'auto'   => __( 'Auto', 'livemesh-el-addons' ),
+                'custom' => __( 'Custom', 'livemesh-el-addons' ),
+            ),
             'default'     => 'auto',
             'description' => __( 'Set column layout to be <strong>Auto</strong> to let the widget auto calculate number of columns based on minimum column size specified. The option <strong>Custom</strong> lets you explicitly control number of columns based on screen width.', 'livemesh-el-addons' ),
         ] );
         $this->add_control( 'min_column_size', [
             'label'      => __( 'Minimum Column Size', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px' ],
+            'size_units' => ['px'],
             'default'    => [
-            'size' => 240,
-        ],
+                'size' => 240,
+            ],
             'range'      => [
-            'px' => [
-            'min' => 50,
-            'max' => 500,
-        ],
-        ],
+                'px' => [
+                    'min' => 50,
+                    'max' => 500,
+                ],
+            ],
             'selectors'  => [
-            '{{WRAPPER}} .lae-uber-grid-container.lae-grid-auto-column-layout' => 'grid-template-columns: repeat(auto-fit, minmax({{SIZE}}{{UNIT}}, 1fr));',
-        ],
+                '{{WRAPPER}} .lae-uber-grid-container.lae-grid-auto-column-layout' => 'grid-template-columns: repeat(auto-fit, minmax({{SIZE}}{{UNIT}}, 1fr));',
+            ],
             'condition'  => [
-            'column_layout' => 'auto',
-        ],
+                'column_layout' => 'auto',
+            ],
         ] );
         $this->add_responsive_control( 'per_line', [
             'label'              => __( 'Columns per row', 'livemesh-el-addons' ),
@@ -388,51 +383,51 @@ class LAE_Clients_Widget extends LAE_Widget_Base
             'tablet_default'     => '3',
             'mobile_default'     => '2',
             'options'            => [
-            '1' => '1',
-            '2' => '2',
-            '3' => '3',
-            '4' => '4',
-            '5' => '5',
-            '6' => '6',
-        ],
+                '1' => '1',
+                '2' => '2',
+                '3' => '3',
+                '4' => '4',
+                '5' => '5',
+                '6' => '6',
+            ],
             'frontend_available' => true,
             'condition'          => [
-            'column_layout' => 'custom',
-        ],
+                'column_layout' => 'custom',
+            ],
         ] );
         $this->add_control( 'column_gap', [
             'label'      => __( 'Column Gap', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px' ],
+            'size_units' => ['px'],
             'default'    => [
-            'size' => 0,
-        ],
+                'size' => 0,
+            ],
             'range'      => [
-            'px' => [
-            'min' => 0,
-            'max' => 100,
-        ],
-        ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                ],
+            ],
             'selectors'  => [
-            '{{WRAPPER}} .lae-uber-grid-container' => 'column-gap: {{SIZE}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-uber-grid-container' => 'column-gap: {{SIZE}}{{UNIT}};',
+            ],
         ] );
         $this->add_control( 'row_gap', [
             'label'      => __( 'Row Gap', 'livemesh-el-addons' ),
             'type'       => Controls_Manager::SLIDER,
-            'size_units' => [ 'px' ],
+            'size_units' => ['px'],
             'default'    => [
-            'size' => 0,
-        ],
+                'size' => 0,
+            ],
             'range'      => [
-            'px' => [
-            'min' => 0,
-            'max' => 100,
-        ],
-        ],
+                'px' => [
+                    'min' => 0,
+                    'max' => 100,
+                ],
+            ],
             'selectors'  => [
-            '{{WRAPPER}} .lae-uber-grid-container' => 'row-gap: {{SIZE}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-uber-grid-container' => 'row-gap: {{SIZE}}{{UNIT}};',
+            ],
         ] );
         $this->end_controls_section();
         $this->start_controls_section( 'section_widget_theme', [
@@ -461,41 +456,41 @@ class LAE_Clients_Widget extends LAE_Widget_Base
             'label'     => __( 'Client Border Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-clients .lae-client' => 'border-color: {{VALUE}} !important;',
-        ],
+                '{{WRAPPER}} .lae-clients .lae-client' => 'border-color: {{VALUE}} !important;',
+            ],
         ] );
         $this->add_control( 'client_hover_bg_color', [
             'label'     => __( 'Client Hover Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-clients .lae-client .lae-image-overlay' => 'background-color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-clients .lae-client .lae-image-overlay' => 'background-color: {{VALUE}};',
+            ],
         ] );
         $this->add_responsive_control( 'thumbnail_hover_opacity', [
             'label'     => __( 'Thumbnail Hover Opacity (%)', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::SLIDER,
             'default'   => [
-            'size' => 0.7,
-        ],
+                'size' => 0.7,
+            ],
             'range'     => [
-            'px' => [
-            'max'  => 1,
-            'min'  => 0.1,
-            'step' => 0.01,
-        ],
-        ],
+                'px' => [
+                    'max'  => 1,
+                    'min'  => 0.1,
+                    'step' => 0.01,
+                ],
+            ],
             'selectors' => [
-            '{{WRAPPER}} .lae-clients .lae-client:hover .lae-image-overlay' => 'opacity: {{SIZE}};',
-        ],
+                '{{WRAPPER}} .lae-clients .lae-client:hover .lae-image-overlay' => 'opacity: {{SIZE}};',
+            ],
         ] );
         $this->add_control( 'client_padding', [
             'label'       => __( 'Client Padding', 'livemesh-el-addons' ),
             'description' => __( 'Padding for the client images.', 'livemesh-el-addons' ),
             'type'        => Controls_Manager::DIMENSIONS,
-            'size_units'  => [ 'px', '%', 'em' ],
+            'size_units'  => ['px', '%', 'em'],
             'selectors'   => [
-            '{{WRAPPER}} .lae-clients .lae-client' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-        ],
+                '{{WRAPPER}} .lae-clients .lae-client' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+            ],
         ] );
         $this->add_control( 'heading_client_name', [
             'label'     => __( 'Client Name', 'livemesh-el-addons' ),
@@ -506,15 +501,15 @@ class LAE_Clients_Widget extends LAE_Widget_Base
             'label'     => __( 'Client Name Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-clients .lae-client .lae-client-name a' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-clients .lae-client .lae-client-name a' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_control( 'client_name_hover_color', [
             'label'     => __( 'Client Name Hover Color', 'livemesh-el-addons' ),
             'type'      => Controls_Manager::COLOR,
             'selectors' => [
-            '{{WRAPPER}} .lae-clients .lae-client .lae-client-name a:hover' => 'color: {{VALUE}};',
-        ],
+                '{{WRAPPER}} .lae-clients .lae-client .lae-client-name a:hover' => 'color: {{VALUE}};',
+            ],
         ] );
         $this->add_group_control( Group_Control_Typography::get_type(), [
             'name'     => 'client_name_typography',
@@ -522,7 +517,7 @@ class LAE_Clients_Widget extends LAE_Widget_Base
         ] );
         $this->end_controls_section();
     }
-    
+
     /**
      * Render HTML widget output on the frontend.
      *
@@ -530,21 +525,19 @@ class LAE_Clients_Widget extends LAE_Widget_Base
      *
      * @return void
      */
-    protected function render()
-    {
+    protected function render() {
         $settings = $this->get_settings_for_display();
         $settings = apply_filters( 'lae_clients_' . $this->get_id() . '_settings', $settings );
         $args['settings'] = $settings;
         $args['widget_instance'] = $this;
         lae_get_template_part( 'addons/clients/loop', $args );
     }
-    
+
     /**
      * Render the widget output in the editor.
      * @return void
      */
-    protected function content_template()
-    {
+    protected function content_template() {
     }
 
 }

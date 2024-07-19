@@ -27,13 +27,17 @@
       padding: 0;
       transition: color 0.3s ease-out;
     }
+    .lae-marquee-subtext {
+      font-size: 24px;
+      line-height: 1.4;
+    }
     .lae-separator-icon {
       align-self: center;
       .lae-icon-wrapper, .lae-image-wrapper {
         display: flex;
         align-items: center;
       }
-      .lae-icon-wrapper {
+      .lae-icon-wrapper i {
         font-size: 30px;
       }
       .lae-image-wrapper {

@@ -15,7 +15,7 @@ if (!defined('ABSPATH')) {
 
 $pricing_title = esc_html($pricing_plan['pricing_title']);
 $tagline = esc_html($pricing_plan['tagline']);
-$price_tag = htmlspecialchars_decode(wp_kses_post($pricing_plan['price_tag']));
+$price_tag = wp_kses_post(htmlspecialchars_decode($pricing_plan['price_tag']));
 $pricing_img = $pricing_plan['pricing_image'];
 $pricing_url = (empty($pricing_plan['button_url']['url'])) ? '#' : esc_url($pricing_plan['button_url']['url']);
 $pricing_button_text = esc_html($pricing_plan['button_text']);
@@ -28,7 +28,7 @@ list($animate_class, $animation_attr) = lae_get_animation_atts($pricing_plan['wi
 
 ?>
 
-<div class="lae-grid-item lae-pricing-plan <?php echo($highlight ? ' lae-highlight' : ''); ?> <?php echo $animate_class; ?>" <?php echo $animation_attr; ?>>
+<div class="lae-grid-item lae-pricing-plan <?php echo($highlight ? ' lae-highlight' : ''); ?> <?php echo esc_attr($animate_class); ?>" <?php echo esc_attr($animation_attr); ?>>
 
     <div class="lae-top-header">
 

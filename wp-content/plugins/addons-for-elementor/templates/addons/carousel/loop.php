@@ -24,16 +24,15 @@ $carousel_settings = [
 ];
 
 $responsive_settings = [
-    'display_columns' => $settings['display_columns'],
-    'scroll_columns' => $settings['scroll_columns'],
-    'gutter' => $settings['gutter'],
-    'tablet_width' => $settings['tablet_width'],
-    'tablet_display_columns' => $settings['tablet_display_columns'],
-    'tablet_scroll_columns' => $settings['tablet_scroll_columns'],
-    'mobile_width' => $settings['mobile_width'],
-    'mobile_display_columns' => $settings['mobile_display_columns'],
-    'mobile_scroll_columns' => $settings['mobile_scroll_columns'],
-
+    'display_columns' => absint($settings['display_columns']),
+    'scroll_columns' => absint($settings['scroll_columns']),
+    'gutter' => isset($settings['gutter']) ? $settings['gutter'] : ['size' => 10], // Set default value if not set
+    'tablet_width' => absint($settings['tablet_width']),
+    'tablet_display_columns' => absint($settings['tablet_display_columns']),
+    'tablet_scroll_columns' => absint($settings['tablet_scroll_columns']),
+    'mobile_width' => absint($settings['mobile_width']),
+    'mobile_display_columns' => absint($settings['mobile_display_columns']),
+    'mobile_scroll_columns' => absint($settings['mobile_scroll_columns']),
 ];
 
 $carousel_settings = array_merge($carousel_settings, $responsive_settings);
@@ -42,9 +41,9 @@ $carousel_settings = array_merge($carousel_settings, $responsive_settings);
 
 <?php if (!empty($elements)) : ?>
 
-    <div<?php echo $dir; ?> id="lae-carousel-<?php echo $widget_instance->get_id(); ?>"
-                            class="lae-carousel lae-container"
-                            data-settings='<?php echo wp_json_encode($carousel_settings); ?>'>
+    <div<?php echo esc_attr($dir); ?> id="lae-carousel-<?php echo esc_attr($widget_instance->get_id()); ?>"
+                                      class="lae-carousel lae-container"
+                                      data-settings='<?php echo esc_attr(wp_json_encode($carousel_settings)); ?>'>
 
         <?php foreach ($elements as $element) : ?>
 

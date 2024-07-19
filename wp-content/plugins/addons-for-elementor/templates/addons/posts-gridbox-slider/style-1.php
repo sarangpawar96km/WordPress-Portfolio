@@ -28,7 +28,7 @@ if ($modulo == 1) : ?>
     <div class="lae-posts-gridbox">
         <?php endif; ?>
 
-        <div class="lae-posts-gridbox-item lae-<?php echo $settings['text_alignment']; ?>" style="<?php echo $item_height_css; ?>">
+        <div class="lae-posts-gridbox-item lae-<?php echo esc_attr($settings['text_alignment']); ?>" style="<?php echo $item_height_css; ?>">
 
             <article id="post-<?php echo get_the_ID(); ?>"
                      class="lae-post-entry <?php echo join(' ', get_post_class('', $post_id)); ?>">

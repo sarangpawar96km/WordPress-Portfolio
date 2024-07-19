@@ -10,7 +10,7 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly
 }
 
-$slider_style = $settings['slider_style'];
+$slider_style = esc_attr($settings['slider_style']);
 
 // Use the processed post selector query to find posts.
 $query_args = lae_build_query_args($settings);

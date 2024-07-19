@@ -12,9 +12,11 @@ if (!defined('ABSPATH')) {
 
 $dir = is_rtl() ? ' dir="rtl"' : '';
 
-$style = is_rtl() ? ' style="direction:rtl"' : '';
+$styling = is_rtl() ? ' style="direction:rtl"' : '';
 
-$settings = apply_filters('lae_testimonials_slider_' . $settings['slider_id'] . '_settings', $settings);
+$settings = apply_filters('lae_testimonials_slider_' . esc_attr($settings['slider_id']) . '_settings', $settings);
+
+$widget_template = esc_attr($settings['slider_style']);
 
 $carousel_settings = [
     'fade' => ('fade' === $settings['slide_animation']),
@@ -43,14 +45,14 @@ $carousel_settings = array_merge($carousel_settings, $responsive_settings);
 
 ?>
 
-<div<?php echo $dir . $style; ?> class="lae-testimonials-slider lae-container"
-                                 data-settings='<?php echo wp_json_encode($carousel_settings); ?>'>
+<div<?php echo esc_attr($dir . $styling); ?> class="lae-testimonials-slider lae-testimonials-slider-<?php echo $widget_template; ?> lae-container"
+                                 data-settings='<?php echo esc_attr(wp_json_encode($carousel_settings)); ?>'>
 
         <?php foreach ($settings['testimonials'] as $testimonial) : ?>
 
             <?php $args['testimonial'] = $testimonial; ?>
 
-            <?php lae_get_template_part("addons/testimonials-slider/content", $args); ?>
+            <?php lae_get_template_part("addons/testimonials-slider/{$widget_template}", $args); ?>
 
         <?php endforeach; ?>
 

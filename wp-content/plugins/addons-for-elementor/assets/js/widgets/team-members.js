@@ -1,9 +1,9 @@
 ( function ( $ ) {
 
 
-    var WidgetLAECarouselHandler = function ($scope, $) {
+    var WidgetLAECarouselHandler = function ( $scope, $ ) {
 
-        var helper = new LAE_Carousel_Helper($scope, '.lae-team-members-carousel');
+        var helper = new LAE_Carousel_Helper( $scope, '.lae-team-members-carousel' );
 
         helper.init();
     };
@@ -13,6 +13,18 @@
 
         elementorFrontend.hooks.addAction( 'frontend/element_ready/lae-team-members.default', WidgetLAECarouselHandler );
 
+    } );
+
+
+    $( '.lae-popup-trigger' ).magnificPopup( {
+        type: 'inline',
+        midClick: true,
+        gallery: {
+            enabled: true, // Enable gallery mode
+            loop: false    // Disable looping
+        },
+        mainClass: 'mfp-fade', // fade effect
+        removalDelay: 300, // delay in closing
     } );
 
 } )( jQuery );

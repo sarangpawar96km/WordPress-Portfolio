@@ -37,12 +37,10 @@
     font-size: 24px;
     color: #aaa;
     overflow: hidden;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     outline: none;
     text-indent: 0;
     text-align: center;
-    -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s; }
   .lae-container .slick-prev:before, .lae-container .slick-next:before {
     margin: 2px;
@@ -60,14 +58,14 @@
     content: "\e904"; }
   @media only screen and (max-width: 1024px) {
     .lae-container .slick-prev {
-      left: -10px; } }
+      left: -20px; } }
 .lae-container .slick-next {
   right: -40px; }
   .lae-container .slick-next:before {
     content: "\e905"; }
   @media only screen and (max-width: 1024px) {
     .lae-container .slick-next {
-      right: -10px; } }
+      right: -20px; } }
 .lae-container ul.slick-dots {
   width: 100%;
   position: absolute;
@@ -87,9 +85,7 @@
     border-radius: 50%;
     width: 12px;
     height: 12px;
-    -webkit-box-shadow: none;
-            box-shadow: none;
-    -webkit-transition: background 0.3s ease-in-out 0s;
+    box-shadow: none;
     transition: background 0.3s ease-in-out 0s;
     font-size: 0;
     outline: none; }

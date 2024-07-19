@@ -14,13 +14,13 @@ if (!defined('ABSPATH')) {
 
 <div class="lae-pricing-item">
 
-    <div class="lae-title"><?php echo htmlspecialchars_decode(wp_kses_post($title)); ?></div>
+    <div class="lae-title"><?php echo wp_kses_post(htmlspecialchars_decode($title)); ?></div>
 
     <div class="lae-value-wrap">
 
         <div class="lae-value">
 
-            <?php echo htmlspecialchars_decode(wp_kses_post($value)); ?>
+            <?php echo wp_kses_post(htmlspecialchars_decode($value)); ?>
 
         </div>
 

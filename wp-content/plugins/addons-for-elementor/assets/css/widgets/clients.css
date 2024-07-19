@@ -6,7 +6,6 @@
   .lae-dark-bg .lae-clients .lae-client {
     border-color: #505050 !important; }
   .lae-clients .lae-client img {
-    -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
     width: 100%;
     margin: 0;
@@ -23,7 +22,6 @@
     color: #fff;
     font-size: 18px;
     line-height: 26px;
-    -webkit-transition: opacity .4s ease-in-out 0s;
     transition: opacity .4s ease-in-out 0s;
     opacity: 0; }
     .lae-clients .lae-client .lae-client-name a {
@@ -40,7 +38,6 @@
     filter: alpha(opacity=0);
     -moz-opacity: 0;
     opacity: 0;
-    -webkit-transition: opacity .4s ease-in-out 0s;
     transition: opacity .4s ease-in-out 0s; }
   .lae-clients .lae-client:hover .lae-image-overlay {
     opacity: 0.7; }

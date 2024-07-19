@@ -16,7 +16,7 @@ list($animate_class, $animation_attr) = lae_get_animation_atts($settings['widget
 
 ?>
 
-<div class="lae-heading lae-<?php echo $settings['style']; ?> lae-align<?php echo $settings['align']; ?> <?php echo $animate_class; ?>" <?php echo $animation_attr; ?>>
+<div class="lae-heading lae-<?php echo esc_attr($settings['style']); ?> lae-align<?php echo esc_attr($settings['align']); ?> <?php echo esc_attr($animate_class); ?>" <?php echo esc_attr($animation_attr); ?>>
 
     <<?php echo lae_validate_html_tag($settings['title_tag']); ?> class="lae-title"><?php echo wp_kses_post($settings['heading']); ?></<?php echo lae_validate_html_tag($settings['title_tag']); ?>>
 

@@ -16,7 +16,7 @@ $post_id = get_the_ID();
 
 ?>
 
-<div class="lae-posts-multislider-item lae-<?php echo $settings['text_alignment']; ?>">
+<div class="lae-posts-multislider-item lae-<?php echo esc_attr($settings['text_alignment']); ?>">
 
     <article id="post-<?php echo get_the_ID(); ?>"
              class="lae-post-entry <?php echo join(' ', get_post_class('', $post_id)); ?>">

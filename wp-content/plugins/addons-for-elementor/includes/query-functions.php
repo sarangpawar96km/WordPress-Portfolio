@@ -51,7 +51,7 @@ function lae_build_query_args($settings) {
 
         global $wp_query;
 
-        $query_args = $wp_query->query_vars;
+        $query_args = $wp_query->query;
 
         $query_args = apply_filters('lae_current_query_args', $query_args, $settings);
     }

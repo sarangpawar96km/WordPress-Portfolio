@@ -1,16 +1,12 @@
 /* ------------------------------------ Services ------------------------------------------- */
 /* -------- General services -------- */
 .lae-message-box-container {
-  -webkit-transition: height 0.25s cubic-bezier(0.06, 0.51, 0.48, 11);
   transition: height 0.25s cubic-bezier(0.06, 0.51, 0.48, 11); }
 
 .lae-message-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 40px;
   background: #d9edf7;
-  -webkit-transition: opacity .2s ease,visibility .2s ease;
   transition: opacity .2s ease,visibility .2s ease; }
   .lae-message-box.lae-hidden {
     opacity: 0;
@@ -31,7 +27,6 @@
     top: 15px;
     line-height: 1;
     cursor: pointer;
-    -webkit-transition: color .25s ease-in-out;
     transition: color .25s ease-in-out; }
     .lae-message-box .lae-close-icon i {
       color: #697073;

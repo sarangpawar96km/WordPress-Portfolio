@@ -18,7 +18,7 @@ if ($settings['layout'] == 'grid')
     list($class_attr, $data_attr) = lae_get_animation_atts($testimonial['widget_animation']);
 ?>
 
-<div class="lae-testimonial  lae-<?php echo $testimonial['testimonial_rating']; ?> <?php echo $class_attr; ?>" <?php echo $data_attr; ?>>
+<div class="lae-testimonial  lae-<?php echo esc_attr($testimonial['testimonial_rating']); ?> <?php echo esc_attr($class_attr); ?>" <?php echo esc_attr($data_attr); ?>>
 
     <div class="lae-testimonial-user-picture">
 

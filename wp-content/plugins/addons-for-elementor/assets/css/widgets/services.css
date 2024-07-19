@@ -5,7 +5,6 @@
   .lae-services .lae-service {
     margin-bottom: 20px; }
     .lae-services .lae-service .lae-icon-wrapper i {
-      -webkit-transition: color .4s ease-in-out 0s;
       transition: color .4s ease-in-out 0s; }
       .lae-services .lae-service .lae-icon-wrapper i:hover {
         color: #555; }
@@ -21,7 +20,6 @@
         .lae-dark-bg .lae-services .lae-service .lae-service-text .lae-service-details {
           color: rgba(255, 255, 255, 0.7); }
       .lae-services .lae-service .lae-service-text .lae-title-link .lae-title {
-        -webkit-transition: color .3s ease-in-out 0s;
         transition: color .3s ease-in-out 0s; }
       .lae-services .lae-service .lae-service-text .lae-title-link:hover .lae-title {
         color: #666; }
@@ -35,7 +33,6 @@
   font-size: 96px;
   line-height: 1;
   margin-bottom: 20px;
-  -webkit-transition: color .4s ease-in-out 0s;
   transition: color .4s ease-in-out 0s;
   color: #888; }
   .lae-dark-bg .lae-services-style1 .lae-service .lae-icon-wrapper i {
@@ -47,7 +44,6 @@
   max-width: 100%;
   text-align: center;
   margin: 0 auto 25px;
-  -webkit-transition: all .4s ease-in-out 0s;
   transition: all .4s ease-in-out 0s; }
 .lae-services-style1 .lae-service .lae-service-text {
   text-align: center;

@@ -35,7 +35,7 @@ $post_id = get_the_ID();
 
             <?php $image_src = get_the_post_thumbnail_url($post_id, 'full'); ?>
 
-            <div class="lae-post-overlay lae-post-featured-img-bg" style="background-image: url(<?php echo $image_src; ?>); height: <?php echo $settings['slider_height']; ?>px;">
+            <div class="lae-post-overlay lae-post-featured-img-bg" style="background-image: url(<?php echo $image_src; ?>); height: <?php echo esc_attr($settings['slider_height']); ?>px;">
 
                 <?php if (($settings['display_title'] == 'yes') || ($settings['display_taxonomy'] == 'yes') || ($settings['display_summary'] == 'yes')): ?>
 
